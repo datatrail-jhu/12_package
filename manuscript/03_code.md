@@ -1,11 +1,11 @@
 # Code
 
 <!-- Google Slide ID -->
-<!-- 1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ -->
+<!-- 1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8 -->
 
 <!-- Include a slide PNG with Page_ID from this Slide Deck: -->
-<!-- ![](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ&pageid=PAGE_ID) -->
-<!-- or use  `didactr::gs_slide_df("1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ")$png_markdown` -->
+<!-- ![](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ88/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&pageid=PAGE_ID) -->
+<!-- or use  `didactr::gs_slide_df("1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8")$png_markdown` -->
 
 In the previous lessons in this course so far we've discussed R packages in general, reviewed functions and got a minimal R packages started using `create_package()` from the `usethis` package. This means that we're now ready to start adding functionality to our `cbds` package!
 
@@ -40,19 +40,23 @@ Once you've got your plan and your function names, it's time to start writing fu
 
 To do this, you'll first navigate to "File" > "New File" > "R Script" to create a new R Script.
 
-![Create a new R Script file](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ&pageid=g5d3e7acaa9_0_0)
+{format: png}
+![Create a new R Script file](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&pageid=g5d3e7acaa9_0_0)
 
 A new untitled R script will show up in the top-left hand pane.
 
-![Untitled Script (.R) file ](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ&pageid=g5d3e7acaa9_0_6)
+{format: png}
+![Untitled Script (.R) file](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&pageid=g5d3e7acaa9_0_6)
 
 We'll want to save this file with a helpful file name before including any code in this file. To do so, got to "File" > "Save As..."
 
-![Save As...](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ&pageid=g5d3e7acaa9_0_11)
+{format: png}
+![Save As...](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&pageid=g5d3e7acaa9_0_11)
 
 The Save File window that pops up is where you will type in your file name. Here, we'll save the first file as `check_na.R`. Note that this file is being stored in `/cloud/project/cbds/R`. We've mentioned previously that your package's functions should all be stored in the `R/` directory within your package. Be sure that the path to where these files should be saved is correct. Once you've typed in the filename, click "Save"
 
-![Save script in `R/` directory](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ&pageid=g5d3e7acaa9_0_16)
+{format: png}
+![Save script in `R/` directory](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&pageid=g5d3e7acaa9_0_16)
 
 Repeat this process to create a second .R file called `theme_cbds.R`. You should now have two files open in the top-left hand pane. And, if you click on the `R/` directory in the Files tab at the bottom-right, you should see these two files stored in that directory.
 
@@ -123,18 +127,21 @@ check_na <- function(variable){
 }
 ```
 
-![`check_na()` function in RStudio Cloud](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ&pageid=g5d3e7acaa9_0_36)
+{format: png}
+![`check_na()` function in RStudio Cloud](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&pageid=g5d3e7acaa9_0_36)
 
 
 Remember that defining a function just creates the function. It does *not* execute the function. To execute this function, we would want to save the file `check_na.R`, then click "Install and Restart"in the Build top at the top right-hand portion of RStudio Cloud. Remember, this rebuilds your package, so the `check_na()` function is now available to you when your package is loaded into memory (using `library(cbds)`, which executes when you click "Install and Restart").
 
-![Install and Restart](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ&pageid=g5d3e7acaa9_0_46)
+{format: png}
+![Install and Restart](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&pageid=g5d3e7acaa9_0_46)
 
 Now you can test out the functionality of your package's first function! 
 
 Let's first test it on a column from the `iris` dataset. We've seen this dataset before, and it includes information about different iris flowers. 
 
-![`iris` dataset](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ&pageid=g5d3e7acaa9_0_41)
+{format: png}
+![`iris` dataset](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&pageid=g5d3e7acaa9_0_41)
 
 Remember: To execute a function you call the function's name and then provide the necessary inputs within the parentheses:
 
@@ -142,7 +149,8 @@ Remember: To execute a function you call the function's name and then provide th
 check_na(iris$Sepal.Length)
 ```
 
-![Testing `check_na()` on the `iris` dataset](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ&pageid=g5d3e7acaa9_0_16)
+{format: png}
+![Testing `check_na()` on the `iris` dataset](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&pageid=g5d3e7acaa9_0_16)
 
 Note in the output we see that there are 150 observations and no missing data.
 
@@ -153,7 +161,8 @@ library(ggplot2)
 check_na(msleep$sleep_rem)
 ```
 
-![Testing `check_na()` on the `msleep` dataset](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ&pageid=g5d3e7acaa9_0_56)
+{format: png}
+![Testing `check_na()` on the `msleep` dataset](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&pageid=g5d3e7acaa9_0_56)
 
 Perfect! Our function correctly calculates that there are 22 missing values in this variable! 
 
@@ -236,7 +245,8 @@ theme_cbds <- function(base_size = 12, base_family = "", ...){
 }
 ```
 
-![`theme_cbds`](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ&pageid=g5d3e7acaa9_0_56)
+{format: png}
+![`theme_cbds`](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&pageid=g5d3e7acaa9_0_56)
 
 Just as with the first function example, we have to test out to make sure this function is behaving as we expect it to! Time for a few quick smoke tests.
 
@@ -254,7 +264,8 @@ library(ggplot2)
 ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) + geom_point()
 ```
 
-![Plot with default settings from `ggplot2`](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ&pageid=g5d3e7acaa9_0_78)
+{format: png}
+![Plot with default settings from `ggplot2`](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&pageid=g5d3e7acaa9_0_78)
 
 Now, let's utilize our new function from our package to improve this plot's aesthetics! 
 
@@ -265,7 +276,8 @@ ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) +
   theme_cbds()
 ```
 
-![Plot with `cbds_theme`](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ&pageid=g5d3e7acaa9_0_86)
+{format: png}
+![Plot with `cbds_theme`](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&pageid=g5d3e7acaa9_0_86)
 
 That looks pretty great! A lot cleaner plot now that we've applied our modified theme to it!
 
@@ -279,7 +291,8 @@ ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) +
   theme_cbds(base_size = 18, base_family = "serif")
 ```
 
-![Plot with `cbds_theme`, serif font, and increased font](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ&pageid=g5d3e7acaa9_0_94)
+{format: png}
+![Plot with `cbds_theme`, serif font, and increased font](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&pageid=g5d3e7acaa9_0_94)
 
 Looks like our package with two functions is working as expected! We've got a different font and a larger font size for the text.
 
@@ -292,7 +305,7 @@ At this point, we have a pretty minimal package - it does have two functions in 
 
 <!-- ![Code](YouTube Link) -->
 
-  - [Slides](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/edit?usp=sharing)
+  - [Slides](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ88/edit?usp=sharing)
 
 {quiz, id: quiz_03_code}
 

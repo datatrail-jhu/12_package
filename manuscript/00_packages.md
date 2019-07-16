@@ -58,6 +58,7 @@ As a refresher and to make sure we're all on the same page before moving forward
 #### Installing
 
 As a brief refresher, if you are installing from the CRAN repository, use the `install.packages()` function, with the name of the package you want to install in quotes between the parentheses . For example, if you want to install the package `ggplot2`, you would use: `install.packages("ggplot2")`  
+
 {format: png}
 ![Installing from CRAN](https://docs.google.com/presentation/d/1fueR3mDU3mGjq0qemekAalmbeYop4_I_7Z9CPHW7fcY/export/png?id=1fueR3mDU3mGjq0qemekAalmbeYop4_I_7Z9CPHW7fcY&pageid=g5cdfd9360d_0_162)
 
