@@ -279,10 +279,8 @@ usethis::use_test("theme_cbds")
 This generates a new file in `tests/testthat` called `test-theme_cbds.R`. We'll delete the example code in that file and replace it with a test that tests our functions expected behaviors:
 
 ```r
-library(ggplot2)
-
 # generate test plot
-p <- ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) + 
+p <- ggplot2::ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) + 
   geom_point() +
   theme_cbds()
 
@@ -299,7 +297,7 @@ Here, it takes understanding that information about the theme is stored in the t
 However, remember that the `theme_cbds()` function also took two input parameters. We want to be sure we're testing that those are working correctly. So, we'll add another test into that same file.
 
 ```r
-p2 <- ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) +
+p2 <- ggplot2::ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) +
   geom_point() +
   theme_cbds(base_size = 18, base_family = "serif")
 

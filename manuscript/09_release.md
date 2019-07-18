@@ -12,7 +12,7 @@
 
 SLIDESHERE
 
-### Summary
+### To GitHub
 
 ### Additional Resources
 
