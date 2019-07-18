@@ -188,7 +188,6 @@ o) it depends
 function_name <- function(a, b) {
   sum(a + b)
 }
-
 ```
 C) None
 o) 2

@@ -196,6 +196,7 @@ In this lesson we've covered package naming, what is required for the minimal R 
 
 - [The minimal R package](https://kbroman.org/pkg_primer/pages/minimal.html), by Karl Broman
 - [`usethis` documentation](https://usethis.r-lib.org/), by Jenny Bryan and Hadley Wickham
+- [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html), from the R Core Team
 
 ### Slides and Video
 

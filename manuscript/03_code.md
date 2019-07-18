@@ -300,6 +300,10 @@ Looks like our package with two functions is working as expected! We've got a di
 
 At this point, we have a pretty minimal package - it does have two functions in it, but it is missing documentation and vignettes. And, we haven't yet discussed the DESCRIPTION file. So, feel free to add any additional functions you may want to have in your package at this time. And then let's continue on to the following lessons to take this package from a minimal package to a *strong* and well-documented package!
 
+### Additional Resources
+
+- [`testthat`](https://testthat.r-lib.org/), by Hadley Wickham
+- [R Packages - R Code](https://r-pkgs.org/r.html), by Hadley Wickham and Jenny Bryan
 
 ### Slides and Video
 

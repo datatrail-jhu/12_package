@@ -202,6 +202,11 @@ Finally, while we haven't added additionally functionality in this lesson, it's 
 
 This lesson was all about the DESCRIPTION file. This file is important for two reasons. First, it informs others what your package is all about, including information about who to contact if there's a problem. Second, it specifies your package's dependencies. Now that we have our minimal package *truly* ready to go, let's move onto one of the most important aspects of package development - documentation!
 
+### Additional Resources
+
+* [Metadata](https://r-pkgs.org/description.html), by Hadley Wickham and Jenny Bryan
+* [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#The-DESCRIPTION-file), from the R Core Team
+
 
 ### Slides and Video
 

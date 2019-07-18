@@ -341,7 +341,7 @@ In this lesson we didn't add additional functionality to the package, but we did
 ### Additional Resources
 
 - [`testthat`](https://testthat.r-lib.org/), by Hadley Wickham
-- [R Packages - Testing](http://r-pkgs.had.co.nz/tests.html), by Hadley Wickham
+- [R Packages - Testing](https://r-pkgs.org/tests.html), by Hadley Wickham
 - [`usethis` documentation](https://usethis.r-lib.org/), by Jenny Bryan and Hadley Wickham
 
 
