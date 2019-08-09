@@ -14,6 +14,12 @@ SLIDESHERE
 
 ### To GitHub
 
+### Travis
+
+### CRAN
+
+
+
 ### Additional Resources
 
 ### Slides and Video
