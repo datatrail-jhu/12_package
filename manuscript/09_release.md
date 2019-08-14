@@ -22,7 +22,7 @@ To get started on getting your package on GitHub, it's important that you're cur
 
 Once you're sure you're within your package's R project, the next thing we're going to do is set up an SSH key so that you don't have to put your username and password in every time you push to GitHub. Now, we'll note that this SSH key will only work for *this* workspace. Any other workspaces in RStudio Cloud will require you to set up a separate SSH key.
 
-To get started, we'll first let git know who you are as we've done previously. Be sure to inlcude *your* GitHub username and email when you run the following in the **Terminal** (not the Console):
+To get started, we'll first let git know who you are as we've done previously. Be sure to include *your* GitHub username and email when you run the following in the **Terminal** (not the Console):
 
 ```
 git config --global user.name "JaneEverydayDoe"
@@ -39,7 +39,7 @@ Now, it's time to set up the global options for the workspace, which will allow 
 {format: png}
 ![Global Options](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_11)
 
-Within this window, select Git/SVN from the munu on the left, then click on "Create RSA Key..."
+Within this window, select Git/SVN from the menu on the left, then click on "Create RSA Key..."
 
 {format: png}
 ![Create RSA Key](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_6) 
@@ -87,7 +87,7 @@ At this point you now have a new Git tab for use within RStudio Cloud right next
 {format: png}
 ![Git tab now viewable](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_36)
 
-If you click on this tab, you'll see a list of the files in your R project. The question marks to the left of each file indicates that these files are untracked. (As a reminder, this means that git has not seen these before. You have not yet staged them.) An icon with an M indiates a file that has been modified. A D indicates a file has been deleted. And, an A indicates that it has been added (or staged).
+If you click on this tab, you'll see a list of the files in your R project. The question marks to the left of each file indicates that these files are untracked. (As a reminder, this means that git has not seen these before. You have not yet staged them.) An icon with an M indicates a file that has been modified. A D indicates a file has been deleted. And, an A indicates that it has been added (or staged).
 
 {format: png}
 ![Git tab lists files and status](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_42)
@@ -97,7 +97,7 @@ If you then click on Diff, you'll be brought to a new window. Here, if you click
 {format: png}
 ![Diff shows you what has changed since last commit](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_47)
 
-To stage all of these files, click the checkboxes to the left for all the files. Then, add a helpful commit message on teh right, and click "Commit".
+To stage all of these files, click the check boxes to the left for all the files. Then, add a helpful commit message on the right, and click "Commit".
 
 {format: png}
 ![Stage and commit these files](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_52)
@@ -188,7 +188,7 @@ At the end of all of these checks, you'll get a readout of what was found:
 
 Here you see that there was 1 warning. The warning here has to do with an outside requirement, qpdf. If you google this warning, you'll see that this warning is really only applicable if you want to submit your package to CRAN and that it requires installing qpdf. However, as we don't want to submit to CRAN at this point, we're in pretty good shape with no errors, notes, or other warnings!
 
-Generally, **errors** should be fixed regardless of whehter you're submitting to cran. **Warnings** are likely to cause an issue if you submit to release your package on CRAN. **Notes** are mild issues. It's best to ultimately have none of each of these, but it's not essential to address them all if the package is just for your own use.
+Generally, **errors** should be fixed regardless of whether you're submitting to CRAN. **Warnings** are likely to cause an issue if you submit to release your package on CRAN. **Notes** are mild issues. It's best to ultimately have none of each of these, but it's not essential to address them all if the package is just for your own use.
 
 
 ### Continuous Integration: Travis
@@ -240,9 +240,9 @@ If you open this up, you'll notice that a few lines of information have been add
 ![`travis.yml`](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_283)
 
 
-What these lines accomplish is that every time you push to GitHub or every time someone submits a pull request to your repo, `devtools::check()` (what is run when you click the "Check" icon) is automatically run. You'll learn about faiulres immediately, allowing you to address them more easily. Note that this yaml file *can* be customized. We'll stick with the defaults here, but know that you can read about more options at [http://docs.travis-ci.com/user/deployment/].
+What these lines accomplish is that every time you push to GitHub or every time someone submits a pull request to your repo, `devtools::check()` (what is run when you click the "Check" icon) is automatically run. You'll learn about failures immediately, allowing you to address them more easily. Note that this yaml file *can* be customized. We'll stick with the defaults here, but know that you can read about more options at [http://docs.travis-ci.com/user/deployment/].
 
-Having added this yaml file, we want to push these changes to GitHub. Return to the Git tab, select to stage these files, add a commit messsage, and commit these files. Then, be sure to push these files to GitHub. (You may be asked your passphrase again.)
+Having added this yaml file, we want to push these changes to GitHub. Return to the Git tab, select to stage these files, add a commit message, and commit these files. Then, be sure to push these files to GitHub. (You may be asked your passphrase again.)
 
 {format: png}
 ![`travis.yml`](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_288)
@@ -273,7 +273,7 @@ After saving this file, we stage, commit, and push our changes to GitHub! Travis
 {format: png}
 ![Push changes](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_368)
 
-Eventually, Travis should indicate a successful build with a green checkmark! Upon refresh, the badge at the top should indicate the build is "passing". Success!
+Eventually, Travis should indicate a successful build with a green check mark! Upon refresh, the badge at the top should indicate the build is "passing". Success!
 
 {format: png}
 ![A successful build!](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_392)
@@ -300,7 +300,7 @@ To change the version in your package, you would edit the version number in your
 
 Last but not least, a README.md can be *very* helpful to others who stumble upon your released package. Similar to a less-detailed vignette, the README included with your package should explain why someone should use your package, briefly demonstrate how to use it, and include information about how to install the package.
 
-The `usethis` package (of course!) has two helpful functions to generate thes files for you which wil generate the template README file and add it to *.Rbuildignore*.
+The `usethis` package (of course!) has two helpful functions to generate these files for you which will generate the template README file and add it to *.Rbuildignore*.
 
 ```
 # to include markdown-formatted text
@@ -321,7 +321,7 @@ For now, we'll generate a Markdown README to demonstrate the process in our pack
 {format: png}
 ![usethis::use_readme_md() genereates and opens README](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_1_10)
 
-In the file that is generated, for now, we can just edit the text to include that this is a personal package and demonstrate how to install it. We'll remove example for now until it becomes a full pacakge for release.
+In the file that is generated, for now, we can just edit the text to include that this is a personal package and demonstrate how to install it. We'll remove example for now until it becomes a full package for release.
 
 {format: png}
 ![Edit file](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_1_15)
@@ -333,7 +333,16 @@ Once edited, you'll click Preview to knit the file. You're then ready to add, co
 
 Your Travis build will automatically begin and you're package will be checked and ready to go!
 
+### Summary
+
+In this lesson we've covered a whole lot. We've discussed how to release this package on GitHub, how to check your package before release, how to integrate this with Travis CI for automated checking, how to version your package, and briefly what to include in a README. We have not, however, discussed the ins and outs of how `devtools::check()` works, what precisely is checked, and how to deal with the warnings, errors, and notes you receive. If you're looking to release your package on CRAN, you'll ultimately have to get good at deciphering these. The [R Packages](https://r-pkgs.org) book can be a great resource for further understanding on this and all topics covered in this course.
+
 ### Additional Resources
+
+* [Git & GitHub](https://r-pkgs.org/git.html), from *R Packages* by Hadley Wickham & Jenny Bryan
+* [Automated Checking](https://r-pkgs.org/r-cmd-check.html), from *R Packages* by Hadley Wickham & Jenny Bryan
+* [Releasing a Packages](https://r-pkgs.org/release.html), from *R Packages* by Hadley Wickham & Jenny Bryan
+
 
 ### Slides and Video
 
@@ -346,12 +355,44 @@ Your Travis build will automatically begin and you're package will be checked an
 ### Release quiz
 
 {choose-answers: 4} 
-? What do you think?
+? What did creating the RSA accomplish?
 
 
-C) The answer to this one
-o) Not the answer
-o) A bad answer
-o) Not an answer
+C) Verified to GitHub who we are so that we don't have to type in our Username and password every time we push to GitHub
+o) Verified to Travis who we are so that we don't have to type in our Username and password every time we push to GitHub
+o) Verified to CRAN who we are so that we don't have to type in our Username and password every time we push to GitHub
+o) Identifies who are so that GitHub believes us when we type in our Username and password every time we push to GitHub
+o) Identifies who are so that Travis believes us when we type in our Username and password every time we push to GitHub
+o) Identifies who are so that CRAN believes us when we type in our Username and password every time we push to GitHub
+
+{choose-answers: 4} 
+? Fill in the blank: There are the fewest requirements for releasing a package on \_\_\_\_\_\_.
+
+C) GitHub
+o) Travis
+o) Bioconductor
+o) Rstudio
+o) RStudio Cloud
+o) CRAN
+
+{choose-answers: 4} 
+? Which of the following does Travis accomplish?
+
+C) automatically checks package every time changes are pushed to GitHub
+o) generates package structure needed for package development
+o) auto-generates README and updates package version
+o) Releases your package on CRAN
+o) Releases your package on GitHub
+o) Releases your packages on Bioconductor
+
+{choose-answers: 4} 
+? Which of the following approaches enables you to download a package from GitHub?
+
+C) `devtools::install_github()`
+o) `install.packages()`
+o) `devtools::install.github()`
+o) `devtools::install.packages()`
+o) `install_packages()`
+o) `install_git()`
 
 {/quiz}
