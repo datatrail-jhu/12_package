@@ -19,7 +19,7 @@ Notice that these data are not stored in `data/` and instead are stored in the `
 Less frequently than providing users with an example dataset (that you've made available to them as discussed earlier in the lesson), you may find a need to provide raw data or original files with your package. These raw data files are often stored in `inst/extdata/`. 
 
 To automatically generate the scripts (using `usethis`) you'll use to generate raw data files (and the accompanying script), you would use the `usethis::use_data_raw()` function. As previously, you get a helpful readout of what has been done for you as well as what still remains for you to do.
-  
+
 Specifically, the example above creates a `data-raw/` directory for you.
 
 It also generates a script file of the name you specified within the `data-raw/` directory, and opens that script file. Within the script file, there is a comment prompting you to add code here that takes your raw data file and gets it into the cleaner form that you've shared with users. You would add your code to take your raw dataset from its raw form into the form shared with your users (in your `data/` directory).

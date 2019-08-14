@@ -4,7 +4,7 @@
 <!-- 1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8 -->
 
 <!-- Include a slide PNG with Page_ID from this Slide Deck: -->
-<!-- ![](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ88/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&pageid=PAGE_ID) -->
+<!-- ![](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&pageid=PAGE_ID) -->
 <!-- or use  `didactr::gs_slide_df("1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8")$png_markdown` -->
 
 In the previous lessons in this course so far we've discussed R packages in general, reviewed functions and got a minimal R packages started using `create_package()` from the `usethis` package. This means that we're now ready to start adding functionality to our `cbds` package!
@@ -309,7 +309,7 @@ At this point, we have a pretty minimal package - it does have two functions in 
 
 <!-- ![Code](YouTube Link) -->
 
-  - [Slides](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ88/edit?usp=sharing)
+  - [Slides](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/edit?usp=sharing)
 
 {quiz, id: quiz_03_code}
 
