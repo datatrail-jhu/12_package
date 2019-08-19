@@ -26,7 +26,7 @@ To get started, we'll first let git know who you are as we've done previously. B
 
 ```
 git config --global user.name "JaneEverydayDoe"
-git config --global user.email "Jane.Everday.Doe@gmail.com"
+git config --global user.email "Jane.Everyday.Doe@gmail.com"
 ```
 
 {format: png}
