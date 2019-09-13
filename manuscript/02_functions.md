@@ -265,7 +265,6 @@ In this lesson, we've reminded you of  *the basics* of writing functions in R an
 function_name <- function(a, b) {
   sum(a + b) / 2
 }
-
 ```
 
 C) average_two_values
@@ -336,7 +335,6 @@ emphasize_text <- function(text){
   out = paste0(out, "!!!")
   print(out)
 }
-
 ```
 
 C) "SHANNON!!!"
@@ -359,18 +357,18 @@ o) `out()`
 o) `output()`
 
 {points:3}
-? Within the swirl project in the [Cloud-based Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/20345/join?access_code=n4b8J1s0XmWctSy83%2BEXbGAwj7rKcuFMI7WJEJFD) use the `swirl()` function and navigate to the course: `CBDS How To Build an R Package`. Then, navigate to the lesson `L02 Functions Q01 Swirl`. Complete this swirl module on object assignment. Once complete, paste the code provided at the end of the swirl module here.
+?6 Within the swirl project in the [Cloud-based Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/20345/join?access_code=n4b8J1s0XmWctSy83%2BEXbGAwj7rKcuFMI7WJEJFD) use the `swirl()` function and navigate to the course: `CBDS How To Build an R Package`. Then, navigate to the lesson `L02 Functions Q01 Swirl`. Complete this swirl module on object assignment. Once complete, paste the code provided at the end of the swirl module here.
 
 ! /.+(5kUr|0k2z|b4zW|eYiF|8XTc|YajI|Ko7J|jxQO|azkv|SCas).+/i
 
 {points:3}
-? Within the same course on swirl: `CBDS How To Build an R Package`, navigate to the lesson `L02 Functions Q02 Swirl`. Complete this swirl module on character type variables. Once complete, paste the code provided at the end of the swirl module here.
+?7 Within the same course on swirl: `CBDS How To Build an R Package`, navigate to the lesson `L02 Functions Q02 Swirl`. Complete this swirl module on character type variables. Once complete, paste the code provided at the end of the swirl module here.
 
 ! /.+(0st8|uTWV|0T2Q|UIyz|QRFA|M6AW|bwJW|vSjV|euFp|FuSM).+/i
 
 
 {points:3}
-? Within the same course on swirl: `CBDS How To Build an R Package`, navigate to the lesson `L02 Functions Q03 Swirl`. Complete this swirl module on character type variables. Once complete, paste the code provided at the end of the swirl module here.
+?8 Within the same course on swirl: `CBDS How To Build an R Package`, navigate to the lesson `L02 Functions Q03 Swirl`. Complete this swirl module on character type variables. Once complete, paste the code provided at the end of the swirl module here.
 
 ! /.+(Dydb|4UT1|OVGf|7OQp|Hj9a|cGqF|Hdq6|Dtwv|QFUu|9CUW).+/i
 
