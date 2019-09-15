@@ -56,7 +56,7 @@ Similarly, the `forcats` package has the following title and description:
 A reminder that you can see the Title and description of packages by loading them into RStudio and then using ?packagename. The package documentation will show up in the Help tab.
 
 {format: png}
-![Title and Description fields help to explain what this package should be used for](https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&pageid=g5dcfb20e71_0_32)
+![Title and Description fields help to explain what this package should be used for](https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&pageid=g5dcfb20e71_0_20)
 
 
 Writing a good Title line and Description are *very* important if you plan on releasing your package - they're how others know what your package does. For our purposes with this first package we're developing in this course, they're less important, as we're just writing a package containing functions for our own use. Nevertheless, it's good to practice writing this information in the correct format, so write a Title and Description in your package's DESCRIPTION file.

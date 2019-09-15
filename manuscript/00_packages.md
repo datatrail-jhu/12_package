@@ -6,7 +6,7 @@ default-random-choice-order: true
 default-quiz-show-answers: none
 }
  
-# Packages
+# Building R Packages
 
 <!-- Google Slide ID -->
 <!-- 1fueR3mDU3mGjq0qemekAalmbeYop4_I_7Z9CPHW7fcY -->

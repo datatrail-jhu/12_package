@@ -313,8 +313,8 @@ o) .png
 ? If you wanted to make "Be sure to first read the Getting Started vignette" **bold** in your documentation, how would you do that?
 
 C) \strong{Be sure to first read the Getting Started vignette}
-o) __Be sure to first read the Getting Started vignette__
-o) **Be sure to first read the Getting Started vignette**
+o) \_\_Be sure to first read the Getting Started vignette\_\_
+o) \*\*Be sure to first read the Getting Started vignette\*\*
 o) \strong{}Be sure to first read the Getting Started vignette
 o) \bold{Be sure to first read the Getting Started vignette}
 o) \bold{}Be sure to first read the Getting Started vignette
