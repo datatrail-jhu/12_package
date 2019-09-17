@@ -247,7 +247,7 @@ In this lesson, we've reminded you of  *the basics* of writing functions in R an
 * [Chapter 19: Functions in r4ds](http://r4ds.had.co.nz/functions.html), by Hadley Wickham in R for Data Science
 * [Functions](http://adv-r.had.co.nz/Functions.html), by Hadley Wickham in Advanced R
 * [Writing Functions](https://nicercode.github.io/intro/writing-functions.html) and [Functions](https://nicercode.github.io/guides/functions/), blog posts from [Nice R Code](https://nicercode.github.io/)
-*
+
 ### Slides and Video
 
 ![Functions](	https://www.youtube.com/watch?v=FB-eMZUaej4)
