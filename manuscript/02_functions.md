@@ -23,7 +23,7 @@ For example, if you are working with multiple, similar datasets and have to carr
 
 In doing this, you accomplish a few things:
 
-1. You make your code **more readable**. Code is read more often than it is written. By having a single function, readers of your code only have to understand that code block once. When they encoutner its use, they already know what the code will do. And, it will lead to less code overall to read.
+1. You make your code **more readable**. Code is read more often than it is written. By having a single function, readers of your code only have to understand that code block once. When they encounter its use, they already know what the code will do. And, it will lead to less code overall to read.
 2. It **simplifies updating your code**. If you have the code in a single function and then use that function throughout, if a change needs to happen, you have to only change it in a single location, rather than looking for all the places you've copy and pasted the code. If you find yourself copy and pasting code more than once, write a function.
 3. You **avoid accidental errors**. If you're using related and very similar code in multiple places rather than writing functions, you have to remember where you copy and pasted and how many places you've done so. With functions, you have a single copy and only have to update that, minimizing the chance of errors and forgetting to edit your code in more than one place. 
 
@@ -250,7 +250,7 @@ In this lesson, we've reminded you of  *the basics* of writing functions in R an
 *
 ### Slides and Video
 
-<!-- ![Functions](YouTube Link) -->
+![Functions](	https://www.youtube.com/watch?v=FB-eMZUaej4)
 
   - [Slides](https://docs.google.com/presentation/d/1Bo0j-Ct0phh9ygYe9LOsmd-J8YNN92H5OS_kPtynEHs/edit?usp=sharing)
 

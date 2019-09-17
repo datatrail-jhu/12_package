@@ -51,9 +51,9 @@ For example, the `ggplot2` package has the following title and description:
 Similarly, the `forcats` package has the following title and description:
 
 **Title**: Tools for Working with Categorical Variables (Factors)
-**Description**: Helpers for reordering factor levels (including moving specified levels to front, ordering by first appearance, reversing, and randomly shuffling), and tools for modifying factor levels (including collapsing rare levels into other, 'anonymising', and manually 'recoding'). 
+**Description**: Helpers for reordering factor levels (including moving specified levels to front, ordering by first appearance, reversing, and randomly shuffling), and tools for modifying factor levels (including collapsing rare levels into other, 'anonymizing', and manually 'recoding'). 
 
-A reminder that you can see the Title and description of packages by loading them into RStudio and then using ?packagename. The package documentation will show up in the Help tab.
+A reminder that you can see the Title and description of packages by loading them into RStudio and then using `?packagename`. The package documentation will show up in the Help tab.
 
 {format: png}
 ![Title and Description fields help to explain what this package should be used for](https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&pageid=g5dcfb20e71_0_20)
@@ -210,7 +210,7 @@ This lesson was all about the DESCRIPTION file. This file is important for two r
 
 ### Slides and Video
 
-<!-- ![Description](YouTube Link) -->
+![Description](https://youtu.be/4q367A3D_gs)
 
   - [Slides](https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/edit?usp=sharing)
 

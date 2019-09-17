@@ -321,7 +321,7 @@ With these tests written, we save the file, return to the Build Tab, again selec
 
 ### Test Errors
 
-So far we've only demonstrated what it looks like when a test passes. But, what happens if a unit test fails? For example, what if into that last test, I had mispecified what font to expect, calling for "sans" in the plot but then testing for "serif"
+So far we've only demonstrated what it looks like when a test passes. But, what happens if a unit test fails? For example, what if into that last test, I had misspecified what font to expect, calling for "sans" in the plot but then testing for "serif"
 
 {format: png}
 ![Errors in testing](https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&pageid=g5d432a4243_0_79)
@@ -347,7 +347,7 @@ In this lesson we didn't add additional functionality to the package, but we did
 
 ### Slides and Video
 
-<!-- ![Testing](YouTube Link) -->
+![Testing](https://youtu.be/V4fJGf2OZRI)
 
   - [Slides](https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/edit?usp=sharing)
 

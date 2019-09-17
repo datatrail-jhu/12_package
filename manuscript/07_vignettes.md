@@ -1,4 +1,3 @@
-
 # Vignettes
 
 <!-- Google Slide ID -->
@@ -258,7 +257,7 @@ At this point you have a pretty complete and well-documented package that includ
 
 ### Slides and Video
 
-<!-- ![Vignettes](YouTube Link) -->
+![Vignettes](https://youtu.be/rosqnrEJeAA)
 
   - [Slides](https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/edit?usp=sharing)
 

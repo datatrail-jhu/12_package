@@ -145,7 +145,7 @@ In this lesson we cover the final piece of what you'll typically add to a packag
 
 ### Slides and Video
 
-<!-- ![Data](YouTube Link) -->
+![Data](https://youtu.be/P2tBbFFoKog)
 
   - [Slides](https://docs.google.com/presentation/d/17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4/edit?usp=sharing)
 

@@ -262,7 +262,7 @@ After this lesson you should have a DESCRIPTION file, two functions, tests for t
 
 ### Slides and Video
 
-<!-- ![Documentation](YouTube Link) -->
+![Documentation](https://youtu.be/H4i-3XH0Xvc)
 
   - [Slides](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/edit?usp=sharing)
 

@@ -200,7 +200,7 @@ In this lesson we've covered package naming, what is required for the minimal R 
 
 ### Slides and Video
 
-<!-- ![Overview](YouTube Link) -->
+![Overview](https://www.youtube.com/watch?v=O0Tpi1azWNo)
 
   - [Slides](https://docs.google.com/presentation/d/1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c/edit?usp=sharing)
 

@@ -346,7 +346,7 @@ In this lesson we've covered a whole lot. We've discussed how to release this pa
 
 ### Slides and Video
 
-<!-- ![Release](YouTube Link) -->
+![Release](https://youtu.be/GfSWRhOGhiA)
 
   - [Slides](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/edit?usp=sharing)
 

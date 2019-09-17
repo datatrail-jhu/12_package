@@ -47,9 +47,9 @@ For R packages, a repository is central location where many developed packages a
 There are three big repositories for R packages:  
     1. [**CRAN (Comprehensive R Archive Network):**](https://cran.r-project.org/web/packages/) R's main repository (>12,100 packages available!)  
     2. [**GitHub:**](https://github.com/collections) A very popular, open source repository (not R specific!)  
-    3. [**BioConductor:**](https://bioconductor.org/packages/release/BiocViews.html#___Software) A repository mainly for bioinformatic-focused packages  
+    3. [**BioConductor:**](https://bioconductor.org/packages/release/BiocViews.html#___Software) A repository mainly for bioinformatic-focused packages   
 
-We note BioConductor here for completeness', but as these courses are not biology-focused, we'll stick to discussing CRAN and GitHub throughout this course.
+We note BioConductor here for completeness' sake, but as these courses are not biology-focused, we'll stick to discussing CRAN and GitHub throughout this course.
 
 ### Installing, Loading, & Updating
 
@@ -101,7 +101,7 @@ We've linked to a number of helpful resources below, and we'll be using content 
 
 ### Slides and Video
 
-<!-- ![Packages](YouTube Link) -->
+![Packages](https://www.youtube.com/watch?v=HpolN_i5Kbw)
 
 - [Slides](https://docs.google.com/presentation/d/1fueR3mDU3mGjq0qemekAalmbeYop4_I_7Z9CPHW7fcY/edit?usp=sharing)
 

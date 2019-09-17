@@ -307,7 +307,7 @@ At this point, we have a pretty minimal package - it does have two functions in 
 
 ### Slides and Video
 
-<!-- ![Code](YouTube Link) -->
+![Code](https://www.youtube.com/watch?v=QwUkZ7zaIwQ)
 
   - [Slides](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/edit?usp=sharing)
 
