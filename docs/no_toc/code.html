@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Code | Course Name</title>
+  <meta name="description" content="Description about Course/Book." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Code | Course Name" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Description about Course/Book." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Code | Course Name" />
+  
+  <meta name="twitter:description" content="Description about Course/Book." />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="assets/DataTrail_favicon.ico" type="image/x-icon" />
+<link rel="prev" href="functions.html"/>
+<link rel="next" href="testing.html"/>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="assets/style_DataTrail.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<a href="https://www.datatrail.org/"><img src="https://github.com/datatrail-jhu/DataTrail_Template/raw/main/assets/DataTrail_logo.jpg" style="padding-left: 0px; padding-top: 8px;"</a>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this Course</a></li>
+<li class="chapter" data-level="1" data-path="building-r-packages.html"><a href="building-r-packages.html"><i class="fa fa-check"></i><b>1</b> Building R Packages</a>
+<ul>
+<li class="chapter" data-level="1.0.1" data-path="building-r-packages.html"><a href="building-r-packages.html#r-packages"><i class="fa fa-check"></i><b>1.0.1</b> R Packages</a></li>
+<li class="chapter" data-level="1.0.2" data-path="building-r-packages.html"><a href="building-r-packages.html#installing-loading-updating"><i class="fa fa-check"></i><b>1.0.2</b> Installing, Loading, &amp; Updating</a></li>
+<li class="chapter" data-level="1.0.3" data-path="building-r-packages.html"><a href="building-r-packages.html#summary"><i class="fa fa-check"></i><b>1.0.3</b> Summary</a></li>
+<li class="chapter" data-level="1.0.4" data-path="building-r-packages.html"><a href="building-r-packages.html#additional-resources"><i class="fa fa-check"></i><b>1.0.4</b> Additional Resources</a></li>
+<li class="chapter" data-level="1.0.5" data-path="building-r-packages.html"><a href="building-r-packages.html#slides-and-video"><i class="fa fa-check"></i><b>1.0.5</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="overview.html"><a href="overview.html"><i class="fa fa-check"></i><b>2</b> Overview</a>
+<ul>
+<li class="chapter" data-level="2.0.1" data-path="overview.html"><a href="overview.html#package-naming"><i class="fa fa-check"></i><b>2.0.1</b> Package Naming</a></li>
+<li class="chapter" data-level="2.0.2" data-path="overview.html"><a href="overview.html#the-minimal-package"><i class="fa fa-check"></i><b>2.0.2</b> The Minimal Package</a></li>
+<li class="chapter" data-level="2.0.3" data-path="overview.html"><a href="overview.html#a-strong-package"><i class="fa fa-check"></i><b>2.0.3</b> A Strong Package</a></li>
+<li class="chapter" data-level="2.0.4" data-path="overview.html"><a href="overview.html#package-types"><i class="fa fa-check"></i><b>2.0.4</b> Package Types</a></li>
+<li class="chapter" data-level="2.0.5" data-path="overview.html"><a href="overview.html#a-note-on-library"><i class="fa fa-check"></i><b>2.0.5</b> A note on <code>library()</code></a></li>
+<li class="chapter" data-level="2.0.6" data-path="overview.html"><a href="overview.html#getting-started-your-first-r-package"><i class="fa fa-check"></i><b>2.0.6</b> Getting Started: Your First R Package</a></li>
+<li class="chapter" data-level="2.0.7" data-path="overview.html"><a href="overview.html#summary-1"><i class="fa fa-check"></i><b>2.0.7</b> Summary</a></li>
+<li class="chapter" data-level="2.0.8" data-path="overview.html"><a href="overview.html#additional-resources-1"><i class="fa fa-check"></i><b>2.0.8</b> Additional Resources</a></li>
+<li class="chapter" data-level="2.0.9" data-path="overview.html"><a href="overview.html#slides-and-video-1"><i class="fa fa-check"></i><b>2.0.9</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>3</b> Functions</a>
+<ul>
+<li class="chapter" data-level="3.0.1" data-path="functions.html"><a href="functions.html#functions-review"><i class="fa fa-check"></i><b>3.0.1</b> Functions: Review</a></li>
+<li class="chapter" data-level="3.0.2" data-path="functions.html"><a href="functions.html#function-example-temperature"><i class="fa fa-check"></i><b>3.0.2</b> Function Example: Temperature</a></li>
+<li class="chapter" data-level="3.0.3" data-path="functions.html"><a href="functions.html#function-example-even-vs.-odd"><i class="fa fa-check"></i><b>3.0.3</b> Function Example: Even vs. Odd</a></li>
+<li class="chapter" data-level="3.0.4" data-path="functions.html"><a href="functions.html#function-example-exponentiation"><i class="fa fa-check"></i><b>3.0.4</b> Function Example: Exponentiation</a></li>
+<li class="chapter" data-level="3.0.5" data-path="functions.html"><a href="functions.html#summary-2"><i class="fa fa-check"></i><b>3.0.5</b> Summary</a></li>
+<li class="chapter" data-level="3.0.6" data-path="functions.html"><a href="functions.html#additional-resources-2"><i class="fa fa-check"></i><b>3.0.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="3.0.7" data-path="functions.html"><a href="functions.html#slides-and-video-2"><i class="fa fa-check"></i><b>3.0.7</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="code.html"><a href="code.html"><i class="fa fa-check"></i><b>4</b> Code</a>
+<ul>
+<li class="chapter" data-level="4.0.1" data-path="code.html"><a href="code.html#adding-functions"><i class="fa fa-check"></i><b>4.0.1</b> Adding Functions</a></li>
+<li class="chapter" data-level="4.0.2" data-path="code.html"><a href="code.html#function-names"><i class="fa fa-check"></i><b>4.0.2</b> Function Names</a></li>
+<li class="chapter" data-level="4.0.3" data-path="code.html"><a href="code.html#storing-functions-in-.r-files"><i class="fa fa-check"></i><b>4.0.3</b> Storing Functions in .R files</a></li>
+<li class="chapter" data-level="4.0.4" data-path="code.html"><a href="code.html#function-1-check_na"><i class="fa fa-check"></i><b>4.0.4</b> Function 1: <code>check_na()</code></a></li>
+<li class="chapter" data-level="4.0.5" data-path="code.html"><a href="code.html#function-2-theme_cbds"><i class="fa fa-check"></i><b>4.0.5</b> Function 2: <code>theme_cbds()</code></a></li>
+<li class="chapter" data-level="4.0.6" data-path="code.html"><a href="code.html#summary-3"><i class="fa fa-check"></i><b>4.0.6</b> Summary</a></li>
+<li class="chapter" data-level="4.0.7" data-path="code.html"><a href="code.html#additional-resources-3"><i class="fa fa-check"></i><b>4.0.7</b> Additional Resources</a></li>
+<li class="chapter" data-level="4.0.8" data-path="code.html"><a href="code.html#slides-and-video-3"><i class="fa fa-check"></i><b>4.0.8</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="testing.html"><a href="testing.html"><i class="fa fa-check"></i><b>5</b> Testing</a>
+<ul>
+<li class="chapter" data-level="5.0.1" data-path="testing.html"><a href="testing.html#code-testing"><i class="fa fa-check"></i><b>5.0.1</b> Code Testing</a></li>
+<li class="chapter" data-level="5.0.2" data-path="testing.html"><a href="testing.html#unit-tests"><i class="fa fa-check"></i><b>5.0.2</b> Unit Tests</a></li>
+<li class="chapter" data-level="5.0.3" data-path="testing.html"><a href="testing.html#testthat"><i class="fa fa-check"></i><b>5.0.3</b> <code>testthat</code></a></li>
+<li class="chapter" data-level="5.0.4" data-path="testing.html"><a href="testing.html#testing-function-1-check_na"><i class="fa fa-check"></i><b>5.0.4</b> Testing Function #1: <code>check_na()</code></a></li>
+<li class="chapter" data-level="5.0.5" data-path="testing.html"><a href="testing.html#testing-function-2-theme_cbds"><i class="fa fa-check"></i><b>5.0.5</b> Testing Function #2: <code>theme_cbds()</code></a></li>
+<li class="chapter" data-level="5.0.6" data-path="testing.html"><a href="testing.html#test-errors"><i class="fa fa-check"></i><b>5.0.6</b> Test Errors</a></li>
+<li class="chapter" data-level="5.0.7" data-path="testing.html"><a href="testing.html#summary-4"><i class="fa fa-check"></i><b>5.0.7</b> Summary</a></li>
+<li class="chapter" data-level="5.0.8" data-path="testing.html"><a href="testing.html#additional-resources-4"><i class="fa fa-check"></i><b>5.0.8</b> Additional Resources</a></li>
+<li class="chapter" data-level="5.0.9" data-path="testing.html"><a href="testing.html#slides-and-video-4"><i class="fa fa-check"></i><b>5.0.9</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="description.html"><a href="description.html"><i class="fa fa-check"></i><b>6</b> Description</a>
+<ul>
+<li class="chapter" data-level="6.0.1" data-path="description.html"><a href="description.html#metadata"><i class="fa fa-check"></i><b>6.0.1</b> Metadata</a></li>
+<li class="chapter" data-level="6.0.2" data-path="description.html"><a href="description.html#description-1"><i class="fa fa-check"></i><b>6.0.2</b> DESCRIPTION</a></li>
+<li class="chapter" data-level="6.0.3" data-path="description.html"><a href="description.html#install-restart"><i class="fa fa-check"></i><b>6.0.3</b> Install &amp; Restart</a></li>
+<li class="chapter" data-level="6.0.4" data-path="description.html"><a href="description.html#summary-5"><i class="fa fa-check"></i><b>6.0.4</b> Summary</a></li>
+<li class="chapter" data-level="6.0.5" data-path="description.html"><a href="description.html#additional-resources-5"><i class="fa fa-check"></i><b>6.0.5</b> Additional Resources</a></li>
+<li class="chapter" data-level="6.0.6" data-path="description.html"><a href="description.html#slides-and-video-5"><i class="fa fa-check"></i><b>6.0.6</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="documentation.html"><a href="documentation.html"><i class="fa fa-check"></i><b>7</b> Documentation</a>
+<ul>
+<li class="chapter" data-level="7.0.1" data-path="documentation.html"><a href="documentation.html#why-document"><i class="fa fa-check"></i><b>7.0.1</b> Why Document?</a></li>
+<li class="chapter" data-level="7.0.2" data-path="documentation.html"><a href="documentation.html#roxygen2"><i class="fa fa-check"></i><b>7.0.2</b> <code>roxygen2</code></a></li>
+<li class="chapter" data-level="7.0.3" data-path="documentation.html"><a href="documentation.html#documenting-functions"><i class="fa fa-check"></i><b>7.0.3</b> Documenting Functions</a></li>
+<li class="chapter" data-level="7.0.4" data-path="documentation.html"><a href="documentation.html#documenting-theme_cbds"><i class="fa fa-check"></i><b>7.0.4</b> Documenting <code>theme_cbds()</code></a></li>
+<li class="chapter" data-level="7.0.5" data-path="documentation.html"><a href="documentation.html#other-documentation"><i class="fa fa-check"></i><b>7.0.5</b> Other Documentation</a></li>
+<li class="chapter" data-level="7.0.6" data-path="documentation.html"><a href="documentation.html#summary-6"><i class="fa fa-check"></i><b>7.0.6</b> Summary</a></li>
+<li class="chapter" data-level="7.0.7" data-path="documentation.html"><a href="documentation.html#additional-resources-6"><i class="fa fa-check"></i><b>7.0.7</b> Additional Resources</a></li>
+<li class="chapter" data-level="7.0.8" data-path="documentation.html"><a href="documentation.html#slides-and-video-6"><i class="fa fa-check"></i><b>7.0.8</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="vignettes.html"><a href="vignettes.html"><i class="fa fa-check"></i><b>8</b> Vignettes</a>
+<ul>
+<li class="chapter" data-level="8.0.1" data-path="vignettes.html"><a href="vignettes.html#vignettes-1"><i class="fa fa-check"></i><b>8.0.1</b> Vignettes</a></li>
+<li class="chapter" data-level="8.0.2" data-path="vignettes.html"><a href="vignettes.html#package-vignettes"><i class="fa fa-check"></i><b>8.0.2</b> Package Vignettes</a></li>
+<li class="chapter" data-level="8.0.3" data-path="vignettes.html"><a href="vignettes.html#vignettes-googlesheets"><i class="fa fa-check"></i><b>8.0.3</b> Vignettes: <code>googlesheets</code></a></li>
+<li class="chapter" data-level="8.0.4" data-path="vignettes.html"><a href="vignettes.html#vignettes-stringr"><i class="fa fa-check"></i><b>8.0.4</b> Vignettes: <code>stringr</code></a></li>
+<li class="chapter" data-level="8.0.5" data-path="vignettes.html"><a href="vignettes.html#creating-vignettes"><i class="fa fa-check"></i><b>8.0.5</b> Creating Vignettes</a></li>
+<li class="chapter" data-level="8.0.6" data-path="vignettes.html"><a href="vignettes.html#write-for-beginners"><i class="fa fa-check"></i><b>8.0.6</b> Write for Beginners</a></li>
+<li class="chapter" data-level="8.0.7" data-path="vignettes.html"><a href="vignettes.html#the-process"><i class="fa fa-check"></i><b>8.0.7</b> The Process</a></li>
+<li class="chapter" data-level="8.0.8" data-path="vignettes.html"><a href="vignettes.html#summary-7"><i class="fa fa-check"></i><b>8.0.8</b> Summary</a></li>
+<li class="chapter" data-level="8.0.9" data-path="vignettes.html"><a href="vignettes.html#additional-resources-7"><i class="fa fa-check"></i><b>8.0.9</b> Additional Resources</a></li>
+<li class="chapter" data-level="8.0.10" data-path="vignettes.html"><a href="vignettes.html#slides-and-video-7"><i class="fa fa-check"></i><b>8.0.10</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>9</b> Data</a>
+<ul>
+<li class="chapter" data-level="9.0.1" data-path="data.html"><a href="data.html#data-available-to-the-user"><i class="fa fa-check"></i><b>9.0.1</b> Data Available to the User</a></li>
+<li class="chapter" data-level="9.0.2" data-path="data.html"><a href="data.html#data-required-by-your-functions"><i class="fa fa-check"></i><b>9.0.2</b> Data Required By Your Functions</a></li>
+<li class="chapter" data-level="9.0.3" data-path="data.html"><a href="data.html#raw-data"><i class="fa fa-check"></i><b>9.0.3</b> Raw Data</a></li>
+<li class="chapter" data-level="9.0.4" data-path="data.html"><a href="data.html#documenting-datasets"><i class="fa fa-check"></i><b>9.0.4</b> Documenting Datasets</a></li>
+<li class="chapter" data-level="9.0.5" data-path="data.html"><a href="data.html#summary-8"><i class="fa fa-check"></i><b>9.0.5</b> Summary</a></li>
+<li class="chapter" data-level="9.0.6" data-path="data.html"><a href="data.html#additional-resources-8"><i class="fa fa-check"></i><b>9.0.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="9.0.7" data-path="data.html"><a href="data.html#slides-and-video-8"><i class="fa fa-check"></i><b>9.0.7</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="release.html"><a href="release.html"><i class="fa fa-check"></i><b>10</b> Release</a>
+<ul>
+<li class="chapter" data-level="10.0.1" data-path="release.html"><a href="release.html#to-github"><i class="fa fa-check"></i><b>10.0.1</b> To GitHub</a></li>
+<li class="chapter" data-level="10.0.2" data-path="release.html"><a href="release.html#installing-from-github"><i class="fa fa-check"></i><b>10.0.2</b> Installing From GitHub</a></li>
+<li class="chapter" data-level="10.0.3" data-path="release.html"><a href="release.html#package-checking"><i class="fa fa-check"></i><b>10.0.3</b> Package Checking</a></li>
+<li class="chapter" data-level="10.0.4" data-path="release.html"><a href="release.html#continuous-integration-travis"><i class="fa fa-check"></i><b>10.0.4</b> Continuous Integration: Travis</a></li>
+<li class="chapter" data-level="10.0.5" data-path="release.html"><a href="release.html#versioning"><i class="fa fa-check"></i><b>10.0.5</b> Versioning</a></li>
+<li class="chapter" data-level="10.0.6" data-path="release.html"><a href="release.html#readme.md"><i class="fa fa-check"></i><b>10.0.6</b> README.md</a></li>
+<li class="chapter" data-level="10.0.7" data-path="release.html"><a href="release.html#summary-9"><i class="fa fa-check"></i><b>10.0.7</b> Summary</a></li>
+<li class="chapter" data-level="10.0.8" data-path="release.html"><a href="release.html#additional-resources-9"><i class="fa fa-check"></i><b>10.0.8</b> Additional Resources</a></li>
+<li class="chapter" data-level="10.0.9" data-path="release.html"><a href="release.html#slides-and-video-9"><i class="fa fa-check"></i><b>10.0.9</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
+<li class="chapter" data-level="11" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>11</b> References</a></li>
+<li class="divider"></li>
+<p style="text-align:center;"> <a href="https://github.com/jhudsl/OTTR_Template" target="blank" > This content was published with</a> <a href="https://bookdown.org/" target="blank"> bookdown by: </a> </p>
+<p style="text-align:center;"> <a href="https://www.datatrail.org/"> Data Trail </a></p>
+<a href="https://www.datatrail.org/"><img src="https://github.com/datatrail-jhu/DataTrail_Template/raw/main/assets/DataTrail_logo.jpg" style=" width: 80%; filter: grayscale(100%); padding-left: 40px; padding-top: 8px; vertical-align: top "</a>
+<p style="text-align:center; font-size: 12px;"> <a href="https://github.com/rstudio4edu/rstudio4edu-book/"> Style adapted from: rstudio4edu-book </a> <a href ="https://creativecommons.org/licenses/by/2.0/"> (CC-BY 2.0) </a></p>
+<p style="padding-left: 40px;"><div class="trapezoid" style = "padding-left: 40px;"><span>  <a href="https://forms.gle/VWaJYc3zATe3qxYC9"> Click here to provide feedback</a> <img src="assets/itcr_arrow.png" style=" width: 10%" ></span></div></p>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Course Name</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<head>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+  <!--script src="https://kit.fontawesome.com/6a26f47516.js"></script-->
+  <!--<script src="assets/hideOutput.js"></script>-->
+  <link href="assets/style_DataTrail.css" rel="stylesheet">
+</head>
+        
+
+
+<div class="hero-image-container"> 
+  <img class= "hero-image" src="assets/DataTrail.jpg">
+</div>
+<div id="code" class="section level1" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Code</h1>
+<!-- Google Slide ID -->
+<!-- 1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8 -->
+<!-- Include a slide PNG with Page_ID from this Slide Deck: -->
+<!-- ![](https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&pageid=PAGE_ID) -->
+<!-- or use  `didactr::gs_slide_df("1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8")$png_markdown` -->
+<p>In the previous lessons in this course so far we’ve discussed R packages in general, reviewed functions and got a minimal R packages started using <code>create_package()</code> from the <code>usethis</code> package. This means that we’re now ready to start adding functionality to our <code>cbds</code> package!</p>
+<p>Earlier, we mentioned that a minimal package has a DESCRIPTION file and functions stored in .R files within the <code>R/</code> directory. It’s those functions that we’re going to write now and store in .R files within the <code>R/</code> directory. We’ll get to the DESCRIPTION file shortly.</p>
+<div id="adding-functions" class="section level3" number="4.0.1">
+<h3><span class="header-section-number">4.0.1</span> Adding Functions</h3>
+<p>Functions are defined within your R package using the <code>function()</code> function, just as we discussed in the previous lesson. We’ve also discussed that picking good names for functions is important. And, we’ve mentioned that these functions are stored in .R files within the <code>R/</code> directory. What we haven’t yet discussed yet is how many functions go in each .R file?</p>
+<p>Well, technically, it’s up to you. You <em>could</em> store every single function in a single .R file, stick it in your packages <code>R/</code> directory and call it a day. <em>However</em>, that is likely <em>not</em> the best organization. With everything in a single file, it’s hard for you or others reading your code to know where to look for certain functions. And, it’s more difficult to document (which we’ll get to later).</p>
+<p>So, for now, we’re going to recommend that each function be stored in its own .R file. In this course we’re going to add two functions to our package, which means we’ll have two .R files…one for each function. We’ll choose to name these files to match the names of the functions stored within. This is not required, but it makes your life easier.</p>
+<p>As packages grow to have additional functionality, however, sometimes you’ll write small “helper” functions that don’t need much documentation. These can be stored in a single file. We recommend that until you are comfortable with package development, you err on the side of more files rather than all functions in a single file.</p>
+<p>The package we’re developing here is meant to make your life easier. It’s a package that will contain functionality for tasks you may find yourself doing over and over again - such as checking for missing data or changing the theme on your plots. Rather than writing the code to do this from scratch each time, we’ll add functions to our package so that all you have to do is load your package into your R session and you’ll be ready to go.</p>
+<p>Many people have packages for their own personal use, including <a href="https://github.com/kbroman/broman">Karl Broman</a> and <a href="https://github.com/dgrtwo/drlib">David Robinson</a>. Feel free to check out those links to see what others include in their personal packages.</p>
+<p>In the personal package we build in this course we’re going to add two functions for tasks we may find ourselves doing frequently:</p>
+<ol style="list-style-type: decimal">
+<li>checking for missing data within a variable in a dataframe</li>
+<li>changing the <code>ggplot2</code> theme</li>
+</ol>
+</div>
+<div id="function-names" class="section level3" number="4.0.2">
+<h3><span class="header-section-number">4.0.2</span> Function Names</h3>
+<p>As discussed previously, using snake case (lower case with words separated by underscores) and verbs (action words) is a great place to start when naming functions. We also want them to be concise. So, for checking for missing data, let’s go with <code>check_na()</code>, since NA is the designation for missing data in R. Now, for theme, we could use <code>set_theme</code>, but you could imagine that you may want to have different themes in different situations, so let’s use <code>theme_cbds()</code>. It’s not a verb, but it will be a modification of the existing <code>theme()</code> function, so it’s a good name in this situation. Let’s get to writing these functions!</p>
+</div>
+<div id="storing-functions-in-.r-files" class="section level3" number="4.0.3">
+<h3><span class="header-section-number">4.0.3</span> Storing Functions in .R files</h3>
+<p>Once you’ve got your plan and your function names, it’s time to start writing functions in .R files.</p>
+<p>To do this, you’ll first navigate to “File” &gt; “New File” &gt; “R Script” to create a new R Script.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&amp;pageid=g5d3e7acaa9_0_0" alt="Create a new R Script file" /></p>
+<p>A new untitled R script will show up in the top-left hand pane.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&amp;pageid=g5d3e7acaa9_0_6" alt="Untitled Script (.R) file" /></p>
+<p>We’ll want to save this file with a helpful file name before including any code in this file. To do so, got to “File” &gt; “Save As…”</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&amp;pageid=g5d3e7acaa9_0_11" alt="Save As…" /></p>
+<p>The Save File window that pops up is where you will type in your file name. Here, we’ll save the first file as <code>check_na.R</code>. Note that this file is being stored in <code>/cloud/project/cbds/R</code>. We’ve mentioned previously that your package’s functions should all be stored in the <code>R/</code> directory within your package. Be sure that the path to where these files should be saved is correct. Once you’ve typed in the filename, click “Save”</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&amp;pageid=g5d3e7acaa9_0_16" alt="Save script in R/ directory" /></p>
+<p>Repeat this process to create a second .R file called <code>theme_cbds.R</code>. You should now have two files open in the top-left hand pane. And, if you click on the <code>R/</code> directory in the Files tab at the bottom-right, you should see these two files stored in that directory.</p>
+<p>Now, we’re ready to start writing some code!</p>
+</div>
+<div id="function-1-check_na" class="section level3" number="4.0.4">
+<h3><span class="header-section-number">4.0.4</span> Function 1: <code>check_na()</code></h3>
+<p>We’ll start by writing our <code>check_na()</code> function.</p>
+<div id="skeleton" class="section level4" number="4.0.4.1">
+<h4><span class="header-section-number">4.0.4.1</span> Skeleton</h4>
+<p>When writing functions, it’s typical to start with the basic function skeleton, including the function name, the <code>function()</code> call and curly braces.</p>
+<p>Return to <code>check_na.R</code>, and let’s get started with that skeleton:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="code.html#cb15-1" aria-hidden="true" tabindex="-1"></a>check_na <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
+<span id="cb15-2"><a href="code.html#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="code.html#cb15-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+</div>
+<div id="inputs-outputs" class="section level4" number="4.0.4.2">
+<h4><span class="header-section-number">4.0.4.2</span> Inputs &amp; Outputs</h4>
+<p>We haven’t discussed in detail yet exactly <em>how</em> we want this function to work, but I find myself frequently wanting to know how many NAs there are in a column in a dataframe. We could write a function to summarize the entire dataframe (as has been done in the <code>skimr</code> and <code>naniar</code> packages discussed in previous lectures), but let’s just start simple.</p>
+<p>If we give the function a column of information as an input, can the function return the following three pieces of information:</p>
+<ol style="list-style-type: decimal">
+<li>number of observations</li>
+<li>number of missing observations</li>
+<li>number of <em>non</em>-missing observations</li>
+</ol>
+<p>This means that the input will be information that could be stored in a column from a dataframe.</p>
+<p>The output will be a summary of the three pieces of information above.</p>
+<p>With that plan in mind, we can start building our function. Here, we’ve provided <code>variable</code> as the single input into the function we’re writing we specified that we need and have included a few comments to help us plan what code we’ll need to write within our function.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="code.html#cb16-1" aria-hidden="true" tabindex="-1"></a>check_na <span class="ot">&lt;-</span> <span class="cf">function</span>(variable){</span>
+<span id="cb16-2"><a href="code.html#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># calculate number of observations</span></span>
+<span id="cb16-3"><a href="code.html#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="code.html#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># calculate number of missing observations</span></span>
+<span id="cb16-5"><a href="code.html#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="code.html#cb16-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># nonmissing = total = missing</span></span>
+<span id="cb16-7"><a href="code.html#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="code.html#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># return summary</span></span>
+<span id="cb16-9"><a href="code.html#cb16-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-10"><a href="code.html#cb16-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Now we can start to fill in our function with code that accomplishes the plan we’ve laid out with comments:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="code.html#cb17-1" aria-hidden="true" tabindex="-1"></a>check_na <span class="ot">&lt;-</span> <span class="cf">function</span>(variable){</span>
+<span id="cb17-2"><a href="code.html#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># calculate number of observations</span></span>
+<span id="cb17-3"><a href="code.html#cb17-3" aria-hidden="true" tabindex="-1"></a>  obs <span class="ot">&lt;-</span> <span class="fu">length</span>(variable)</span>
+<span id="cb17-4"><a href="code.html#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="code.html#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># calculate number of missing observations</span></span>
+<span id="cb17-6"><a href="code.html#cb17-6" aria-hidden="true" tabindex="-1"></a>  nas <span class="ot">&lt;-</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(variable))</span>
+<span id="cb17-7"><a href="code.html#cb17-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-8"><a href="code.html#cb17-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># nonmissing = total = missing</span></span>
+<span id="cb17-9"><a href="code.html#cb17-9" aria-hidden="true" tabindex="-1"></a>  non_na <span class="ot">&lt;-</span> obs <span class="sc">-</span> nas</span>
+<span id="cb17-10"><a href="code.html#cb17-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-11"><a href="code.html#cb17-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># return summary</span></span>
+<span id="cb17-12"><a href="code.html#cb17-12" aria-hidden="true" tabindex="-1"></a>  out <span class="ot">&lt;-</span> <span class="fu">cbind</span>(obs, nas, non_na)</span>
+<span id="cb17-13"><a href="code.html#cb17-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">colnames</span>(out) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;N&quot;</span>, <span class="st">&quot;NAs&quot;</span>, <span class="st">&quot;Non-NAs&quot;</span>)</span>
+<span id="cb17-14"><a href="code.html#cb17-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(out)</span>
+<span id="cb17-15"><a href="code.html#cb17-15" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&amp;pageid=g5d3e7acaa9_0_36" alt="check_na() function in RStudio Cloud" /></p>
+<p>Remember that defining a function just creates the function. It does <em>not</em> execute the function. To execute this function, we would want to save the file <code>check_na.R</code>, then click “Install and Restart”in the Build top at the top right-hand portion of RStudio Cloud. Remember, this rebuilds your package, so the <code>check_na()</code> function is now available to you when your package is loaded into memory (using <code>library(cbds)</code>, which executes when you click “Install and Restart”).</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&amp;pageid=g5d3e7acaa9_0_46" alt="Install and Restart" /></p>
+<p>Now you can test out the functionality of your package’s first function!</p>
+<p>Let’s first test it on a column from the <code>iris</code> dataset. We’ve seen this dataset before, and it includes information about different iris flowers.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&amp;pageid=g5d3e7acaa9_0_41" alt="iris dataset" /></p>
+<p>Remember: To execute a function you call the function’s name and then provide the necessary inputs within the parentheses:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="code.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">check_na</span>(iris<span class="sc">$</span>Sepal.Length)</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&amp;pageid=g5d3e7acaa9_0_16" alt="Testing check_na() on the iris dataset" /></p>
+<p>Note in the output we see that there are 150 observations and no missing data.</p>
+<p>Let’s make sure that this works for data where there <em>is</em> missing information. We’ve worked with the <code>msleep</code> (mammalian sleep) dataset previously from <code>ggplot2</code>. You may recall that the variable <code>sleep_rem</code> from that dataset had missing information. So, let’s test out our function on that variable:</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="code.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb19-2"><a href="code.html#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">check_na</span>(msleep<span class="sc">$</span>sleep_rem)</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&amp;pageid=g5d3e7acaa9_0_56" alt="Testing check_na() on the msleep dataset" /></p>
+<p>Perfect! Our function correctly calculates that there are 22 missing values in this variable!</p>
+<p>When we test out our functions in the console like this, we’re doing what are called <strong>smoke tests</strong>. We’re checking quickly to ensure that our function works. However, there are more formal tests called <strong>unit tests</strong> that we’re going to discuss in the next lesson. So, keep this idea of testing out the functions within your package in the back of your mind for now and we’ll discuss formal testing in the next lesson!</p>
+<p>And, just like that, we’ve accomplished our first goal! We’ve got our first function in our <code>cbds</code> package!</p>
+<p>Now for our second function!</p>
+</div>
+</div>
+<div id="function-2-theme_cbds" class="section level3" number="4.0.5">
+<h3><span class="header-section-number">4.0.5</span> Function 2: <code>theme_cbds()</code></h3>
+<p>Often we want to customize our plots to look a certain way. We want to change the default settings in <code>ggplot2</code> to better fit the look we’re going for in our project. However, it’s often that we’re working on a project and we want that look to apply across all of our plots in the project we’re working on. This leads us to want a function that will change the theme across all plots in a project. We can write a function to accomplish this!</p>
+<p>In fact, others have already done this! We’re going to be modifying code from <a href="https://github.com/kbroman/broman/blob/master/R/theme_karl.R">Karl Broman</a>’s personal R package to accomplish this for our needs.</p>
+<p>In our <a href="https://leanpub.com/universities/courses/jhu/cbds-visualization">Data Visualization</a> course, we discussed a number of best practices in data visualization. One general theme we’ll focus on here is that each bit of ink on the plot should serve a purpose. For example, the gray background that we have by default in <code>ggplot2</code> doesn’t <em>really</em> serve a purpose, so in our <code>theme_cbds()</code> we’ll get rid of it. We’ll also make it easy to change the font and to increase or decrease the font size on our plots within this theme.</p>
+<p>For anything that you want to change from one plot to the next, you’ll have to include it as an argument (input) to your function. The two things we want to be able to change are the font size (<code>base_size</code>) and font (<code>base_family</code>). The third argument you see here is just three dots <code>...</code>. This is officially known as an ellipsis.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="code.html#cb20-1" aria-hidden="true" tabindex="-1"></a>theme_cbds <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">base_size =</span> <span class="dv">12</span>, <span class="at">base_family =</span> <span class="st">&quot;&quot;</span>, ...)</span>
+<span id="cb20-2"><a href="code.html#cb20-2" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb20-3"><a href="code.html#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="code.html#cb20-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div id="aside-ellipsis" class="section level4" number="4.0.5.1">
+<h4><span class="header-section-number">4.0.5.1</span> Aside: ellipsis</h4>
+<p>In R (and other programming languages), the ellipsis (<code>...</code>) allows functions to take any number of named or unnamed arguments. While this may seem a bit confusing, there are really only two cases where you would want to use this:</p>
+<ol style="list-style-type: decimal">
+<li>When your function calls <em>other</em> functions within it, and these functions can take additional arguments. This allows you to pass arguments into your function that will then be applied to the functions you use within your function.</li>
+<li>When you need your function to be able to take a variable number of arguments.</li>
+</ol>
+<p>Here, we’ll see a case of Situation #1.</p>
+<p>With our skeleton function established, now it’s time to figure out exactly what it is we want the aesthetic of our <code>cbds</code> plots to be.</p>
+<p>Generally we’ll want:</p>
+<ul>
+<li>a white background</li>
+<li>only the left and bottom axes to be present</li>
+<li>axis tick labels to be close to their axes</li>
+<li>grid lines removed</li>
+</ul>
+<p>A lot of this (white background, left and bottom axes present, and grid lines removed) can be accomplished by setting the theme to <a href="https://ggplot2.tidyverse.org/reference/ggtheme.html"><code>theme_classic()</code></a>, where we pass the input parameters of our function as inputs to that function.</p>
+<p>However, to move the axis text labels closer, we’ll need to modify <code>theme()</code> directly.</p>
+<p>Our general approach will be as follows:</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="code.html#cb21-1" aria-hidden="true" tabindex="-1"></a>theme_cbds <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">base_size =</span> <span class="dv">12</span>, <span class="at">base_family =</span> <span class="st">&quot;&quot;</span>, ...){</span>
+<span id="cb21-2"><a href="code.html#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># change to theme_classic</span></span>
+<span id="cb21-3"><a href="code.html#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="code.html#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># move axis ticks closer to axes</span></span>
+<span id="cb21-5"><a href="code.html#cb21-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-6"><a href="code.html#cb21-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Now it’s just time to fill in the code.</p>
+<p>From <a href="https://ggplot2.tidyverse.org/reference/theme_get.html"><code>ggplot2</code>’s documentation</a>, we learn that we can use <code>%+replace%</code> to modify elements in a theme.</p>
+<p>Additionally, you’ll note that we’re using <code>ggplot2::</code> any time we want to call a function from the <code>ggplot2</code> package. This is a best practice when writing functions within a package. You’ll want to explicitly call the package name and the function you want to use, separated by two colons (<code>::</code>) any time you call another package’s function.</p>
+<p>Finally, you’ll see that the ellipses is called within <code>ggplot2::theme()</code>. This means that if you were to pass additional arguments into your <code>theme_cbds()</code> function call, they would be applied to change additional aspects of the plot’s <code>theme()</code>.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="code.html#cb22-1" aria-hidden="true" tabindex="-1"></a>theme_cbds <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">base_size =</span> <span class="dv">12</span>, <span class="at">base_family =</span> <span class="st">&quot;&quot;</span>, ...){</span>
+<span id="cb22-2"><a href="code.html#cb22-2" aria-hidden="true" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="st">&quot;%+replace%&quot;</span>(</span>
+<span id="cb22-3"><a href="code.html#cb22-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># change to theme_classic</span></span>
+<span id="cb22-4"><a href="code.html#cb22-4" aria-hidden="true" tabindex="-1"></a>    ggplot2<span class="sc">::</span><span class="fu">theme_classic</span>(<span class="at">base_size =</span> base_size,</span>
+<span id="cb22-5"><a href="code.html#cb22-5" aria-hidden="true" tabindex="-1"></a>                           <span class="at">base_family =</span> base_family),</span>
+<span id="cb22-6"><a href="code.html#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-7"><a href="code.html#cb22-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># move axis ticks closer to axes</span></span>
+<span id="cb22-8"><a href="code.html#cb22-8" aria-hidden="true" tabindex="-1"></a>    ggplot2<span class="sc">::</span><span class="fu">theme</span>(<span class="at">axis.ticks.length =</span> grid<span class="sc">::</span><span class="fu">unit</span>(<span class="dv">0</span>, <span class="st">&quot;cm&quot;</span>), ...)</span>
+<span id="cb22-9"><a href="code.html#cb22-9" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb22-10"><a href="code.html#cb22-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&amp;pageid=g5d3e7acaa9_0_56" alt="theme_cbds" /></p>
+<p>Just as with the first function example, we have to test out to make sure this function is behaving as we expect it to! Time for a few quick smoke tests.</p>
+<p>After clicking “Install and Restart” in the Build tab, we can then test this function out on the <code>iris</code> dataset.</p>
+<p>First, let’s remind ourselves what the <code>ggplot2</code> defaults look like:</p>
+<p>Note that if you’re testing this out on a space where <code>ggplot2</code> has not been installed, you may have to uncomment and run the first line below:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="code.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(&quot;ggplot2&quot;)</span></span>
+<span id="cb23-2"><a href="code.html#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb23-3"><a href="code.html#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-4"><a href="code.html#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="co"># generate default plot</span></span>
+<span id="cb23-5"><a href="code.html#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&amp;pageid=g5d3e7acaa9_0_78" alt="Plot with default settings from ggplot2" /></p>
+<p>Now, let’s utilize our new function from our package to improve this plot’s aesthetics!</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="code.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># use cbds theme</span></span>
+<span id="cb24-2"><a href="code.html#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width)) <span class="sc">+</span></span>
+<span id="cb24-3"><a href="code.html#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb24-4"><a href="code.html#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_cbds</span>()</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&amp;pageid=g5d3e7acaa9_0_86" alt="Plot with cbds_theme" /></p>
+<p>That looks pretty great! A lot cleaner plot now that we’ve applied our modified theme to it!</p>
+<p>But, don’t forget that we have two inputs to our theme that we want to ensure are behaving as expected. So, let’s generate the same plot but change the font and increase the font size by passing this information in as arguments to our function.</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="code.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># use cbds theme</span></span>
+<span id="cb25-2"><a href="code.html#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="co"># change font and font size</span></span>
+<span id="cb25-3"><a href="code.html#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width)) <span class="sc">+</span></span>
+<span id="cb25-4"><a href="code.html#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb25-5"><a href="code.html#cb25-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_cbds</span>(<span class="at">base_size =</span> <span class="dv">18</span>, <span class="at">base_family =</span> <span class="st">&quot;serif&quot;</span>)</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&amp;pageid=g5d3e7acaa9_0_94" alt="Plot with cbds_theme, serif font, and increased font" /></p>
+<p>Looks like our package with two functions is working as expected! We’ve got a different font and a larger font size for the text.</p>
+</div>
+</div>
+<div id="summary-3" class="section level3" number="4.0.6">
+<h3><span class="header-section-number">4.0.6</span> Summary</h3>
+<p>At this point, we have a pretty minimal package - it does have two functions in it, but it is missing documentation and vignettes. And, we haven’t yet discussed the DESCRIPTION file. So, feel free to add any additional functions you may want to have in your package at this time. And then let’s continue on to the following lessons to take this package from a minimal package to a <em>strong</em> and well-documented package!</p>
+</div>
+<div id="additional-resources-3" class="section level3" number="4.0.7">
+<h3><span class="header-section-number">4.0.7</span> Additional Resources</h3>
+<ul>
+<li><a href="https://testthat.r-lib.org/"><code>testthat</code></a>, by Hadley Wickham</li>
+<li><a href="https://r-pkgs.org/r.html">R Packages - R Code</a>, by Hadley Wickham and Jenny Bryan</li>
+</ul>
+</div>
+<div id="slides-and-video-3" class="section level3" number="4.0.8">
+<h3><span class="header-section-number">4.0.8</span> Slides and Video</h3>
+<div class="figure">
+<img src="https://www.youtube.com/watch?v=QwUkZ7zaIwQ" alt="" />
+<p class="caption">Code</p>
+</div>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/edit?usp=sharing">Slides</a></li>
+</ul>
+
+</div>
+</div>
+<hr>
+<center> 
+  <div class="footer">
+      All illustrations <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY. </a>
+      <br>
+      All other materials <a href= "https://creativecommons.org/licenses/by/4.0/"> CC-BY </a> unless noted otherwise.
+  </div>
+</center>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="testing.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

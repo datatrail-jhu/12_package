@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Overview | Course Name</title>
+  <meta name="description" content="Description about Course/Book." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Overview | Course Name" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Description about Course/Book." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Overview | Course Name" />
+  
+  <meta name="twitter:description" content="Description about Course/Book." />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="assets/DataTrail_favicon.ico" type="image/x-icon" />
+<link rel="prev" href="building-r-packages.html"/>
+<link rel="next" href="functions.html"/>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="assets/style_DataTrail.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<a href="https://www.datatrail.org/"><img src="https://github.com/datatrail-jhu/DataTrail_Template/raw/main/assets/DataTrail_logo.jpg" style="padding-left: 0px; padding-top: 8px;"</a>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this Course</a></li>
+<li class="chapter" data-level="1" data-path="building-r-packages.html"><a href="building-r-packages.html"><i class="fa fa-check"></i><b>1</b> Building R Packages</a>
+<ul>
+<li class="chapter" data-level="1.0.1" data-path="building-r-packages.html"><a href="building-r-packages.html#r-packages"><i class="fa fa-check"></i><b>1.0.1</b> R Packages</a></li>
+<li class="chapter" data-level="1.0.2" data-path="building-r-packages.html"><a href="building-r-packages.html#installing-loading-updating"><i class="fa fa-check"></i><b>1.0.2</b> Installing, Loading, &amp; Updating</a></li>
+<li class="chapter" data-level="1.0.3" data-path="building-r-packages.html"><a href="building-r-packages.html#summary"><i class="fa fa-check"></i><b>1.0.3</b> Summary</a></li>
+<li class="chapter" data-level="1.0.4" data-path="building-r-packages.html"><a href="building-r-packages.html#additional-resources"><i class="fa fa-check"></i><b>1.0.4</b> Additional Resources</a></li>
+<li class="chapter" data-level="1.0.5" data-path="building-r-packages.html"><a href="building-r-packages.html#slides-and-video"><i class="fa fa-check"></i><b>1.0.5</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="overview.html"><a href="overview.html"><i class="fa fa-check"></i><b>2</b> Overview</a>
+<ul>
+<li class="chapter" data-level="2.0.1" data-path="overview.html"><a href="overview.html#package-naming"><i class="fa fa-check"></i><b>2.0.1</b> Package Naming</a></li>
+<li class="chapter" data-level="2.0.2" data-path="overview.html"><a href="overview.html#the-minimal-package"><i class="fa fa-check"></i><b>2.0.2</b> The Minimal Package</a></li>
+<li class="chapter" data-level="2.0.3" data-path="overview.html"><a href="overview.html#a-strong-package"><i class="fa fa-check"></i><b>2.0.3</b> A Strong Package</a></li>
+<li class="chapter" data-level="2.0.4" data-path="overview.html"><a href="overview.html#package-types"><i class="fa fa-check"></i><b>2.0.4</b> Package Types</a></li>
+<li class="chapter" data-level="2.0.5" data-path="overview.html"><a href="overview.html#a-note-on-library"><i class="fa fa-check"></i><b>2.0.5</b> A note on <code>library()</code></a></li>
+<li class="chapter" data-level="2.0.6" data-path="overview.html"><a href="overview.html#getting-started-your-first-r-package"><i class="fa fa-check"></i><b>2.0.6</b> Getting Started: Your First R Package</a></li>
+<li class="chapter" data-level="2.0.7" data-path="overview.html"><a href="overview.html#summary-1"><i class="fa fa-check"></i><b>2.0.7</b> Summary</a></li>
+<li class="chapter" data-level="2.0.8" data-path="overview.html"><a href="overview.html#additional-resources-1"><i class="fa fa-check"></i><b>2.0.8</b> Additional Resources</a></li>
+<li class="chapter" data-level="2.0.9" data-path="overview.html"><a href="overview.html#slides-and-video-1"><i class="fa fa-check"></i><b>2.0.9</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>3</b> Functions</a>
+<ul>
+<li class="chapter" data-level="3.0.1" data-path="functions.html"><a href="functions.html#functions-review"><i class="fa fa-check"></i><b>3.0.1</b> Functions: Review</a></li>
+<li class="chapter" data-level="3.0.2" data-path="functions.html"><a href="functions.html#function-example-temperature"><i class="fa fa-check"></i><b>3.0.2</b> Function Example: Temperature</a></li>
+<li class="chapter" data-level="3.0.3" data-path="functions.html"><a href="functions.html#function-example-even-vs.-odd"><i class="fa fa-check"></i><b>3.0.3</b> Function Example: Even vs. Odd</a></li>
+<li class="chapter" data-level="3.0.4" data-path="functions.html"><a href="functions.html#function-example-exponentiation"><i class="fa fa-check"></i><b>3.0.4</b> Function Example: Exponentiation</a></li>
+<li class="chapter" data-level="3.0.5" data-path="functions.html"><a href="functions.html#summary-2"><i class="fa fa-check"></i><b>3.0.5</b> Summary</a></li>
+<li class="chapter" data-level="3.0.6" data-path="functions.html"><a href="functions.html#additional-resources-2"><i class="fa fa-check"></i><b>3.0.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="3.0.7" data-path="functions.html"><a href="functions.html#slides-and-video-2"><i class="fa fa-check"></i><b>3.0.7</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="code.html"><a href="code.html"><i class="fa fa-check"></i><b>4</b> Code</a>
+<ul>
+<li class="chapter" data-level="4.0.1" data-path="code.html"><a href="code.html#adding-functions"><i class="fa fa-check"></i><b>4.0.1</b> Adding Functions</a></li>
+<li class="chapter" data-level="4.0.2" data-path="code.html"><a href="code.html#function-names"><i class="fa fa-check"></i><b>4.0.2</b> Function Names</a></li>
+<li class="chapter" data-level="4.0.3" data-path="code.html"><a href="code.html#storing-functions-in-.r-files"><i class="fa fa-check"></i><b>4.0.3</b> Storing Functions in .R files</a></li>
+<li class="chapter" data-level="4.0.4" data-path="code.html"><a href="code.html#function-1-check_na"><i class="fa fa-check"></i><b>4.0.4</b> Function 1: <code>check_na()</code></a></li>
+<li class="chapter" data-level="4.0.5" data-path="code.html"><a href="code.html#function-2-theme_cbds"><i class="fa fa-check"></i><b>4.0.5</b> Function 2: <code>theme_cbds()</code></a></li>
+<li class="chapter" data-level="4.0.6" data-path="code.html"><a href="code.html#summary-3"><i class="fa fa-check"></i><b>4.0.6</b> Summary</a></li>
+<li class="chapter" data-level="4.0.7" data-path="code.html"><a href="code.html#additional-resources-3"><i class="fa fa-check"></i><b>4.0.7</b> Additional Resources</a></li>
+<li class="chapter" data-level="4.0.8" data-path="code.html"><a href="code.html#slides-and-video-3"><i class="fa fa-check"></i><b>4.0.8</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="testing.html"><a href="testing.html"><i class="fa fa-check"></i><b>5</b> Testing</a>
+<ul>
+<li class="chapter" data-level="5.0.1" data-path="testing.html"><a href="testing.html#code-testing"><i class="fa fa-check"></i><b>5.0.1</b> Code Testing</a></li>
+<li class="chapter" data-level="5.0.2" data-path="testing.html"><a href="testing.html#unit-tests"><i class="fa fa-check"></i><b>5.0.2</b> Unit Tests</a></li>
+<li class="chapter" data-level="5.0.3" data-path="testing.html"><a href="testing.html#testthat"><i class="fa fa-check"></i><b>5.0.3</b> <code>testthat</code></a></li>
+<li class="chapter" data-level="5.0.4" data-path="testing.html"><a href="testing.html#testing-function-1-check_na"><i class="fa fa-check"></i><b>5.0.4</b> Testing Function #1: <code>check_na()</code></a></li>
+<li class="chapter" data-level="5.0.5" data-path="testing.html"><a href="testing.html#testing-function-2-theme_cbds"><i class="fa fa-check"></i><b>5.0.5</b> Testing Function #2: <code>theme_cbds()</code></a></li>
+<li class="chapter" data-level="5.0.6" data-path="testing.html"><a href="testing.html#test-errors"><i class="fa fa-check"></i><b>5.0.6</b> Test Errors</a></li>
+<li class="chapter" data-level="5.0.7" data-path="testing.html"><a href="testing.html#summary-4"><i class="fa fa-check"></i><b>5.0.7</b> Summary</a></li>
+<li class="chapter" data-level="5.0.8" data-path="testing.html"><a href="testing.html#additional-resources-4"><i class="fa fa-check"></i><b>5.0.8</b> Additional Resources</a></li>
+<li class="chapter" data-level="5.0.9" data-path="testing.html"><a href="testing.html#slides-and-video-4"><i class="fa fa-check"></i><b>5.0.9</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="description.html"><a href="description.html"><i class="fa fa-check"></i><b>6</b> Description</a>
+<ul>
+<li class="chapter" data-level="6.0.1" data-path="description.html"><a href="description.html#metadata"><i class="fa fa-check"></i><b>6.0.1</b> Metadata</a></li>
+<li class="chapter" data-level="6.0.2" data-path="description.html"><a href="description.html#description-1"><i class="fa fa-check"></i><b>6.0.2</b> DESCRIPTION</a></li>
+<li class="chapter" data-level="6.0.3" data-path="description.html"><a href="description.html#install-restart"><i class="fa fa-check"></i><b>6.0.3</b> Install &amp; Restart</a></li>
+<li class="chapter" data-level="6.0.4" data-path="description.html"><a href="description.html#summary-5"><i class="fa fa-check"></i><b>6.0.4</b> Summary</a></li>
+<li class="chapter" data-level="6.0.5" data-path="description.html"><a href="description.html#additional-resources-5"><i class="fa fa-check"></i><b>6.0.5</b> Additional Resources</a></li>
+<li class="chapter" data-level="6.0.6" data-path="description.html"><a href="description.html#slides-and-video-5"><i class="fa fa-check"></i><b>6.0.6</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="documentation.html"><a href="documentation.html"><i class="fa fa-check"></i><b>7</b> Documentation</a>
+<ul>
+<li class="chapter" data-level="7.0.1" data-path="documentation.html"><a href="documentation.html#why-document"><i class="fa fa-check"></i><b>7.0.1</b> Why Document?</a></li>
+<li class="chapter" data-level="7.0.2" data-path="documentation.html"><a href="documentation.html#roxygen2"><i class="fa fa-check"></i><b>7.0.2</b> <code>roxygen2</code></a></li>
+<li class="chapter" data-level="7.0.3" data-path="documentation.html"><a href="documentation.html#documenting-functions"><i class="fa fa-check"></i><b>7.0.3</b> Documenting Functions</a></li>
+<li class="chapter" data-level="7.0.4" data-path="documentation.html"><a href="documentation.html#documenting-theme_cbds"><i class="fa fa-check"></i><b>7.0.4</b> Documenting <code>theme_cbds()</code></a></li>
+<li class="chapter" data-level="7.0.5" data-path="documentation.html"><a href="documentation.html#other-documentation"><i class="fa fa-check"></i><b>7.0.5</b> Other Documentation</a></li>
+<li class="chapter" data-level="7.0.6" data-path="documentation.html"><a href="documentation.html#summary-6"><i class="fa fa-check"></i><b>7.0.6</b> Summary</a></li>
+<li class="chapter" data-level="7.0.7" data-path="documentation.html"><a href="documentation.html#additional-resources-6"><i class="fa fa-check"></i><b>7.0.7</b> Additional Resources</a></li>
+<li class="chapter" data-level="7.0.8" data-path="documentation.html"><a href="documentation.html#slides-and-video-6"><i class="fa fa-check"></i><b>7.0.8</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="vignettes.html"><a href="vignettes.html"><i class="fa fa-check"></i><b>8</b> Vignettes</a>
+<ul>
+<li class="chapter" data-level="8.0.1" data-path="vignettes.html"><a href="vignettes.html#vignettes-1"><i class="fa fa-check"></i><b>8.0.1</b> Vignettes</a></li>
+<li class="chapter" data-level="8.0.2" data-path="vignettes.html"><a href="vignettes.html#package-vignettes"><i class="fa fa-check"></i><b>8.0.2</b> Package Vignettes</a></li>
+<li class="chapter" data-level="8.0.3" data-path="vignettes.html"><a href="vignettes.html#vignettes-googlesheets"><i class="fa fa-check"></i><b>8.0.3</b> Vignettes: <code>googlesheets</code></a></li>
+<li class="chapter" data-level="8.0.4" data-path="vignettes.html"><a href="vignettes.html#vignettes-stringr"><i class="fa fa-check"></i><b>8.0.4</b> Vignettes: <code>stringr</code></a></li>
+<li class="chapter" data-level="8.0.5" data-path="vignettes.html"><a href="vignettes.html#creating-vignettes"><i class="fa fa-check"></i><b>8.0.5</b> Creating Vignettes</a></li>
+<li class="chapter" data-level="8.0.6" data-path="vignettes.html"><a href="vignettes.html#write-for-beginners"><i class="fa fa-check"></i><b>8.0.6</b> Write for Beginners</a></li>
+<li class="chapter" data-level="8.0.7" data-path="vignettes.html"><a href="vignettes.html#the-process"><i class="fa fa-check"></i><b>8.0.7</b> The Process</a></li>
+<li class="chapter" data-level="8.0.8" data-path="vignettes.html"><a href="vignettes.html#summary-7"><i class="fa fa-check"></i><b>8.0.8</b> Summary</a></li>
+<li class="chapter" data-level="8.0.9" data-path="vignettes.html"><a href="vignettes.html#additional-resources-7"><i class="fa fa-check"></i><b>8.0.9</b> Additional Resources</a></li>
+<li class="chapter" data-level="8.0.10" data-path="vignettes.html"><a href="vignettes.html#slides-and-video-7"><i class="fa fa-check"></i><b>8.0.10</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>9</b> Data</a>
+<ul>
+<li class="chapter" data-level="9.0.1" data-path="data.html"><a href="data.html#data-available-to-the-user"><i class="fa fa-check"></i><b>9.0.1</b> Data Available to the User</a></li>
+<li class="chapter" data-level="9.0.2" data-path="data.html"><a href="data.html#data-required-by-your-functions"><i class="fa fa-check"></i><b>9.0.2</b> Data Required By Your Functions</a></li>
+<li class="chapter" data-level="9.0.3" data-path="data.html"><a href="data.html#raw-data"><i class="fa fa-check"></i><b>9.0.3</b> Raw Data</a></li>
+<li class="chapter" data-level="9.0.4" data-path="data.html"><a href="data.html#documenting-datasets"><i class="fa fa-check"></i><b>9.0.4</b> Documenting Datasets</a></li>
+<li class="chapter" data-level="9.0.5" data-path="data.html"><a href="data.html#summary-8"><i class="fa fa-check"></i><b>9.0.5</b> Summary</a></li>
+<li class="chapter" data-level="9.0.6" data-path="data.html"><a href="data.html#additional-resources-8"><i class="fa fa-check"></i><b>9.0.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="9.0.7" data-path="data.html"><a href="data.html#slides-and-video-8"><i class="fa fa-check"></i><b>9.0.7</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="release.html"><a href="release.html"><i class="fa fa-check"></i><b>10</b> Release</a>
+<ul>
+<li class="chapter" data-level="10.0.1" data-path="release.html"><a href="release.html#to-github"><i class="fa fa-check"></i><b>10.0.1</b> To GitHub</a></li>
+<li class="chapter" data-level="10.0.2" data-path="release.html"><a href="release.html#installing-from-github"><i class="fa fa-check"></i><b>10.0.2</b> Installing From GitHub</a></li>
+<li class="chapter" data-level="10.0.3" data-path="release.html"><a href="release.html#package-checking"><i class="fa fa-check"></i><b>10.0.3</b> Package Checking</a></li>
+<li class="chapter" data-level="10.0.4" data-path="release.html"><a href="release.html#continuous-integration-travis"><i class="fa fa-check"></i><b>10.0.4</b> Continuous Integration: Travis</a></li>
+<li class="chapter" data-level="10.0.5" data-path="release.html"><a href="release.html#versioning"><i class="fa fa-check"></i><b>10.0.5</b> Versioning</a></li>
+<li class="chapter" data-level="10.0.6" data-path="release.html"><a href="release.html#readme.md"><i class="fa fa-check"></i><b>10.0.6</b> README.md</a></li>
+<li class="chapter" data-level="10.0.7" data-path="release.html"><a href="release.html#summary-9"><i class="fa fa-check"></i><b>10.0.7</b> Summary</a></li>
+<li class="chapter" data-level="10.0.8" data-path="release.html"><a href="release.html#additional-resources-9"><i class="fa fa-check"></i><b>10.0.8</b> Additional Resources</a></li>
+<li class="chapter" data-level="10.0.9" data-path="release.html"><a href="release.html#slides-and-video-9"><i class="fa fa-check"></i><b>10.0.9</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
+<li class="chapter" data-level="11" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>11</b> References</a></li>
+<li class="divider"></li>
+<p style="text-align:center;"> <a href="https://github.com/jhudsl/OTTR_Template" target="blank" > This content was published with</a> <a href="https://bookdown.org/" target="blank"> bookdown by: </a> </p>
+<p style="text-align:center;"> <a href="https://www.datatrail.org/"> Data Trail </a></p>
+<a href="https://www.datatrail.org/"><img src="https://github.com/datatrail-jhu/DataTrail_Template/raw/main/assets/DataTrail_logo.jpg" style=" width: 80%; filter: grayscale(100%); padding-left: 40px; padding-top: 8px; vertical-align: top "</a>
+<p style="text-align:center; font-size: 12px;"> <a href="https://github.com/rstudio4edu/rstudio4edu-book/"> Style adapted from: rstudio4edu-book </a> <a href ="https://creativecommons.org/licenses/by/2.0/"> (CC-BY 2.0) </a></p>
+<p style="padding-left: 40px;"><div class="trapezoid" style = "padding-left: 40px;"><span>  <a href="https://forms.gle/VWaJYc3zATe3qxYC9"> Click here to provide feedback</a> <img src="assets/itcr_arrow.png" style=" width: 10%" ></span></div></p>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Course Name</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<head>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+  <!--script src="https://kit.fontawesome.com/6a26f47516.js"></script-->
+  <!--<script src="assets/hideOutput.js"></script>-->
+  <link href="assets/style_DataTrail.css" rel="stylesheet">
+</head>
+        
+
+
+<div class="hero-image-container"> 
+  <img class= "hero-image" src="assets/DataTrail.jpg">
+</div>
+<div id="overview" class="section level1" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Overview</h1>
+<!-- Google Slide ID -->
+<!-- 1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c -->
+<!-- Include a slide PNG with Page_ID from this Slide Deck: -->
+<!-- ![](https://docs.google.com/presentation/d/1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c/export/png?id=1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c&pageid=PAGE_ID) -->
+<!-- or use  `didactr::gs_slide_df("1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c")$png_markdown` -->
+<p>As you start to explore building your own packages, it’s a good idea to first think about packages you’ve already used and what you like or dislike about them. This can be helpful in guiding your thinking as you start writing your own packages, helping to make them as useful as possible to both you and others who may use your packages!</p>
+<p>For example, think of the R package <a href="https://cran.rstudio.com/web/packages/googlesheets/vignettes/basic-usage.html"><code>googlesheets</code></a> from Jenny Bryan. Let’s discuss why this is such a wonderful and widely-used package.</p>
+<p>First, the <strong>name</strong> of the package makes it clear what the package is used for! The <code>googlesheets</code> R package makes working with Google Sheets in R a lot easier! That’s a great start.</p>
+<p>Second, the main functions within that package all begin with <code>gs_</code>. This means that whenever you see <code>gs_</code> in someone else’s code <em>or</em> whenever you’re trying to remember what function from <code>googlesheets</code> you need, you know that it will likely start with <code>gs_</code>, making it easier to use.</p>
+<p>Third, the package is <strong>well-documented</strong> and has <a href="https://cran.rstudio.com/web/packages/googlesheets/vignettes/basic-usage.html"><strong>vignettes</strong></a>. We’ll discuss these in later lessons in this course, but for now what this means is that if you are trying to figure out what a function does, how to get started, or how to use the package overall, a look at the package’s vignettes, peak through the package documentation, or a quick Google search will usually solve your problem quickly and painlessly.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c/export/png?id=1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c&amp;pageid=g5d3c3ba7e1_0_0" alt="googlesheets is a great package" /></p>
+<p>While we’ll get to discussing function naming, documentation, and vignettes in coming lessons, we’ll focus on the first point here - package naming! We’ll also discuss the basic components of an R package and get you on your way to creating your first R package.</p>
+<div id="package-naming" class="section level3" number="2.0.1">
+<h3><span class="header-section-number">2.0.1</span> Package Naming</h3>
+<p>Technically, your package name can be anything, so long as it (1) starts with a letter, (2) only contains letters, numbers, and periods, and (3) does not end with a period.</p>
+<p><em>But</em>, when it comes to naming a package <em>well</em> there are a few additional things to keep in mind. If your package is just for your use, you can name it whatever you want. But, if you have any plans of releasing your package, there are a number of guidelines to follow. And, whether you plan on releasing it or not, it’s probably best to just get in the habit of following these guidelines.</p>
+<p>Your package name should:</p>
+<ol style="list-style-type: decimal">
+<li>make it clear what your package does</li>
+<li>not be the name of an already-existing R package</li>
+<li>all be lowercase</li>
+<li>be as concise as possible</li>
+</ol>
+<p>For example, <code>stringr</code> is a package that makes it easy to work with strings. ‘string’ is right there in the name and the <code>r</code> at the end indicates that it’s an R package.</p>
+<p>Similarly, <code>lubridate</code> makes it easier to work with dates and sounds like the word ‘lubricate’ - a great name for that R package.</p>
+<p>Moving beyond the most obvious cases, <code>dplyr</code> may seem like an odd name for a package, but this package works best for dataframes (the ‘d’ in <code>dplyr</code>), generalizes the “apply” family of functions (the ‘ply’), and uses pliers (‘plyr’).</p>
+<p>As you start writing your own packages, it’s best to spend some time thinking of a good name at the beginning of the process and are sure that an R package by the same name does not already exist</p>
+</div>
+<div id="the-minimal-package" class="section level3" number="2.0.2">
+<h3><span class="header-section-number">2.0.2</span> The Minimal Package</h3>
+<p>Packages do not have to be anywhere near as complex as those that we’ve mentioned so far. Your package does not have to make working with Google Sheets easier, work out how to work with strings/dates, or allow for piping to be a worthwhile package.
+In fact, you can create an R package with a single function, stored in the <code>R/</code> directory and a text file called DESCRIPTION. This is an <a href="https://github.com/kbroman/pkg_primer/tree/gh-pages/example/stage1/R">example of the bare bones</a> needed to create an R package.</p>
+<p>In this and the following two two lessons in this course we’ll work on building a minimal (yet functional!) R package.</p>
+</div>
+<div id="a-strong-package" class="section level3" number="2.0.3">
+<h3><span class="header-section-number">2.0.3</span> A Strong Package</h3>
+<p>However, in order for a package to be useful, a package should have a few additional components. This makes understanding the code/functions in your package and overall usage of your package easily understood by you in the future as well as others trying to use your package.</p>
+<p>Strong Packages also have:</p>
+<ul>
+<li><strong>tests</strong> - code that runs each time your package is built to check to ensure that the behavior of each of your package’s functions are behaving as expected</li>
+<li>good <strong>documentation</strong> - descriptions of each function, the inputs (arguments) it takes, the outputs it returns, and examples of how to use it</li>
+<li><strong>vignettes</strong> - guides and examples demonstrating how to use the functionality of your package</li>
+</ul>
+<p>In the final lessons in this course, we’ll dedicate time to writing a <em>good</em> R package with proper documentation and tests.</p>
+</div>
+<div id="package-types" class="section level3" number="2.0.4">
+<h3><span class="header-section-number">2.0.4</span> Package Types</h3>
+<p>Before we jump into creating your first R package, let’s take a second to lay out the types of packages that exist. Generally, there are five states of an R package:</p>
+<ol style="list-style-type: decimal">
+<li>source</li>
+<li>bundled</li>
+<li>binary</li>
+<li>installed</li>
+<li>in memory</li>
+</ol>
+<p>As you <em>use</em> R packages, it’s typically not important to know or even think about which state your package is currently in. However, as you start to <em>develop</em> R packages and need to debug your packages, understanding these states can help you debug more quickly.</p>
+<div id="source-packages" class="section level4" number="2.0.4.1">
+<h4><span class="header-section-number">2.0.4.1</span> Source Packages</h4>
+<p>Source Packages are those packages you’re developing on your computer. It’s a bunch of functions stored in an <code>R/</code> directory along with a DESCRIPTION text file. As we create your R package in this course, add functions, and edit documentation, we’ll be working with the source package.</p>
+</div>
+<div id="bundled-packages" class="section level4" number="2.0.4.2">
+<h4><span class="header-section-number">2.0.4.2</span> Bundled Packages</h4>
+<p>Bundled packages are those where all components of the package have been compressed into a single file (usually with the extension <code>tar.gz</code>). You will typically not encounter or work with bundled packages - they are used to move between other states.</p>
+</div>
+<div id="binary-packages" class="section level4" number="2.0.4.3">
+<h4><span class="header-section-number">2.0.4.3</span> Binary Packages</h4>
+<p>Like bundled packages, binary packages are also a single, compressed file. However, when decompressed, bundled packages have a structure very similar to source packages - or what’s on your computer. Binary packages, on the other hand, have a very different internal structure. For example, functions are not stored in <code>.R</code> files in the <code>R/</code> directory as they are in source packages.</p>
+<p>What’s important to know about binary packages is that they are platform-specific. This means that someone who has a Windows laptop will need a different binary package (a file that ends in <em>.zip</em>) than a Mac user (who would need a file that ends in <em>.tgz</em>).</p>
+</div>
+<div id="installed-packages" class="section level4" number="2.0.4.4">
+<h4><span class="header-section-number">2.0.4.4</span> Installed Packages</h4>
+<p>Installed packages are binary packages that have been decompressed into a package library (we’ll talk about these in just a second!). Packages can be installed in a number of ways.</p>
+<p>For example, we’ve discussed that for packages on CRAN, you can use <code>install.packages()</code>. What this does is take the binary package stored on CRAN that is appropriate for the Computer platform you’re using, downloads the binary package to your computer, decompresses it, and stores that in your package library.</p>
+<p>However, to install a package from GitHub, we’ve noted that you can use <code>devtools::install_github()</code>. This takes the <strong>source package</strong> on GitHub, bundles it into a <strong>bundled package</strong>, decompresses that file and then installs the package into your package library.</p>
+<p>While it’s not super important to understand the details of each state a package can be in, it’s important to be at least aware, as you will run into different package states along the way.</p>
+</div>
+<div id="in-memory-packages" class="section level4" number="2.0.4.5">
+<h4><span class="header-section-number">2.0.4.5</span> In-Memory Packages</h4>
+<p>We’ve discussed previously that there is a difference between installing and loading a package. To use the functions within a package, it first has to be installed. This is done most typically with either <code>install.packages()</code> or <code>install_github()</code> from <code>devtools</code>.</p>
+<p>After installation, however, you can’t actually use the functions until you load the package into memory (our final package state!). So far we’ve used <code>library()</code> to load the package into package. This loads the package when you use <code>library()</code>, making its functionality available to you.</p>
+<p>Something we haven’t discussed in detail yet, however, is that you can use a function without loading the entire package into memory by calling the package and function name separated by two colons. For example, if you haven’t loaded <code>devtools</code> into memory but want to use <code>install_github()</code> from devtools you can call <code>devtools::install_github()</code> to use that function. We’ll use this format frequently throughout package development.</p>
+<p>We’ll avoid using <code>library()</code> in package development, as it requires the package be installed before being able to use the package’s functions. Instead, we’ll use the <code>package::function()</code> format frequently in package development.</p>
+</div>
+</div>
+<div id="a-note-on-library" class="section level3" number="2.0.5">
+<h3><span class="header-section-number">2.0.5</span> A note on <code>library()</code></h3>
+<p>As discussed in the <a href="https://leanpub.com/universities/courses/jhu/cbds-intro-r">Introduction to R</a> course, packages you’ve installed are stored in your package library. The function <code>.libPaths()</code> will tell you where on your computer your installed packages are stored.</p>
+<p>Whenever you call <code>library()</code> on package, R will look in this path for a directory with the specified package’s name and load that package into memory.</p>
+</div>
+<div id="getting-started-your-first-r-package" class="section level3" number="2.0.6">
+<h3><span class="header-section-number">2.0.6</span> Getting Started: Your First R Package</h3>
+<p>RStudio has a bunch of built-in functionality to help make package development simpler, and you can take advantage of this functionality on RStudio Cloud. In fact getting started building your first R package requires just a few steps!</p>
+<p>We suggest you follow along as the following lessons in this course will refer back to the skeleton package we create in this lesson.</p>
+<div id="step-1-create-new-project-on-rstudio-cloud" class="section level4" number="2.0.6.1">
+<h4><span class="header-section-number">2.0.6.1</span> Step 1: Create New Project on RStudio Cloud</h4>
+<p>As you’ve done previously, you’ll start by going to <a href="https://rstudio.cloud">Rstudio Cloud</a> and creating a new project.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c/export/png?id=1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c&amp;pageid=g5d3c3ba7e1_0_177" alt="Create a New Project" /></p>
+<p>We’re going to create a package called <code>cbds</code>, so you can should this project ‘cbds’. Now, we talked previously about how having a good name for your package is important. Because this is just a package being created as an example, <code>cbds</code> is a fine name. But, if it were a package being used for a specific purpose or one to be released out into the world, you should spend more time and think of a better name for sure!</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c/export/png?id=1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c&amp;pageid=g5d3c3ba7e1_0_172" alt="Rename project: cbds" /></p>
+</div>
+<div id="step-2-install-usethis" class="section level4" number="2.0.6.2">
+<h4><span class="header-section-number">2.0.6.2</span> Step 2: Install <code>usethis</code></h4>
+<p>Up to this point, this should all be pretty familiar. However, now we get into the fun stuff! As with most things in R, there’s a package called <code>usethis</code> for helping people develop packages! As described on their website, <a href="https://usethis.r-lib.org/"><code>usethis</code></a> “is a workflow package: it automates repetitive tasks that arise during project setup and development, both for R packages and non-package projects.” Sounds like just the thing we want!</p>
+<p>To get starting using <code>usethis</code>, we’ll have to first install it!</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="overview.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install package</span></span>
+<span id="cb1-2"><a href="overview.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;usethis&quot;</span>)</span></code></pre></div>
+</div>
+<div id="step-3-create-package" class="section level4" number="2.0.6.3">
+<h4><span class="header-section-number">2.0.6.3</span> Step 3: Create Package</h4>
+<p>Now, you’re ready to create your first package. To do this we’ll load <code>usethis</code> into memory and then use the <code>create_package()</code> function to create our project that will store the source package!</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="overview.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load package</span></span>
+<span id="cb2-2"><a href="overview.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(usethis)</span>
+<span id="cb2-3"><a href="overview.html#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="overview.html#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new package</span></span>
+<span id="cb2-5"><a href="overview.html#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">create_package</span>(<span class="st">&quot;cbds&quot;</span>)</span></code></pre></div>
+<p>When you run this code, you’ll get a warning message asking you if you want to create the package anyway. Choose the numeric option (here, it’s 3) that corresponds to “Yup”.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c/export/png?id=1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c&amp;pageid=g5d3c3bad68_0_22" alt="create_package()" /></p>
+<p>You’ll then be prompted to see if you want to Switch Projects.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c/export/png?id=1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c&amp;pageid=g5d3c3bad68_0_27" alt="Select “Save” to Switch Projects" /></p>
+<p>Click Save when asked if you want to Save workspace image to <code>/cloud/project/.RData</code> and you’ll be moved into the directory <code>cbds/</code>.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c/export/png?id=1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c&amp;pageid=g5d3c3bad68_0_32" alt="cbds package directory and Build tab" /></p>
+<p>Notice that you’re now within <code>/cloud/project/cbds</code> and that a number of files are visible here. These have all been created for you thanks to the <code>create_package()</code> function from <code>usethis</code>. Earlier we mentioned that a minimal package has a folder called <code>R/</code> and a text file called DESCRIPTION. Both of those have been created for you! This means that you have a minimal package already…in just a few short steps!</p>
+<div id="aside-rstudio-project-files" class="section level5" number="2.0.6.3.1">
+<h5><span class="header-section-number">2.0.6.3.1</span> Aside: RStudio Project Files</h5>
+<p>The reason we get this message asking us if we want to create a project within an existing project while telling us this is generally not a good idea has to do with the fact that we’re building this on RStudio Cloud, rather than RStudio on our local computer.</p>
+<p>Something we haven’t discussed a ton up to this point is that everything on RStudio Cloud is organized into projects.Within each project a project.Rproj file is created. <code>.Rproj</code> files are text files that keep track of information about your project.</p>
+<p>Packages also require an .Rproj file within the package directory. Because RStudio Cloud already has a .Rproj file by default for the project space, we see this message.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c/export/png?id=1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c&amp;pageid=g5d3c3bad68_0_64" alt="Creating packages in RStudio Cloud creates an .Rproj file" /></p>
+</div>
+</div>
+<div id="step-4-build-package" class="section level4" number="2.0.6.4">
+<h4><span class="header-section-number">2.0.6.4</span> Step 4: Build Package</h4>
+<p>You should also notice on RStudio Cloud that a “Build” tab is now visible at the top-right. If you click on “Install and Restart”, RStudio will build your package from the source package files in this directory, restart R in the console, and load your package into R. A log of what’s happening will also be kept in the Build tab.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c/export/png?id=1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c&amp;pageid=g5d3c3bad68_0_78" alt="Install and Restart from the Build tab" /></p>
+<p>Here, you’ve built your package from the source package files in this directory; however, we haven’t actually added any functions to this package yet. That’s what we’ll do in a coming lesson. Once we do that, we’ll build the package and test out its functionality!</p>
+</div>
+</div>
+<div id="summary-1" class="section level3" number="2.0.7">
+<h3><span class="header-section-number">2.0.7</span> Summary</h3>
+<p>In this lesson we’ve covered package naming, what is required for the minimal R package, what’s needed to make a <em>good</em> R package, and got started creating our R package using the <code>usethis</code> package. In coming lessons we’ll add functionality, documentation, tests, and vignettes to our package as you get more and more comfortable using RStudio Cloud for package development!</p>
+</div>
+<div id="additional-resources-1" class="section level3" number="2.0.8">
+<h3><span class="header-section-number">2.0.8</span> Additional Resources</h3>
+<ul>
+<li><a href="https://kbroman.org/pkg_primer/pages/minimal.html">The minimal R package</a>, by Karl Broman</li>
+<li><a href="https://usethis.r-lib.org/"><code>usethis</code> documentation</a>, by Jenny Bryan and Hadley Wickham</li>
+<li><a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html">Writing R Extensions</a>, from the R Core Team</li>
+</ul>
+</div>
+<div id="slides-and-video-1" class="section level3" number="2.0.9">
+<h3><span class="header-section-number">2.0.9</span> Slides and Video</h3>
+<div class="figure">
+<img src="https://www.youtube.com/watch?v=O0Tpi1azWNo" alt="" />
+<p class="caption">Overview</p>
+</div>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c/edit?usp=sharing">Slides</a></li>
+</ul>
+
+</div>
+</div>
+<hr>
+<center> 
+  <div class="footer">
+      All illustrations <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY. </a>
+      <br>
+      All other materials <a href= "https://creativecommons.org/licenses/by/4.0/"> CC-BY </a> unless noted otherwise.
+  </div>
+</center>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="building-r-packages.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
