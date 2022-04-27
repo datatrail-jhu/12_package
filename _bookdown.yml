@@ -1,0 +1,23 @@
+book_filename: "DataTrail"
+chapter_name: "Chapter "
+repo: https://github.com/jhudsl/OTTR_Template/
+rmd_files: ["index.Rmd",
+            "00_packages.Rmd",
+            "01_overview.Rmd",
+            "02_functions.Rmd",
+            "03_code.Rmd",
+            "04_testing.Rmd",
+            "05_description.Rmd",
+            "06_documentation.Rmd",
+            "07_vignettes.Rmd",
+            "08_data.Rmd",
+            "09_release.Rmd",
+            "About.Rmd",
+            "References.Rmd"]
+new_session: yes
+bibliography: [book.bib]
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: "Chapter"
+output_dir: "docs"

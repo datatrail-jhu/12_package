@@ -42,19 +42,19 @@ Now, it's time to set up the global options for the workspace, which will allow 
 Within this window, select Git/SVN from the menu on the left, then click on "Create RSA Key..."
 
 {format: png}
-![Create RSA Key](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_6) 
+![Create RSA Key](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_6)
 
 In the window that pops up, choose a passphrase and type it into both boxes. Remember this passphrase as you will need to type it in shortly. Then, click "Create".
 
 {format: png}
-![Create Passphrase](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_16) 
+![Create Passphrase](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_16)
 
 This will return you to the Options window. On this window, click on "View public key". In the window that pops up, copy all the text for your key.
 
 {format: png}
 ![View public key](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_101)
 
-You've now generated an RSA key for your project. It's time to let GitHub know about this key so that it can verify who you are. To do so, go to [http://github.com/keys]. In this window, click on "New SSH key". 
+You've now generated an RSA key for your project. It's time to let GitHub know about this key so that it can verify who you are. To do so, go to [http://github.com/keys]. In this window, click on "New SSH key".
 
 {format: png}
 ![New SSH key on GitHub](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_89)
@@ -126,17 +126,17 @@ git push -u origin master
 {format: png}
 ![connect to remote GitHub repo](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_187)
 
-Copy this text and then paste it into the Terminal on RStudio Cloud. 
+Copy this text and then paste it into the Terminal on RStudio Cloud.
 
-Upon pressing enter (and executing these commands), you will be asked first if you want to use the RSA key fingerprint that you generated. Type "yes". 
+Upon pressing enter (and executing these commands), you will be asked first if you want to use the RSA key fingerprint that you generated. Type "yes".
 
 Then, you will be asked for your passphrase. This is the passphrase you created when generating your RSA key. Type that now and press enter.
 
 {format: png}
 ![Type yes and enter passphrase](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_74)
 
-And, with that, your package will be pushed to GitHub! 
- 
+And, with that, your package will be pushed to GitHub!
+
 {format: png}
 ![Package on GitHub](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_78)
 
@@ -159,7 +159,7 @@ So, for this package we would use the following in the Console:
 # install from GitHub
 devtools::install_github("janeeverydaydoe/cbds")
 ```
-  
+
 With that, the package has been installed. Then, you just have to load it using `library(cbds)` to start using the functionality within the package.
 
 {format: png}
@@ -169,7 +169,7 @@ With that, the package has been installed. Then, you just have to load it using 
 
 In this lesson we noted that there are stricter rules and requirements for packages if you want to release them on CRAN or Bioconductor. While we won't be going into detail here, if you want more details, the [R Packages](https://r-pkgs.org) book is a great resource with lots of information about building a package for CRAN.
 
-Nevertheless, we do want to mention that there is a way to check your packages for common issues. There is a helpful function `R CMD check` that you can use to check for these common issues. The more frequently you check your package during development, the better. This way you identify issues along the way shortly after you've written a function or test. This avoids having *tons* of issues at the end of package development and will make your life easier overall at the end when you release the package. 
+Nevertheless, we do want to mention that there is a way to check your packages for common issues. There is a helpful function `R CMD check` that you can use to check for these common issues. The more frequently you check your package during development, the better. This way you identify issues along the way shortly after you've written a function or test. This avoids having *tons* of issues at the end of package development and will make your life easier overall at the end when you release the package.
 
 The easiest way to check your package is to click on the Check icon within the Build tab.
 
@@ -234,7 +234,7 @@ Execute this function and you'll see that a file `travis.yml` is generated.
 {format: png}
 ![`usethis::use_travis()`](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_278)
 
-If you open this up, you'll notice that a few lines of information have been added there. 
+If you open this up, you'll notice that a few lines of information have been added there.
 
 {format: png}
 ![`travis.yml`](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_283)
@@ -280,13 +280,13 @@ Eventually, Travis should indicate a successful build with a green check mark! U
 
 ### Versioning
 
-We specified a version number within our DESCRIPTION file in an earlier lesson in this course, but we didn't fully explain how versioning works. 
+We specified a version number within our DESCRIPTION file in an earlier lesson in this course, but we didn't fully explain how versioning works.
 
 We mentioned previously that:
 
 > your package's version will contain three numbers, separated by periods. Those numbers correspond to <major>.<minor>.<patch>. For example, 1.0.0 would be the first released version of your package. As you patch the package (make a small change), the patch value would increase, such that the next version may be 1.0.1. We'll discuss what major, minor, and patch mean in the context of versioning in the final lesson in this course.
 
-So far, we've been using the version "0.0.0.9000". The fact that there are three zeroes indicates that this is still a development version. 9000 is a somewhat arbitrary number, but it's helpful to use this to indicate that this is not a "typical" released version. 
+So far, we've been using the version "0.0.0.9000". The fact that there are three zeroes indicates that this is still a development version. 9000 is a somewhat arbitrary number, but it's helpful to use this to indicate that this is not a "typical" released version.
 
 Upon release, you'll want to drop the dev number, which is why your first released version is "1.0.0". Here the major version is "1" and the minor and patch are both "0". If you were to fix bugs without adding new functionality to your package, you'd want to increase your **patch**. For example, you would update your version to be "1.0.1." However, patch numbers remain 0 from one version to the next.
 
@@ -326,7 +326,7 @@ In the file that is generated, for now, we can just edit the text to include tha
 {format: png}
 ![Edit file](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_1_15)
 
-Once edited, you'll click Preview to knit the file. You're then ready to add, commit, and push the changes to your repo. 
+Once edited, you'll click Preview to knit the file. You're then ready to add, commit, and push the changes to your repo.
 
 {format: png}
 ![Commit and push changes](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_1_20)
@@ -349,50 +349,3 @@ In this lesson we've covered a whole lot. We've discussed how to release this pa
 ![Release](https://youtu.be/GfSWRhOGhiA)
 
   - [Slides](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/edit?usp=sharing)
-
-{quiz, id: quiz_09_release}
-
-### Release quiz
-
-{choose-answers: 4} 
-? What did creating the RSA accomplish?
-
-
-C) Verified to GitHub who we are so that we don't have to type in our Username and password every time we push to GitHub
-o) Verified to Travis who we are so that we don't have to type in our Username and password every time we push to GitHub
-o) Verified to CRAN who we are so that we don't have to type in our Username and password every time we push to GitHub
-o) Identifies who are so that GitHub believes us when we type in our Username and password every time we push to GitHub
-o) Identifies who are so that Travis believes us when we type in our Username and password every time we push to GitHub
-o) Identifies who are so that CRAN believes us when we type in our Username and password every time we push to GitHub
-
-{choose-answers: 4} 
-? Fill in the blank: There are the fewest requirements for releasing a package on \_\_\_\_\_\_.
-
-C) GitHub
-o) Travis
-o) Bioconductor
-o) Rstudio
-o) RStudio Cloud
-o) CRAN
-
-{choose-answers: 4} 
-? Which of the following does Travis accomplish?
-
-C) automatically checks package every time changes are pushed to GitHub
-o) generates package structure needed for package development
-o) auto-generates README and updates package version
-o) Releases your package on CRAN
-o) Releases your package on GitHub
-o) Releases your packages on Bioconductor
-
-{choose-answers: 4} 
-? Which of the following approaches enables you to download a package from GitHub?
-
-C) `devtools::install_github()`
-o) `install.packages()`
-o) `devtools::install.github()`
-o) `devtools::install.packages()`
-o) `install_packages()`
-o) `install_git()`
-
-{/quiz}

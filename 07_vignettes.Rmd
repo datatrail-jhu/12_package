@@ -7,13 +7,13 @@
 <!-- ![](https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&pageid=PAGE_ID) -->
 <!-- or use  `didactr::gs_slide_df("1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ")$png_markdown` -->
 
-So far in this course we've discussed what R packages are, reviewed functions, and created a package with a complete DESCRIPTION file (including all metadata) and two functions, including both tests and documentation for those functions. At this point our package is in pretty good shape. 
+So far in this course we've discussed what R packages are, reviewed functions, and created a package with a complete DESCRIPTION file (including all metadata) and two functions, including both tests and documentation for those functions. At this point our package is in pretty good shape.
 
 It has documentation explaining to users how to use each function, which is great! What it doesn't have yet is long-form documentation in the form of vignettes. Rather than object documentation, which tells users how to use each individual piece of your package, vignettes help explain how the whole package fits together. It explains the functionality within your package and explains how it all works together, showing users through examples.
 
 ### Vignettes
 
-Vignettes are long-form documentation in that they demonstrate how all the pieces of your package fit together. Admittedly, the package we're creating in this course only has two pieces and they aren't necessarily related; however, as you add functionality to your personal package, you could see that some pieces may be more related to one another. Grouping these together within your vignette than makes sense. 
+Vignettes are long-form documentation in that they demonstrate how all the pieces of your package fit together. Admittedly, the package we're creating in this course only has two pieces and they aren't necessarily related; however, as you add functionality to your personal package, you could see that some pieces may be more related to one another. Grouping these together within your vignette than makes sense.
 
 And, the best way to do this involves technology with which you're likely already familiar! Vignettes are written as R Markdown documents. (If you're unfamiliar with R Markdown, refer back to the [Introduction to R](https://leanpub.com/universities/courses/jhu/cbds-intro-r) course.) This means that it's very easy to intermingle code and text explaining the code/thought process together in the same document. Good vignettes that a good package and make it a great package because it makes it easier for users to *just get started* with the package.
 
@@ -45,9 +45,9 @@ To see the vignettes in a package, you can use the `browseVignettes()` function 
 To get a sense of what vignettes a package should have and what they look like, we'll take a look more closely at the vignettes within the `googlesheets` package. At the time of writing this lesson, there are four vignettes in the `googlesheets` package:
 
 1. Formulas and formatted numbers
-2. googlesheets Basic Usage 
-3. Managing Auth Tokens 
-4. Use an alternative browser 
+2. googlesheets Basic Usage
+3. Managing Auth Tokens
+4. Use an alternative browser
 
 From their titles you can see that each plays a different role. The Basic Usage vignette is likely where most people would start. However, if after using this package, you found yourself running into trouble working with formulas in googlesheets, you'd likely check out the "Formulas and formatted numbers" vignette. If you were struggling to understand your authorization in the package, you would look at the "Managing Auth Tokens" vignette. And, if you wanted to use an alternative browser, you'd check out the last vignette listed above.
 
@@ -55,7 +55,7 @@ As the "googlesheets Basic Usage" vignette is where most people would start, tha
 
 {format: png}
 !["googlesheets Basic Usage"](https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&pageid=g5dd7d7062c_0_82)
-  
+
 At the top of the vignette, in addition to the title, you have information about who authored the vignette and when it was last updated. And, in the most helpful vignettes, there is a table of contents where you can see clearly what's included throughout the vignette. By looking at the topics here you can see that all of the basic functions you would want to accomplish using the `googlesheets` package (reading in a google sheet, creating a new google sheet, editing an existing sheet, etc.) are all documented within this vignette.
 
 Let's focus in on ["List Your Google Sheets"](https://cran.r-project.org/web/packages/googlesheets/vignettes/basic-usage.html#list-your-google-sheets). If we click on that link within the table of contents, we'll be brought to the part of the vignette that explains how to accomplish listing all of your google sheets.
@@ -85,7 +85,7 @@ What this does:
 
 1. Adds needed packages to DESCRIPTION file automatically for you
 2. Creates `inst/doc` and adds this directory to .gitignore (so that built vignettes are not version controlled)
-3. Adds `vignettes/*.html` and `vignettes/*.R` to .gitignore 
+3. Adds `vignettes/*.html` and `vignettes/*.R` to .gitignore
 
 To do this, you may have to first install `knitr` (if you haven't previously) and then run then use the following code:
 
@@ -100,7 +100,7 @@ With this, you'll see a new file (get-started.Rmd) has been added to your `vigne
 {format: png}
 ![Vignette file generated from `use_vignette()`](https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&pageid=g5f4c3822f3_0_0)
 
-Note that within the `get-started.Rmd` document, some required YAML information at the top of the document as well as two code chunks have been added for you. But, aside from a line of code loading in your package (`library(cbds)`) being included for you, none of this is specific to *your* package yet. It's time to personalize this document and make this vignette a helpful long-form piece of documentation to accompany your package! 
+Note that within the `get-started.Rmd` document, some required YAML information at the top of the document as well as two code chunks have been added for you. But, aside from a line of code loading in your package (`library(cbds)`) being included for you, none of this is specific to *your* package yet. It's time to personalize this document and make this vignette a helpful long-form piece of documentation to accompany your package!
 
 {format: png}
 ![`get-started.Rmd` contains skeleton but requires that you add information about your package](https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&pageid=g5f4c3822f3_0_10)
@@ -133,17 +133,17 @@ Note that `r Sys.Date()` will add today's date any time this document is Knit. T
 
 #### Vignettes in R Markdown
 
-The rest of this document is written as all other R Markdown documents you've worked with previously. There's space for text (using Markdown syntax) and code (using R chunks)! 
+The rest of this document is written as all other R Markdown documents you've worked with previously. There's space for text (using Markdown syntax) and code (using R chunks)!
 
 And, after adding all necessary text and code to explain how to use your package, you'll use Knitr - just like before! - to Knit your document (running all of the code within the R chunks!) into a beautiful HTML document!
 
-As we mentioned previously, vignettes are used to demonstrate the functionality of your package *and* how all the pieces fit together. This is the document where you get to show off what you've built and make it easier for others to use - a win-win! 
+As we mentioned previously, vignettes are used to demonstrate the functionality of your package *and* how all the pieces fit together. This is the document where you get to show off what you've built and make it easier for others to use - a win-win!
 
 ### Write for Beginners
 
 So, we've generated the file for our vignette, but we haven't added any information to it, specific to our package's functionality yet. Now we'll fix that. And, we'll do it while talking about how to write helpful and good vignettes.
 
-The most important piece of advice to remember when writing a vignette is that other people have *not* used your package before. It's important to include all the necessary information someone new to your package would need to know. Don't skip steps that you're familiar with because others will not be as familiar. Include helpful examples and text explaining them so that others, who are beginners, will be able to follow along with ease. 
+The most important piece of advice to remember when writing a vignette is that other people have *not* used your package before. It's important to include all the necessary information someone new to your package would need to know. Don't skip steps that you're familiar with because others will not be as familiar. Include helpful examples and text explaining them so that others, who are beginners, will be able to follow along with ease.
 
 Okay, with that in mind, let's add some examples and text to our vignette!
 
@@ -179,7 +179,7 @@ To ensure that there are no errors in the code you've written, it's always a goo
 ![Run code chunks to ensure the code executes without error](https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&pageid=g5f4c3822f3_0_42)
 
 
-#### Step 4: Repeat Steps 1-3 
+#### Step 4: Repeat Steps 1-3
 
 At this point, we have an introduction and data to work with, so we're ready to continue adding text and code to demonstrate how the functions in our package work.
 
@@ -260,50 +260,3 @@ At this point you have a pretty complete and well-documented package that includ
 ![Vignettes](https://youtu.be/rosqnrEJeAA)
 
   - [Slides](https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/edit?usp=sharing)
-
-{quiz, id: quiz_07_vignettes}
-
-### Vignettes quiz
-
-{choose-answers: 4} 
-? Why spend time writing vignettes?
-
-C) They're long-form documentation that helps explain and demonstrate through text and code how to use your package.
-o) They store unit tests which demonstrate that your package works correctly.
-o) They allow you to document each functions inputs and outputs using roxygen. 
-o) They provide a space where using code alone you can explain your package.
-o) They provide a space where using text alone you can explain your package.
-o) They're long-form documentation that helps explain and demonstrate through text alone how to use your package.
-o) They're long-form documentation that helps explain and demonstrate through code alone how to use your package.
-
-{choose-answers: 4} 
-? Who is your target audience when writing vignettes?
-
-C) Beginners
-o) Yourself
-o) Intermediate programmers
-o) Advanced programmers
-o) People familiar with your work
-o) Other developers you worked with on the package development
-
-{choose-answers: 4} 
-? Why didn't we use Clean & Rebuild from the Build tab in this lesson?
-
-C) Clean & Rebuild skips building vignettes to save time.
-o) Clean & Rebuild builds vignettes incorrectly.
-o) Clean & Rebuild only builds vignettes and not the package 
-o) Clean & Rebuild will error out if vignettes are in your package.
-o) Clean & Rebuild does not know how to work with the `devtools` package.
-
-{choose-answers: 4} 
-? Which of the following is TRUE about package vignettes?
-
-C) Vignettes use text and code to demonstrate functionality
-o) Each package should have one and only one vignette.
-o) Vignettes are the only form of documentation in R packages.
-o) Vignettes are the appropriate place to store package function code.
-o) Vignettes document individual functions.
-o) Vignettes are the appropriate place to store package data.
-
-
-{/quiz}

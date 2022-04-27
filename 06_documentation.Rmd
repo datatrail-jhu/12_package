@@ -8,21 +8,21 @@
 <!-- ![](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=PAGE_ID) -->
 <!-- or use  `didactr::gs_slide_df("1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ")$png_markdown` -->
 
-So far in this course we've gotten to the point where you should have a functional package. The package has two functions, two tests, and a complete DESCRIPTION file. However, while this package is usable by you at this point, it's likely not usable by others ...or even by future you. Without proper documentation, the utility of any package (or any piece of software for that matter!) is limited. 
+So far in this course we've gotten to the point where you should have a functional package. The package has two functions, two tests, and a complete DESCRIPTION file. However, while this package is usable by you at this point, it's likely not usable by others ...or even by future you. Without proper documentation, the utility of any package (or any piece of software for that matter!) is limited.
 
-### Why Document? 
+### Why Document?
 
 Documentation is *incredibly* important and largely undervalued. We often get too focused on writing the code and don't spend the required time to document our code. This lesson is a warning against that! As you write the code **also write the documentation**. You'll save yourself time by doing it in the moment in that you won't have to remember in the future what your code does. And, future you (and others if you release the package) will be able to use your package quickly and with ease.
 
-Now, writing good documentation takes practice. And, we all know that practice makes perfect. So, it's best to practice writing good documentation on your own personal package so that when you release packages, you're already good at it! 
+Now, writing good documentation takes practice. And, we all know that practice makes perfect. So, it's best to practice writing good documentation on your own personal package so that when you release packages, you're already good at it!
 
 Okay, enough of the pep talk, let's get to documenting!
 
 ### `roxygen2`
 
-There are multiple types of documentation. In the next lesson we'll talk about long-form documentation (in the form of vignettes), but in this lesson we're going to focus on **object** documentation. This is the documentation that you see anytime you use `?` or the `help()` functions in R. 
+There are multiple types of documentation. In the next lesson we'll talk about long-form documentation (in the form of vignettes), but in this lesson we're going to focus on **object** documentation. This is the documentation that you see anytime you use `?` or the `help()` functions in R.
 
-Previously we used the metaphor that R packages are like books in a library. The library stores all the packages you've installed. Extending this metaphor, if each R package is a book, documentation is the Glossary in the back of the book. It allows you to look up a function and receive definitions of what that function does and how to use it. 
+Previously we used the metaphor that R packages are like books in a library. The library stores all the packages you've installed. Extending this metaphor, if each R package is a book, documentation is the Glossary in the back of the book. It allows you to look up a function and receive definitions of what that function does and how to use it.
 
 The standard way of documenting objects (such as functions) is to write files including the object's documentation and store them with the .Rd extension in the `man/` directory. If you're currently looking at your `cbds` package, you may be thinking to yourself "Um...there isn't a `man/` directory..." And you're right, there isn't...yet!
 
@@ -56,15 +56,15 @@ To get started documenting your package, **roxygen comments** -- which are speci
 install.packages("roxygen2")
 ```
 
-Then, return to (open) your `check_na.R` file from within the `R/` directory. Once open, click on the wand icon within RStudio Cloud and select "Insert Roxygen Skeleton." 
+Then, return to (open) your `check_na.R` file from within the `R/` directory. Once open, click on the wand icon within RStudio Cloud and select "Insert Roxygen Skeleton."
 
 {format: png}
-![Insert Roxygen Skeleton](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_0) 
+![Insert Roxygen Skeleton](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_0)
 
-This will get you started with what's necessary for documenting your function using `roxygen2`. Specifically, this will add a *block*, or a number of lines at the top of your file containing roxygen comments. Blocks include *tags*. Tags take the format: `@tag_name information` 
+This will get you started with what's necessary for documenting your function using `roxygen2`. Specifically, this will add a *block*, or a number of lines at the top of your file containing roxygen comments. Blocks include *tags*. Tags take the format: `@tag_name information`
 
 {format: png}
-![Add roxygen comments in block at top of function](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_6) 
+![Add roxygen comments in block at top of function](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_6)
 
 Note that within roxygen comments "@" therefore has a special meaning. If you ever want to use an actual "@" symbol (for email addresses, for example), you'll need to use "@@".
 
@@ -74,14 +74,14 @@ The required information within this block are the title (first sentence) and de
 
 ##### Title & Description
 
-For each object you document, the **title** should be a single line, written in sentence case (First word capitalized), and should *not* end in a period. The title should briefly explain the function's purpose. 
+For each object you document, the **title** should be a single line, written in sentence case (First word capitalized), and should *not* end in a period. The title should briefly explain the function's purpose.
 
 The **description** should briefly (in a few sentences) describe what the function does.
 
 To see this clearly, let's use `?ggplot` (after loading the `ggplot2` library into RStudio Cloud) to see how these pieces go on to look in the documentation.
 
 {format: png}
-![title and description in `ggplot` function](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_6) 
+![title and description in `ggplot` function](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_6)
 
 Now, having seen an example, let's add this specific information necessary to use *your* function.
 
@@ -92,19 +92,19 @@ Within the `check_na.R` file, let's first replace "Title" with "Return missingne
 ```r
 #' Return missingness info for a variable
 #'
-#' Take variable as input and compute the number of total observations, 
+#' Take variable as input and compute the number of total observations,
 #' number of missing observations and number of non-missing observations.
 ```
 
 The first few lines of your .R file should now look as follows within RStudio Cloud:
 
 {format: png}
-![title and description in roxygen block](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_29) 
+![title and description in roxygen block](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_29)
 
 As a brief aside, if you write a long description in a single line, you can use "Reflow Comment" (from the wand icon) to separate these comments into separate lines, so that no one line is too long (each line should be <80 characters long)  .
 
 {format: png}
-![Reflow Comment](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_24) 
+![Reflow Comment](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_24)
 
 ##### Documenting tags (`@tags`)
 
@@ -120,7 +120,7 @@ These come after the introduction block that we just worked on and are used for 
 
 This tag takes the following form: `@param name description`.
 
-`name` should be replaced by the input parameter's name for each input to your function. 
+`name` should be replaced by the input parameter's name for each input to your function.
 
 `description` should include a summary of the type of the parameter (i.e. numeric) and what the parameter does. It should start with a capital letter and end with a period. It can take multiple lines. Every single parameter must be documented.
 
@@ -132,11 +132,11 @@ This tag takes the following form: `@return description`.
 
 **`@examples`**
 
-This tag is *incredibly* important. Many people look to examples first to get an understanding of what a function does and how to use it. This should include R code that can be run (executed) without error. 
+This tag is *incredibly* important. Many people look to examples first to get an understanding of what a function does and how to use it. This should include R code that can be run (executed) without error.
 
 **@tags: `check_na.R`**
 
-Within `check_na.R`, we'll want to document our input parameter, explain what the function returns, and provide an example of how to use the function. 
+Within `check_na.R`, we'll want to document our input parameter, explain what the function returns, and provide an example of how to use the function.
 
 Within our roxygen comments this would look as follows:
 
@@ -158,31 +158,31 @@ Note the following:
 2. We've included two examples, each of which will execute without error
 
 {format: png}
-![@tags within `check_na.R`](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_39) 
+![@tags within `check_na.R`](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_39)
 
 Also, you may see a tag in there that we haven't talked about yet. The **`@export`** tag indicates that this function should be added to the NAMESPACE file. While we haven't discussed that file and won't be editing it manually, it's important to know that functions included in the NAMESPACE are functions you want users of your package to have access to. So, if you want this function to be available to users, include the `@export` tag.
 
 Note that sometimes you'll have functions that are used internally by other functions within your package and you won't want them to be exported (available to users). However, for this first package and for most packages you write as you get started, you'll likely want to `@export` each of your functions.
 
 {format: png}
-![@export tag makes function usable to users](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_46) 
+![@export tag makes function usable to users](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_46)
 
 #### Step 3: Generate documentation
 
 Now that you've add the required information to your function in the roxygen comments, you're ready to generate your documentation. To do this, return to the "Build" tab in RStudio Cloud, click on "More" and select "Document" from the drop-down menu.
 
 {format: png}
-![Document](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_58) 
+![Document](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_58)
 
 This will generate the documentation and give you a readout of what it's doing in the process:
 
 {format: png}
-![Generate documentation](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_63) 
+![Generate documentation](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_63)
 
-This results in the the `man/` documentation being generated for you. 
+This results in the the `man/` documentation being generated for you.
 
 {format: png}
-![`man/` directory generated](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_68) 
+![`man/` directory generated](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_68)
 
 Within the `man/` directory, you'll see that the `.Rd` file has been generated for you from the roxygen comments in your .R file.
 
@@ -193,16 +193,16 @@ It's finally time to take a look at your documentation using the `?` function.
 To do so, "Install and Restart" from the Build tab.
 
 {format: png}
-!["Install and Restart"](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_74) 
+!["Install and Restart"](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_74)
 
 You're now ready to view your function's technology! To do so, run `?check_na` from the console. Your documentation will be viewable in the Help tab!
 
 {format: png}
-![Documentation in View Tab](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_79) 
+![Documentation in View Tab](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_79)
 
 ### Documenting `theme_cbds()`
 
-We've walked through the steps to document a single function; however, you have a second function in your package! You'll want to be sure to repeat these steps to document `theme_cbds()`. 
+We've walked through the steps to document a single function; however, you have a second function in your package! You'll want to be sure to repeat these steps to document `theme_cbds()`.
 
 For example, your file could include the following roxygen comment block:
 
@@ -229,19 +229,19 @@ For example, your file could include the following roxygen comment block:
 #'   theme_cbds()
 ```
 
-There are a few new ideas in this block. Something we haven't talked about yet is text formatting in .Rd documentation files. 
+There are a few new ideas in this block. Something we haven't talked about yet is text formatting in .Rd documentation files.
 
 {format: png}
-![Formatting and linking possible within documentation](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_114) 
+![Formatting and linking possible within documentation](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_114)
 
 Specifically, you can italicize (`\emph{text}`), bold (`\strong{text}`), or specify that text should be formatted as code (`\code{code}`) within your documentation.
 
-Additionally you can include links to *other* documentation. For another function within the same package you would specify `\code{\link{function_name}}`. If you wanted, however, to include a link to a function in another R package, you would use `\code{\link[other_package]{function_name}}`. 
+Additionally you can include links to *other* documentation. For another function within the same package you would specify `\code{\link{function_name}}`. If you wanted, however, to include a link to a function in another R package, you would use `\code{\link[other_package]{function_name}}`.
 
 You can see an example text formatting and linking to other packages in the documentation for our `theme_cbds()` function.
 
 {format: png}
-![Formatting and linking in rendered documentation](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_114) 
+![Formatting and linking in rendered documentation](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_114)
 
 Linking to places on the web is also possible using `url{}`, `\href{}`, and `\email{}`. Friendly reminder that the email would require @@.
 
@@ -265,84 +265,3 @@ After this lesson you should have a DESCRIPTION file, two functions, tests for t
 ![Documentation](https://youtu.be/H4i-3XH0Xvc)
 
   - [Slides](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/edit?usp=sharing)
-
-{quiz, id: quiz_06_documentation}
-
-### Documentation quiz
-
-{choose-answers: 4} 
-? For the following `emphasize_text()` function how many `@param` tags would you need to include in your roxygen comments?
-
-```r
-emphasize_text <- function(text, emphasis = "!!!"){
-  out = toupper(text)
-  out = paste0(out, emphasis)
-  return(out)
-}
-```
-
-C) 2
-o) 0
-o) 1
-o) 3
-
-{choose-answers: 4} 
-? Which of the following correctly displays how a roxygen comment starts?
-
-C) `#'`
-o) `#`
-o) `'`
-o) `'#`
-o) `@#`
-o) `#@`
-o) `#'@`
-
-
-{choose-answers: 4} 
-? What type of files are generated from the roxygen comments in your .R files?
-
-C) .Rd
-o) .Rmd
-o) .R
-o) .Rda
-o) .r
-o) .pdf
-o) .png
-
-{choose-answers: 4} 
-? If you wanted to make "Be sure to first read the Getting Started vignette" **bold** in your documentation, how would you do that?
-
-C) \strong{Be sure to first read the Getting Started vignette}
-o) \_\_Be sure to first read the Getting Started vignette\_\_
-o) \*\*Be sure to first read the Getting Started vignette\*\*
-o) \strong{}Be sure to first read the Getting Started vignette
-o) \bold{Be sure to first read the Getting Started vignette}
-o) \bold{}Be sure to first read the Getting Started vignette
-
-{choose-answers: 4} 
-? Which tag specifies the output from your function?
-
-C) `@return`
-o) `@output`
-o) `@function`
-o) `@params`
-o) `@out`
-o) `@examples`
-o) `@export`
-o) `@seealso`
-
-{choose-answers: 4} 
-? Which of the following is NOT something true about `roxygen2`?
-
-C) uses markdown formatting
-C) requires you to write .Rd files manually
-o) helps generate documentation within R packages
-o) allows documentation and code to be in the same document
-o) automatically generates .Rd documents in correct format
-o) removes the need to edit code and documentation in two different places
-o) is specified within roxygen comment blocks
-o) allows for text to be bold and italicized within its roxygen comments
-o) allows for links to places on the web within its roxygen comments
-
-
-{/quiz}
