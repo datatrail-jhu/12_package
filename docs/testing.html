@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 Testing | Course Name</title>
+  <meta name="description" content="Description about Course/Book." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 Testing | Course Name" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Description about Course/Book." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 Testing | Course Name" />
+  
+  <meta name="twitter:description" content="Description about Course/Book." />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="assets/DataTrail_favicon.ico" type="image/x-icon" />
+<link rel="prev" href="code.html"/>
+<link rel="next" href="description.html"/>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="assets/style_DataTrail.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<a href="https://www.datatrail.org/"><img src="https://github.com/datatrail-jhu/DataTrail_Template/raw/main/assets/DataTrail_logo.jpg" style="padding-left: 0px; padding-top: 8px;"</a>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this Course</a></li>
+<li class="chapter" data-level="1" data-path="building-r-packages.html"><a href="building-r-packages.html"><i class="fa fa-check"></i><b>1</b> Building R Packages</a>
+<ul>
+<li class="chapter" data-level="1.0.1" data-path="building-r-packages.html"><a href="building-r-packages.html#r-packages"><i class="fa fa-check"></i><b>1.0.1</b> R Packages</a></li>
+<li class="chapter" data-level="1.0.2" data-path="building-r-packages.html"><a href="building-r-packages.html#installing-loading-updating"><i class="fa fa-check"></i><b>1.0.2</b> Installing, Loading, &amp; Updating</a></li>
+<li class="chapter" data-level="1.0.3" data-path="building-r-packages.html"><a href="building-r-packages.html#summary"><i class="fa fa-check"></i><b>1.0.3</b> Summary</a></li>
+<li class="chapter" data-level="1.0.4" data-path="building-r-packages.html"><a href="building-r-packages.html#additional-resources"><i class="fa fa-check"></i><b>1.0.4</b> Additional Resources</a></li>
+<li class="chapter" data-level="1.0.5" data-path="building-r-packages.html"><a href="building-r-packages.html#slides-and-video"><i class="fa fa-check"></i><b>1.0.5</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="overview.html"><a href="overview.html"><i class="fa fa-check"></i><b>2</b> Overview</a>
+<ul>
+<li class="chapter" data-level="2.0.1" data-path="overview.html"><a href="overview.html#package-naming"><i class="fa fa-check"></i><b>2.0.1</b> Package Naming</a></li>
+<li class="chapter" data-level="2.0.2" data-path="overview.html"><a href="overview.html#the-minimal-package"><i class="fa fa-check"></i><b>2.0.2</b> The Minimal Package</a></li>
+<li class="chapter" data-level="2.0.3" data-path="overview.html"><a href="overview.html#a-strong-package"><i class="fa fa-check"></i><b>2.0.3</b> A Strong Package</a></li>
+<li class="chapter" data-level="2.0.4" data-path="overview.html"><a href="overview.html#package-types"><i class="fa fa-check"></i><b>2.0.4</b> Package Types</a></li>
+<li class="chapter" data-level="2.0.5" data-path="overview.html"><a href="overview.html#a-note-on-library"><i class="fa fa-check"></i><b>2.0.5</b> A note on <code>library()</code></a></li>
+<li class="chapter" data-level="2.0.6" data-path="overview.html"><a href="overview.html#getting-started-your-first-r-package"><i class="fa fa-check"></i><b>2.0.6</b> Getting Started: Your First R Package</a></li>
+<li class="chapter" data-level="2.0.7" data-path="overview.html"><a href="overview.html#summary-1"><i class="fa fa-check"></i><b>2.0.7</b> Summary</a></li>
+<li class="chapter" data-level="2.0.8" data-path="overview.html"><a href="overview.html#additional-resources-1"><i class="fa fa-check"></i><b>2.0.8</b> Additional Resources</a></li>
+<li class="chapter" data-level="2.0.9" data-path="overview.html"><a href="overview.html#slides-and-video-1"><i class="fa fa-check"></i><b>2.0.9</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>3</b> Functions</a>
+<ul>
+<li class="chapter" data-level="3.0.1" data-path="functions.html"><a href="functions.html#functions-review"><i class="fa fa-check"></i><b>3.0.1</b> Functions: Review</a></li>
+<li class="chapter" data-level="3.0.2" data-path="functions.html"><a href="functions.html#function-example-temperature"><i class="fa fa-check"></i><b>3.0.2</b> Function Example: Temperature</a></li>
+<li class="chapter" data-level="3.0.3" data-path="functions.html"><a href="functions.html#function-example-even-vs.-odd"><i class="fa fa-check"></i><b>3.0.3</b> Function Example: Even vs. Odd</a></li>
+<li class="chapter" data-level="3.0.4" data-path="functions.html"><a href="functions.html#function-example-exponentiation"><i class="fa fa-check"></i><b>3.0.4</b> Function Example: Exponentiation</a></li>
+<li class="chapter" data-level="3.0.5" data-path="functions.html"><a href="functions.html#summary-2"><i class="fa fa-check"></i><b>3.0.5</b> Summary</a></li>
+<li class="chapter" data-level="3.0.6" data-path="functions.html"><a href="functions.html#additional-resources-2"><i class="fa fa-check"></i><b>3.0.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="3.0.7" data-path="functions.html"><a href="functions.html#slides-and-video-2"><i class="fa fa-check"></i><b>3.0.7</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="code.html"><a href="code.html"><i class="fa fa-check"></i><b>4</b> Code</a>
+<ul>
+<li class="chapter" data-level="4.0.1" data-path="code.html"><a href="code.html#adding-functions"><i class="fa fa-check"></i><b>4.0.1</b> Adding Functions</a></li>
+<li class="chapter" data-level="4.0.2" data-path="code.html"><a href="code.html#function-names"><i class="fa fa-check"></i><b>4.0.2</b> Function Names</a></li>
+<li class="chapter" data-level="4.0.3" data-path="code.html"><a href="code.html#storing-functions-in-.r-files"><i class="fa fa-check"></i><b>4.0.3</b> Storing Functions in .R files</a></li>
+<li class="chapter" data-level="4.0.4" data-path="code.html"><a href="code.html#function-1-check_na"><i class="fa fa-check"></i><b>4.0.4</b> Function 1: <code>check_na()</code></a></li>
+<li class="chapter" data-level="4.0.5" data-path="code.html"><a href="code.html#function-2-theme_cbds"><i class="fa fa-check"></i><b>4.0.5</b> Function 2: <code>theme_cbds()</code></a></li>
+<li class="chapter" data-level="4.0.6" data-path="code.html"><a href="code.html#summary-3"><i class="fa fa-check"></i><b>4.0.6</b> Summary</a></li>
+<li class="chapter" data-level="4.0.7" data-path="code.html"><a href="code.html#additional-resources-3"><i class="fa fa-check"></i><b>4.0.7</b> Additional Resources</a></li>
+<li class="chapter" data-level="4.0.8" data-path="code.html"><a href="code.html#slides-and-video-3"><i class="fa fa-check"></i><b>4.0.8</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="testing.html"><a href="testing.html"><i class="fa fa-check"></i><b>5</b> Testing</a>
+<ul>
+<li class="chapter" data-level="5.0.1" data-path="testing.html"><a href="testing.html#code-testing"><i class="fa fa-check"></i><b>5.0.1</b> Code Testing</a></li>
+<li class="chapter" data-level="5.0.2" data-path="testing.html"><a href="testing.html#unit-tests"><i class="fa fa-check"></i><b>5.0.2</b> Unit Tests</a></li>
+<li class="chapter" data-level="5.0.3" data-path="testing.html"><a href="testing.html#testthat"><i class="fa fa-check"></i><b>5.0.3</b> <code>testthat</code></a></li>
+<li class="chapter" data-level="5.0.4" data-path="testing.html"><a href="testing.html#testing-function-1-check_na"><i class="fa fa-check"></i><b>5.0.4</b> Testing Function #1: <code>check_na()</code></a></li>
+<li class="chapter" data-level="5.0.5" data-path="testing.html"><a href="testing.html#testing-function-2-theme_cbds"><i class="fa fa-check"></i><b>5.0.5</b> Testing Function #2: <code>theme_cbds()</code></a></li>
+<li class="chapter" data-level="5.0.6" data-path="testing.html"><a href="testing.html#test-errors"><i class="fa fa-check"></i><b>5.0.6</b> Test Errors</a></li>
+<li class="chapter" data-level="5.0.7" data-path="testing.html"><a href="testing.html#summary-4"><i class="fa fa-check"></i><b>5.0.7</b> Summary</a></li>
+<li class="chapter" data-level="5.0.8" data-path="testing.html"><a href="testing.html#additional-resources-4"><i class="fa fa-check"></i><b>5.0.8</b> Additional Resources</a></li>
+<li class="chapter" data-level="5.0.9" data-path="testing.html"><a href="testing.html#slides-and-video-4"><i class="fa fa-check"></i><b>5.0.9</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="description.html"><a href="description.html"><i class="fa fa-check"></i><b>6</b> Description</a>
+<ul>
+<li class="chapter" data-level="6.0.1" data-path="description.html"><a href="description.html#metadata"><i class="fa fa-check"></i><b>6.0.1</b> Metadata</a></li>
+<li class="chapter" data-level="6.0.2" data-path="description.html"><a href="description.html#description-1"><i class="fa fa-check"></i><b>6.0.2</b> DESCRIPTION</a></li>
+<li class="chapter" data-level="6.0.3" data-path="description.html"><a href="description.html#install-restart"><i class="fa fa-check"></i><b>6.0.3</b> Install &amp; Restart</a></li>
+<li class="chapter" data-level="6.0.4" data-path="description.html"><a href="description.html#summary-5"><i class="fa fa-check"></i><b>6.0.4</b> Summary</a></li>
+<li class="chapter" data-level="6.0.5" data-path="description.html"><a href="description.html#additional-resources-5"><i class="fa fa-check"></i><b>6.0.5</b> Additional Resources</a></li>
+<li class="chapter" data-level="6.0.6" data-path="description.html"><a href="description.html#slides-and-video-5"><i class="fa fa-check"></i><b>6.0.6</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="documentation.html"><a href="documentation.html"><i class="fa fa-check"></i><b>7</b> Documentation</a>
+<ul>
+<li class="chapter" data-level="7.0.1" data-path="documentation.html"><a href="documentation.html#why-document"><i class="fa fa-check"></i><b>7.0.1</b> Why Document?</a></li>
+<li class="chapter" data-level="7.0.2" data-path="documentation.html"><a href="documentation.html#roxygen2"><i class="fa fa-check"></i><b>7.0.2</b> <code>roxygen2</code></a></li>
+<li class="chapter" data-level="7.0.3" data-path="documentation.html"><a href="documentation.html#documenting-functions"><i class="fa fa-check"></i><b>7.0.3</b> Documenting Functions</a></li>
+<li class="chapter" data-level="7.0.4" data-path="documentation.html"><a href="documentation.html#documenting-theme_cbds"><i class="fa fa-check"></i><b>7.0.4</b> Documenting <code>theme_cbds()</code></a></li>
+<li class="chapter" data-level="7.0.5" data-path="documentation.html"><a href="documentation.html#other-documentation"><i class="fa fa-check"></i><b>7.0.5</b> Other Documentation</a></li>
+<li class="chapter" data-level="7.0.6" data-path="documentation.html"><a href="documentation.html#summary-6"><i class="fa fa-check"></i><b>7.0.6</b> Summary</a></li>
+<li class="chapter" data-level="7.0.7" data-path="documentation.html"><a href="documentation.html#additional-resources-6"><i class="fa fa-check"></i><b>7.0.7</b> Additional Resources</a></li>
+<li class="chapter" data-level="7.0.8" data-path="documentation.html"><a href="documentation.html#slides-and-video-6"><i class="fa fa-check"></i><b>7.0.8</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="vignettes.html"><a href="vignettes.html"><i class="fa fa-check"></i><b>8</b> Vignettes</a>
+<ul>
+<li class="chapter" data-level="8.0.1" data-path="vignettes.html"><a href="vignettes.html#vignettes-1"><i class="fa fa-check"></i><b>8.0.1</b> Vignettes</a></li>
+<li class="chapter" data-level="8.0.2" data-path="vignettes.html"><a href="vignettes.html#package-vignettes"><i class="fa fa-check"></i><b>8.0.2</b> Package Vignettes</a></li>
+<li class="chapter" data-level="8.0.3" data-path="vignettes.html"><a href="vignettes.html#vignettes-googlesheets"><i class="fa fa-check"></i><b>8.0.3</b> Vignettes: <code>googlesheets</code></a></li>
+<li class="chapter" data-level="8.0.4" data-path="vignettes.html"><a href="vignettes.html#vignettes-stringr"><i class="fa fa-check"></i><b>8.0.4</b> Vignettes: <code>stringr</code></a></li>
+<li class="chapter" data-level="8.0.5" data-path="vignettes.html"><a href="vignettes.html#creating-vignettes"><i class="fa fa-check"></i><b>8.0.5</b> Creating Vignettes</a></li>
+<li class="chapter" data-level="8.0.6" data-path="vignettes.html"><a href="vignettes.html#write-for-beginners"><i class="fa fa-check"></i><b>8.0.6</b> Write for Beginners</a></li>
+<li class="chapter" data-level="8.0.7" data-path="vignettes.html"><a href="vignettes.html#the-process"><i class="fa fa-check"></i><b>8.0.7</b> The Process</a></li>
+<li class="chapter" data-level="8.0.8" data-path="vignettes.html"><a href="vignettes.html#summary-7"><i class="fa fa-check"></i><b>8.0.8</b> Summary</a></li>
+<li class="chapter" data-level="8.0.9" data-path="vignettes.html"><a href="vignettes.html#additional-resources-7"><i class="fa fa-check"></i><b>8.0.9</b> Additional Resources</a></li>
+<li class="chapter" data-level="8.0.10" data-path="vignettes.html"><a href="vignettes.html#slides-and-video-7"><i class="fa fa-check"></i><b>8.0.10</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>9</b> Data</a>
+<ul>
+<li class="chapter" data-level="9.0.1" data-path="data.html"><a href="data.html#data-available-to-the-user"><i class="fa fa-check"></i><b>9.0.1</b> Data Available to the User</a></li>
+<li class="chapter" data-level="9.0.2" data-path="data.html"><a href="data.html#data-required-by-your-functions"><i class="fa fa-check"></i><b>9.0.2</b> Data Required By Your Functions</a></li>
+<li class="chapter" data-level="9.0.3" data-path="data.html"><a href="data.html#raw-data"><i class="fa fa-check"></i><b>9.0.3</b> Raw Data</a></li>
+<li class="chapter" data-level="9.0.4" data-path="data.html"><a href="data.html#documenting-datasets"><i class="fa fa-check"></i><b>9.0.4</b> Documenting Datasets</a></li>
+<li class="chapter" data-level="9.0.5" data-path="data.html"><a href="data.html#summary-8"><i class="fa fa-check"></i><b>9.0.5</b> Summary</a></li>
+<li class="chapter" data-level="9.0.6" data-path="data.html"><a href="data.html#additional-resources-8"><i class="fa fa-check"></i><b>9.0.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="9.0.7" data-path="data.html"><a href="data.html#slides-and-video-8"><i class="fa fa-check"></i><b>9.0.7</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="release.html"><a href="release.html"><i class="fa fa-check"></i><b>10</b> Release</a>
+<ul>
+<li class="chapter" data-level="10.0.1" data-path="release.html"><a href="release.html#to-github"><i class="fa fa-check"></i><b>10.0.1</b> To GitHub</a></li>
+<li class="chapter" data-level="10.0.2" data-path="release.html"><a href="release.html#installing-from-github"><i class="fa fa-check"></i><b>10.0.2</b> Installing From GitHub</a></li>
+<li class="chapter" data-level="10.0.3" data-path="release.html"><a href="release.html#package-checking"><i class="fa fa-check"></i><b>10.0.3</b> Package Checking</a></li>
+<li class="chapter" data-level="10.0.4" data-path="release.html"><a href="release.html#continuous-integration-travis"><i class="fa fa-check"></i><b>10.0.4</b> Continuous Integration: Travis</a></li>
+<li class="chapter" data-level="10.0.5" data-path="release.html"><a href="release.html#versioning"><i class="fa fa-check"></i><b>10.0.5</b> Versioning</a></li>
+<li class="chapter" data-level="10.0.6" data-path="release.html"><a href="release.html#readme.md"><i class="fa fa-check"></i><b>10.0.6</b> README.md</a></li>
+<li class="chapter" data-level="10.0.7" data-path="release.html"><a href="release.html#summary-9"><i class="fa fa-check"></i><b>10.0.7</b> Summary</a></li>
+<li class="chapter" data-level="10.0.8" data-path="release.html"><a href="release.html#additional-resources-9"><i class="fa fa-check"></i><b>10.0.8</b> Additional Resources</a></li>
+<li class="chapter" data-level="10.0.9" data-path="release.html"><a href="release.html#slides-and-video-9"><i class="fa fa-check"></i><b>10.0.9</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
+<li class="chapter" data-level="11" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>11</b> References</a></li>
+<li class="divider"></li>
+<p style="text-align:center;"> <a href="https://github.com/jhudsl/OTTR_Template" target="blank" > This content was published with</a> <a href="https://bookdown.org/" target="blank"> bookdown by: </a> </p>
+<p style="text-align:center;"> <a href="https://www.datatrail.org/"> Data Trail </a></p>
+<a href="https://www.datatrail.org/"><img src="https://github.com/datatrail-jhu/DataTrail_Template/raw/main/assets/DataTrail_logo.jpg" style=" width: 80%; filter: grayscale(100%); padding-left: 40px; padding-top: 8px; vertical-align: top "</a>
+<p style="text-align:center; font-size: 12px;"> <a href="https://github.com/rstudio4edu/rstudio4edu-book/"> Style adapted from: rstudio4edu-book </a> <a href ="https://creativecommons.org/licenses/by/2.0/"> (CC-BY 2.0) </a></p>
+<p style="padding-left: 40px;"><div class="trapezoid" style = "padding-left: 40px;"><span>  <a href="https://forms.gle/VWaJYc3zATe3qxYC9"> Click here to provide feedback</a> <img src="assets/itcr_arrow.png" style=" width: 10%" ></span></div></p>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Course Name</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<head>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+  <!--script src="https://kit.fontawesome.com/6a26f47516.js"></script-->
+  <!--<script src="assets/hideOutput.js"></script>-->
+  <link href="assets/style_DataTrail.css" rel="stylesheet">
+</head>
+        
+
+
+<div class="hero-image-container"> 
+  <img class= "hero-image" src="assets/DataTrail.jpg">
+</div>
+<div id="testing" class="section level1" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Testing</h1>
+<!-- Google Slide ID -->
+<!-- 18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g -->
+<!-- Include a slide PNG with Page_ID from this Slide Deck: -->
+<!-- ![](https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&pageid=PAGE_ID) -->
+<!-- or use  `didactr::gs_slide_df("18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g")$png_markdown` -->
+<div id="code-testing" class="section level3" number="5.0.1">
+<h3><span class="header-section-number">5.0.1</span> Code Testing</h3>
+<p>In the last lesson, we added two functions to our <code>cbds</code> R package. To see that they were working as we expected, we ran the functions on data and looked to see if we got the expected outcome. We mentioned that these are known as <strong>smoke tests</strong>. They’re quick checks that you run to make sure your code is doing what you expect it to do. When people write code in R, they almost always run these types of tests.</p>
+<p><em>However</em>, what is less common among R programmers, is writing tests that <em>automate your tests</em>. When automated, the tests are written and ready to run so that any time changes are made to your package, you run these tests to ensure that you’re not getting any errors. It’s this type of testing we’ll cover in this lesson.</p>
+<p>By the end of this lesson you’ll have written tests for the two functions in our <code>cbds</code> package <em>and</em> be familiar with how to automatically run these tests during package development.</p>
+</div>
+<div id="unit-tests" class="section level3" number="5.0.2">
+<h3><span class="header-section-number">5.0.2</span> Unit Tests</h3>
+<p>Writing <strong>unit tests</strong> moves your code from only writing smoke tests to be able to save your tests and automate package testing.</p>
+<p>While it may take a little bit of work up front to get used to programming like this, it will ultimately save you a ton of time in the following ways:</p>
+<ol style="list-style-type: decimal">
+<li><em>Fewer errors</em> - When you write tests explicitly for each aspect of your code, you’re automatically checking to ensure that each piece is behaving as expected. When you change code within your package during development, these tests will identify whether or not behavior as broken automatically, cluing you into bugs in your code <em>much</em> earlier than if you didn’t have the tests. Note that when you find a bug in your code, you should get in the habit of writing a unit test right then and there. This way, you never have to fix a bug more than once!</li>
+<li><em>Quickly identify bugs</em> - when a well-written unit test fails, you know precisely where to look in your code to identify the issue. You won’t have to go back through all of the code in your package to track down what’s gone wrong.</li>
+<li><em>Better code</em> - Code that is easily tested tends to be better code. In writing tests, you’re forced to simplify your code into functions that carry out a single task (rather than having a large function that does a whole bunch of different things). In this process, your code will be easier to read and better designed overall.</li>
+</ol>
+<p><strong>Unit tests</strong> are meant to be small tests, each of which tests a different piece of your overall code (here, your package). So, for each “thing” that your package accomplishes, you’ll want to be sure to have at least one unit test.</p>
+<p>Note that there are additional tests that are helpful within software development (including integration tests and system tests); however, unit tests are the fundamental unit, the first piece in the puzzle, and the most important piece to master when writing R packages, so we’ll focus on those here.</p>
+</div>
+<div id="testthat" class="section level3" number="5.0.3">
+<h3><span class="header-section-number">5.0.3</span> <code>testthat</code></h3>
+<p>As with writing packages, where <code>usethis</code> was a helpful package for automatically getting the structure of your package set up, <code>testthat</code> is a package written by Hadley Wickham to help R programmers write unit tests and automatically test the functionality within their packages. To use this package, you’ll first have to install it from CRAN:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="testing.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install from CRAN</span></span>
+<span id="cb26-2"><a href="testing.html#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;testthat&quot;</span>)</span></code></pre></div>
+<div id="creating-a-test-file" class="section level4" number="5.0.3.1">
+<h4><span class="header-section-number">5.0.3.1</span> Creating a test file</h4>
+<p>Once you have <code>testthat</code> installed, you can use <code>use_test()</code> from <code>usethis</code> to set up the required directories and files needed to start running tests.</p>
+<p>The input to this function should be the name you want to use for your test file. In our case, we’re going to write tests for the <code>check_na</code> function, so we’ll use that as the input. This function will then create (and open!) a file for us with the word <code>test-</code> followed by the name we specified.</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="testing.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create test and structure</span></span>
+<span id="cb27-2"><a href="testing.html#cb27-2" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_test</span>(<span class="st">&quot;check_na&quot;</span>)</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&amp;pageid=g5d432a4243_0_0" alt="use_test sets up structure and files for automated testing" /></p>
+<p>Executing this function <em>also</em> creates a <code>tests/</code> directory within our package. Within that directory there will be a directory called <code>testthat/</code>. The test file we just created <code>test-check_na.R</code> will be stored within that directory. There will be example code within that file. This is where we’ll write our unit test code.</p>
+<p>Finally, within <code>tests/</code> there will be a file called <code>testthat.R</code>. This file automatically has code within it that will allow for automated testing to take place.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&amp;pageid=g5d432a4243_0_11" alt="testthat.R contains code needed to automate testing" /></p>
+</div>
+<div id="testing-expectations" class="section level4" number="5.0.3.2">
+<h4><span class="header-section-number">5.0.3.2</span> Testing Expectations</h4>
+<p>Within the file that was created for you using <code>use_test()</code>, you’ll see an example unit tests:</p>
+<p>test_that(“multiplication works”, {
+expect_equal(2 * 2, 4)
+})</p>
+<p>There are two parts of the <code>test_that()</code> example.</p>
+<ol style="list-style-type: decimal">
+<li><strong>test name</strong> - a brief description of the test (i.e. “multiplication works”)</li>
+<li><strong>code</strong> - the test containing the expectation (`expect_equal(2 * 2, 4))</li>
+</ol>
+<p>The <strong>test name</strong> should be descriptive, informative, and short. Good descriptions will help you later on quickly identify any issues.</p>
+<p>In this example, the <strong>code</strong> within the test is checking to see whether or not (2 * 2, what’s on the left hand side of the comma) is equal to 4 (what’s on the right hand side of the comma). As 2 * 2 <em>is</em> equal to 4, this test would pass. All tests should be written so that they pass. If a test does not pass, it will throw an error. This is how unit testing works! All tests that test code that is doing as we expect should pass silently. However, if an error is encountered, testing will throw an error.</p>
+<p>Now, testing that two things are equal, using <code>expect_equal()</code>, is not the only way you can test code; however, it is a very common type of test. There are other expectations that you can use, but all of them evaluate as either TRUE or FALSE. Tests that pass evaluate as TRUE. Tests that fail evaluate as FALSE.</p>
+<p>As we saw above with the <code>expect_equal()</code> multiplication works example, expectations have the following structure:</p>
+<ol style="list-style-type: decimal">
+<li>They start with <code>expect_</code></li>
+<li>They take two arguments: the first is the result of the test, the second is the expectation</li>
+<li>If the actual and the expected results fail to agree, you’ll get an error.</li>
+</ol>
+<p>There are many different types of expectations, but the most commonly used are described here:</p>
+<div id="expect_equal" class="section level5" number="5.0.3.2.1">
+<h5><span class="header-section-number">5.0.3.2.1</span> <code>expect_equal()</code></h5>
+<p>As described above, <code>expect_equal()</code> tests that the statement passed as the first argument is equal to the second argument.</p>
+<p>For example, the following statement would pass silently as 2 is in fact equal to 2:</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="testing.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># passes silently</span></span>
+<span id="cb28-2"><a href="testing.html#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">expect_equal</span>(<span class="dv">2</span>, <span class="dv">2</span>)</span></code></pre></div>
+<p>However, the following would throw an error, as 2 is not equal to 1:</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="testing.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># throws an error</span></span>
+<span id="cb29-2"><a href="testing.html#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">expect_equal</span>(<span class="dv">2</span>, <span class="dv">1</span>)</span></code></pre></div>
+</div>
+<div id="expect_match" class="section level5" number="5.0.3.2.2">
+<h5><span class="header-section-number">5.0.3.2.2</span> <code>expect_match()</code></h5>
+<p><code>expect_match()</code> tests a character vector and determines if it matches with the stated regular expression.</p>
+<p>Note: We discussed regular expression briefly in the Working with Strings lesson of the <a href="https://leanpub.com/universities/courses/jhu/cbds-tidying">Data Tidying</a> course, so feel free to review that lesson before moving forward here.</p>
+<p>For example, the following statement would pass silently as “love” is within the <code>test_string</code>:</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="testing.html#cb30-1" aria-hidden="true" tabindex="-1"></a>test_string <span class="ot">&lt;-</span> <span class="st">&quot;I love CBDS!&quot;</span></span>
+<span id="cb30-2"><a href="testing.html#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-3"><a href="testing.html#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="co"># passes silently</span></span>
+<span id="cb30-4"><a href="testing.html#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="fu">expect_match</span>(test_string, <span class="st">&quot;love&quot;</span>)</span></code></pre></div>
+<p>However, the following would throw an error, as “LOVE” is <em>not</em> within the <code>test_string</code>, due to case-sensitivity:</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="testing.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># throws an error</span></span>
+<span id="cb31-2"><a href="testing.html#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">expect_match</span>(test_string, <span class="st">&quot;LOVE&quot;</span>)</span></code></pre></div>
+</div>
+<div id="expect_message-expect_warning-expect_error" class="section level5" number="5.0.3.2.3">
+<h5><span class="header-section-number">5.0.3.2.3</span> <code>expect_message()</code>, <code>expect_warning()</code>, &amp; <code>expect_error()</code></h5>
+<p>These three expectations check at their simplest whether or not a message, warning, or error is generated.</p>
+<p>For example if you tried to divide a number by a character string: <code>1/"cbds"</code>, you would get the error: “Error in 1/”cbds” : non-numeric argument to binary operator”</p>
+<p>Therefore, if you’re expecting an error, the following would produce an error and therefore pass silently:</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="testing.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># passes silently</span></span>
+<span id="cb32-2"><a href="testing.html#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">expect_error</span>(<span class="dv">1</span><span class="sc">/</span><span class="st">&quot;cbds&quot;</span>)</span></code></pre></div>
+<p>However, it’s best to include explicitly what the message, warning, or error you’re expecting is.</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="testing.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># explicit error provided</span></span>
+<span id="cb33-2"><a href="testing.html#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">expect_error</span>(<span class="dv">1</span><span class="sc">/</span><span class="st">&quot;cbds&quot;</span>, <span class="st">&quot;non-numeric argument&quot;</span>)</span></code></pre></div>
+<p>Note that if you stated the <em>incorrect</em> error message (one that is not produced), you will get an error.</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="testing.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># incorrect error message</span></span>
+<span id="cb34-2"><a href="testing.html#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">expect_error</span>(<span class="dv">1</span><span class="sc">/</span><span class="st">&quot;cbds&quot;</span>, <span class="st">&quot;NaNs produced&quot;</span>)</span></code></pre></div>
+<p>By providing the error message to <code>expect_error()</code> that you’re anticipating, you’re writing a better test, so that it will only pass silently when the <em>expected</em> error message is produced.</p>
+</div>
+<div id="expect_is" class="section level5" number="5.0.3.2.4">
+<h5><span class="header-section-number">5.0.3.2.4</span> <code>expect_is()</code></h5>
+<p><code>expect_is()</code> checks that the class of the specified object is of the stated class.</p>
+<p>For example, the following statement would pass silently as “cbds” is of the class “character”:</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="testing.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># passes silently</span></span>
+<span id="cb35-2"><a href="testing.html#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">expect_is</span>(<span class="st">&quot;cbds&quot;</span>, <span class="st">&quot;character&quot;</span>)</span></code></pre></div>
+<p>However, the following would throw an error, as the string “cbds” is not numeric:</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="testing.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># throws an error</span></span>
+<span id="cb36-2"><a href="testing.html#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">expect_is</span>(<span class="st">&quot;cbds&quot;</span>, <span class="st">&quot;numeric&quot;</span>)</span></code></pre></div>
+</div>
+<div id="expect_true-expect_false" class="section level5" number="5.0.3.2.5">
+<h5><span class="header-section-number">5.0.3.2.5</span> <code>expect_true()</code> &amp; <code>expect_false()</code></h5>
+<p>Finally, if none of the other <code>expect_</code> functions fit what you need, you can use either of these functions which expect to evaluate as either TRUE or FALSE. However, whenever possible, it’s best to be explicit and use the other expectations already mentioned.</p>
+</div>
+</div>
+</div>
+<div id="testing-function-1-check_na" class="section level3" number="5.0.4">
+<h3><span class="header-section-number">5.0.4</span> Testing Function #1: <code>check_na()</code></h3>
+<p>Now that the files have been created and we have some idea of the different types of expectations we can utilize, it’s time to start actually writing unit tests!</p>
+<p>As we start writing tests, each test should test a single aspect of your package. Note that you can put more than one expectation within a single test. But, avoid putting too many expectations into a single test. When it comes to debugging and tracking down errors, a number of smaller tests is better than a single or a few large tests, for sure.</p>
+<p>Additionally, you do not have to test every single function within your package. If there are small bits of simple code that you’re sure will work, then you don’t need a test. However, in the beginning, as you get comfortable writing unit tests, it’s good practice to write tests for each major function within your package.</p>
+<p>Finally, any time you encounter a bug during package development, <em>go write a test</em>. Your future self will thank you. Or rather, your future self won’t waste time re-discovering the same bug.</p>
+<p>For our package, we’ll write tests for both of the functions we generated. in the previous lesson.</p>
+<div id="smoke-test-reminders" class="section level4" number="5.0.4.1">
+<h4><span class="header-section-number">5.0.4.1</span> Smoke Test Reminders</h4>
+<p>In the previous lesson we checked to see if our function was working by executing our functions and examining the output. These were smoke tests. They checked to ensure the functions were behaving as expected, but they did not accomplish this in an automated way.</p>
+<p>For example, we checked to see how many NAs there were in the <code>Sepal.Length</code> column of the <code>iris</code> dataset. Similarly, we looked at the output from our <code>check_na()</code> function using the <code>sleep_rep</code> variable from <code>msleep</code> dataset in <code>ggplot2</code>, since we knew there were NAs expected in that dataset.</p>
+</div>
+<div id="unit-test-generation" class="section level4" number="5.0.4.2">
+<h4><span class="header-section-number">5.0.4.2</span> Unit Test Generation</h4>
+<p>To write a unit test, we’ll similarly want to check all expected behavior of our function, but we’ll just want to do so in an automated fashion, using <code>testthat</code> and storing all expectations within the <code>testthat/</code> directory we previously generated.</p>
+<p>For this function, we’ll want to test that our function:</p>
+<ul>
+<li>correctly counts the number of observations in the input</li>
+<li>correctly returns the number of NAs in the input</li>
+<li>correctly returns the number of non-NAs in the input</li>
+<li>returns the information in the expected output</li>
+</ul>
+<p>This means, that we’ll have at least four expectations for this function. And, I’ll argue here that we’ll have two different tests, one to test the calculations and another to test the information is returned in the expected format.</p>
+<p>Let’s first write the test that checks the calculations. We’ll delete the example test provided and then first include an example dataset so that we can test the output of the function on something where we confidently know the answer.</p>
+<p>Then, within the test, we first include the description “NA calculations correct” and then include the code. The code includes a simple example object where we know the expected answer for sure, execute the function storing the output, and then test that all three calculations are occurring as expected in that output:</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="testing.html#cb37-1" aria-hidden="true" tabindex="-1"></a>obs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">4</span>, <span class="st">&quot;str&quot;</span>, <span class="dv">10</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>)</span>
+<span id="cb37-2"><a href="testing.html#cb37-2" aria-hidden="true" tabindex="-1"></a>tested <span class="ot">=</span> <span class="fu">check_na</span>(obs)</span>
+<span id="cb37-3"><a href="testing.html#cb37-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-4"><a href="testing.html#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="fu">test_that</span>(<span class="st">&quot;NA calculations correct&quot;</span>, {</span>
+<span id="cb37-5"><a href="testing.html#cb37-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expect_equal</span>(<span class="fu">as.numeric</span>(tested[<span class="dv">1</span>,<span class="st">&quot;N&quot;</span>]), <span class="dv">7</span>)</span>
+<span id="cb37-6"><a href="testing.html#cb37-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expect_equal</span>(<span class="fu">as.numeric</span>(tested[<span class="dv">1</span>,<span class="st">&quot;NAs&quot;</span>]), <span class="dv">3</span>)</span>
+<span id="cb37-7"><a href="testing.html#cb37-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expect_equal</span>(<span class="fu">as.numeric</span>(tested[<span class="dv">1</span>,<span class="st">&quot;Non-NAs&quot;</span>]), <span class="dv">4</span>)</span>
+<span id="cb37-8"><a href="testing.html#cb37-8" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div>
+<p>Now we need the test that checks that the output are being returned in the expected format. Here we’ll want to check that a matrix is being returned and that it has the expected number of rows and columns:</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="testing.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">test_that</span>(<span class="st">&quot;NA output format&quot;</span>, {</span>
+<span id="cb38-2"><a href="testing.html#cb38-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expect_is</span>(tested, <span class="st">&quot;matrix&quot;</span>)</span>
+<span id="cb38-3"><a href="testing.html#cb38-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expect_equal</span>(<span class="fu">dim</span>(tested), <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>))</span>
+<span id="cb38-4"><a href="testing.html#cb38-4" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div>
+<p>The example code used and both of these tests will be all be stored in the <code>test-check_na.R</code> file we generated previously.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&amp;pageid=g5d432a4243_0_28" alt="test-check_na.R" /></p>
+</div>
+<div id="running-tests-in-a-package" class="section level4" number="5.0.4.3">
+<h4><span class="header-section-number">5.0.4.3</span> Running tests in a package</h4>
+<p>Now that we have our first two official unit tests, it’s time to test our package. To do so, return to the Build tab in the top-right panel, click on More, and select “Test Package.” This will run all of the tests in <code>tests/testthat</code>.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&amp;pageid=g5d432a4243_0_39" alt="Run package tests" /></p>
+<p>The results of these tests will be visible in the Build tab. Notice that we have passed all tests! Let’s keep on writing tests for our package!</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&amp;pageid=g5d432a4243_0_44" alt="Test output in Build tab" /></p>
+</div>
+</div>
+<div id="testing-function-2-theme_cbds" class="section level3" number="5.0.5">
+<h3><span class="header-section-number">5.0.5</span> Testing Function #2: <code>theme_cbds()</code></h3>
+<p>Our second function is slightly harder to write tests for as we’re dealing with plotting. However, we can still write effective unit tests for <code>theme_cbds</code>.</p>
+<p>In the last lesson, we ran smoke tests to ensure that our plots looked as we expected. We wanted to see that our plots had:</p>
+<ul>
+<li>a white background</li>
+<li>only the left and bottom axes visible</li>
+<li>axis tick labels to be close to their axes</li>
+<li>grid lines removed</li>
+</ul>
+<p>While slightly more convoluted, we can write unit tests to check all of this expected behavior of our theme.</p>
+<p>To do this, let’s again use <code>use_test()</code> to create our test files within the expected structure. But, this time, we’ll create a file for the <code>theme_cbds</code> function!</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="testing.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create test files</span></span>
+<span id="cb39-2"><a href="testing.html#cb39-2" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_test</span>(<span class="st">&quot;theme_cbds&quot;</span>)</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&amp;pageid=g5d432a4243_0_49" alt="Generate new test file" /></p>
+<p>This generates a new file in <code>tests/testthat</code> called <code>test-theme_cbds.R</code>. We’ll delete the example code in that file and replace it with a test that tests our functions expected behaviors:</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="testing.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># generate test plot</span></span>
+<span id="cb40-2"><a href="testing.html#cb40-2" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width)) <span class="sc">+</span></span>
+<span id="cb40-3"><a href="testing.html#cb40-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb40-4"><a href="testing.html#cb40-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_cbds</span>()</span>
+<span id="cb40-5"><a href="testing.html#cb40-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-6"><a href="testing.html#cb40-6" aria-hidden="true" tabindex="-1"></a><span class="fu">test_that</span>(<span class="st">&quot;plot theme defaults&quot;</span>, {</span>
+<span id="cb40-7"><a href="testing.html#cb40-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expect_equal</span>(<span class="fu">as.character</span>(p<span class="sc">$</span>theme<span class="sc">$</span>axis.ticks.length), <span class="st">&quot;0cm&quot;</span>)</span>
+<span id="cb40-8"><a href="testing.html#cb40-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expect_is</span>(p<span class="sc">$</span>theme<span class="sc">$</span>panel.grid.major, <span class="st">&quot;element_blank&quot;</span>)</span>
+<span id="cb40-9"><a href="testing.html#cb40-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expect_equal</span>(p<span class="sc">$</span>theme<span class="sc">$</span>panel.background<span class="sc">$</span>fill, <span class="st">&quot;white&quot;</span>)</span>
+<span id="cb40-10"><a href="testing.html#cb40-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expect_equal</span>(p<span class="sc">$</span>theme<span class="sc">$</span>axis.line<span class="sc">$</span>colour, <span class="st">&quot;black&quot;</span>)</span>
+<span id="cb40-11"><a href="testing.html#cb40-11" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div>
+<p>Here, it takes understanding that information about the theme is stored in the theme argument. Then, we have to know what we’ve set the values for each of these theme elements to be in the <code>theme_cbds</code> that we specified.</p>
+<p>However, remember that the <code>theme_cbds()</code> function also took two input parameters. We want to be sure we’re testing that those are working correctly. So, we’ll add another test into that same file.</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="testing.html#cb41-1" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width)) <span class="sc">+</span></span>
+<span id="cb41-2"><a href="testing.html#cb41-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb41-3"><a href="testing.html#cb41-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_cbds</span>(<span class="at">base_size =</span> <span class="dv">18</span>, <span class="at">base_family =</span> <span class="st">&quot;serif&quot;</span>)</span>
+<span id="cb41-4"><a href="testing.html#cb41-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-5"><a href="testing.html#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="fu">test_that</span>(<span class="st">&quot;font and font size&quot;</span>, {</span>
+<span id="cb41-6"><a href="testing.html#cb41-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expect_equal</span>(p2<span class="sc">$</span>theme<span class="sc">$</span>text<span class="sc">$</span>family, <span class="st">&quot;serif&quot;</span>)</span>
+<span id="cb41-7"><a href="testing.html#cb41-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expect_equal</span>(p2<span class="sc">$</span>theme<span class="sc">$</span>text<span class="sc">$</span>size, <span class="dv">18</span>)</span>
+<span id="cb41-8"><a href="testing.html#cb41-8" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div>
+<p>Here, we’re testing to ensure that when we change the <code>base_size</code> and <code>base_family</code>, the resulting plot reflects those changes.</p>
+<p>We save all of this test code in <code>test-theme_cbds.R</code>.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&amp;pageid=g5d432a4243_0_62" alt="test-theme_cbds.R" /></p>
+<p>With these tests written, we save the file, return to the Build Tab, again select More and then click check package from the drop-down menu. You should again get a message that all tests passed!</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&amp;pageid=g5d432a4243_0_74" alt="All tests pass" /></p>
+</div>
+<div id="test-errors" class="section level3" number="5.0.6">
+<h3><span class="header-section-number">5.0.6</span> Test Errors</h3>
+<p>So far we’ve only demonstrated what it looks like when a test passes. But, what happens if a unit test fails? For example, what if into that last test, I had misspecified what font to expect, calling for “sans” in the plot but then testing for “serif”</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&amp;pageid=g5d432a4243_0_79" alt="Errors in testing" /></p>
+<p>In this case, the test would (and should!) fail. The output we would get when testing the package would then provide us with a lot of information! First, in red, we see the description of the test where the failure occurred was in the “font and font size” test. We also see what file this test is in, along with the number of the line of code where the failure occurred (here, line 20). We also get a readout of what the mismatch was, and we can see that the test saw a mismatch between “sans” and “serif”.</p>
+<p>We also see the overall results, where 10 tests passed and 1 failed. Note that even though the test in line 20 failed, the test in line 21 was still run. All tests are tried, even if one fails earlier in the file.</p>
+<p>If you’re following along and made this change to see the error, do go back and change “sans” back to “serif” so that you’re tests no longer fail!</p>
+<p>After testing, feel free to click “Install and Relaunch” to ensure that your package is still building correctly.</p>
+</div>
+<div id="summary-4" class="section level3" number="5.0.7">
+<h3><span class="header-section-number">5.0.7</span> Summary</h3>
+<p>In this lesson we didn’t add additional functionality to the package, but we did add automated testing to the functionality we added last lesson! We added this automated testing by writing unit tests via the <code>testthat</code> package. If you added any additional functions to the package, add unit tests for those functions now. Or, add additional unit tests for the functions we’ve included. The quicker you get comfortable with unit testing, the easier package development will become!</p>
+</div>
+<div id="additional-resources-4" class="section level3" number="5.0.8">
+<h3><span class="header-section-number">5.0.8</span> Additional Resources</h3>
+<ul>
+<li><a href="https://testthat.r-lib.org/"><code>testthat</code></a>, by Hadley Wickham</li>
+<li><a href="https://r-pkgs.org/tests.html">R Packages - Testing</a>, by Hadley Wickham</li>
+<li><a href="https://usethis.r-lib.org/"><code>usethis</code> documentation</a>, by Jenny Bryan and Hadley Wickham</li>
+</ul>
+</div>
+<div id="slides-and-video-4" class="section level3" number="5.0.9">
+<h3><span class="header-section-number">5.0.9</span> Slides and Video</h3>
+<div class="figure">
+<img src="https://youtu.be/V4fJGf2OZRI" alt="" />
+<p class="caption">Testing</p>
+</div>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/edit?usp=sharing">Slides</a></li>
+</ul>
+
+</div>
+</div>
+<hr>
+<center> 
+  <div class="footer">
+      All illustrations <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY. </a>
+      <br>
+      All other materials <a href= "https://creativecommons.org/licenses/by/4.0/"> CC-BY </a> unless noted otherwise.
+  </div>
+</center>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="code.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="description.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

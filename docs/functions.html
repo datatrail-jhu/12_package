@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Functions | Course Name</title>
+  <meta name="description" content="Description about Course/Book." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Functions | Course Name" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Description about Course/Book." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Functions | Course Name" />
+  
+  <meta name="twitter:description" content="Description about Course/Book." />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="assets/DataTrail_favicon.ico" type="image/x-icon" />
+<link rel="prev" href="overview.html"/>
+<link rel="next" href="code.html"/>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="assets/style_DataTrail.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<a href="https://www.datatrail.org/"><img src="https://github.com/datatrail-jhu/DataTrail_Template/raw/main/assets/DataTrail_logo.jpg" style="padding-left: 0px; padding-top: 8px;"</a>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this Course</a></li>
+<li class="chapter" data-level="1" data-path="building-r-packages.html"><a href="building-r-packages.html"><i class="fa fa-check"></i><b>1</b> Building R Packages</a>
+<ul>
+<li class="chapter" data-level="1.0.1" data-path="building-r-packages.html"><a href="building-r-packages.html#r-packages"><i class="fa fa-check"></i><b>1.0.1</b> R Packages</a></li>
+<li class="chapter" data-level="1.0.2" data-path="building-r-packages.html"><a href="building-r-packages.html#installing-loading-updating"><i class="fa fa-check"></i><b>1.0.2</b> Installing, Loading, &amp; Updating</a></li>
+<li class="chapter" data-level="1.0.3" data-path="building-r-packages.html"><a href="building-r-packages.html#summary"><i class="fa fa-check"></i><b>1.0.3</b> Summary</a></li>
+<li class="chapter" data-level="1.0.4" data-path="building-r-packages.html"><a href="building-r-packages.html#additional-resources"><i class="fa fa-check"></i><b>1.0.4</b> Additional Resources</a></li>
+<li class="chapter" data-level="1.0.5" data-path="building-r-packages.html"><a href="building-r-packages.html#slides-and-video"><i class="fa fa-check"></i><b>1.0.5</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="overview.html"><a href="overview.html"><i class="fa fa-check"></i><b>2</b> Overview</a>
+<ul>
+<li class="chapter" data-level="2.0.1" data-path="overview.html"><a href="overview.html#package-naming"><i class="fa fa-check"></i><b>2.0.1</b> Package Naming</a></li>
+<li class="chapter" data-level="2.0.2" data-path="overview.html"><a href="overview.html#the-minimal-package"><i class="fa fa-check"></i><b>2.0.2</b> The Minimal Package</a></li>
+<li class="chapter" data-level="2.0.3" data-path="overview.html"><a href="overview.html#a-strong-package"><i class="fa fa-check"></i><b>2.0.3</b> A Strong Package</a></li>
+<li class="chapter" data-level="2.0.4" data-path="overview.html"><a href="overview.html#package-types"><i class="fa fa-check"></i><b>2.0.4</b> Package Types</a></li>
+<li class="chapter" data-level="2.0.5" data-path="overview.html"><a href="overview.html#a-note-on-library"><i class="fa fa-check"></i><b>2.0.5</b> A note on <code>library()</code></a></li>
+<li class="chapter" data-level="2.0.6" data-path="overview.html"><a href="overview.html#getting-started-your-first-r-package"><i class="fa fa-check"></i><b>2.0.6</b> Getting Started: Your First R Package</a></li>
+<li class="chapter" data-level="2.0.7" data-path="overview.html"><a href="overview.html#summary-1"><i class="fa fa-check"></i><b>2.0.7</b> Summary</a></li>
+<li class="chapter" data-level="2.0.8" data-path="overview.html"><a href="overview.html#additional-resources-1"><i class="fa fa-check"></i><b>2.0.8</b> Additional Resources</a></li>
+<li class="chapter" data-level="2.0.9" data-path="overview.html"><a href="overview.html#slides-and-video-1"><i class="fa fa-check"></i><b>2.0.9</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>3</b> Functions</a>
+<ul>
+<li class="chapter" data-level="3.0.1" data-path="functions.html"><a href="functions.html#functions-review"><i class="fa fa-check"></i><b>3.0.1</b> Functions: Review</a></li>
+<li class="chapter" data-level="3.0.2" data-path="functions.html"><a href="functions.html#function-example-temperature"><i class="fa fa-check"></i><b>3.0.2</b> Function Example: Temperature</a></li>
+<li class="chapter" data-level="3.0.3" data-path="functions.html"><a href="functions.html#function-example-even-vs.-odd"><i class="fa fa-check"></i><b>3.0.3</b> Function Example: Even vs. Odd</a></li>
+<li class="chapter" data-level="3.0.4" data-path="functions.html"><a href="functions.html#function-example-exponentiation"><i class="fa fa-check"></i><b>3.0.4</b> Function Example: Exponentiation</a></li>
+<li class="chapter" data-level="3.0.5" data-path="functions.html"><a href="functions.html#summary-2"><i class="fa fa-check"></i><b>3.0.5</b> Summary</a></li>
+<li class="chapter" data-level="3.0.6" data-path="functions.html"><a href="functions.html#additional-resources-2"><i class="fa fa-check"></i><b>3.0.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="3.0.7" data-path="functions.html"><a href="functions.html#slides-and-video-2"><i class="fa fa-check"></i><b>3.0.7</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="code.html"><a href="code.html"><i class="fa fa-check"></i><b>4</b> Code</a>
+<ul>
+<li class="chapter" data-level="4.0.1" data-path="code.html"><a href="code.html#adding-functions"><i class="fa fa-check"></i><b>4.0.1</b> Adding Functions</a></li>
+<li class="chapter" data-level="4.0.2" data-path="code.html"><a href="code.html#function-names"><i class="fa fa-check"></i><b>4.0.2</b> Function Names</a></li>
+<li class="chapter" data-level="4.0.3" data-path="code.html"><a href="code.html#storing-functions-in-.r-files"><i class="fa fa-check"></i><b>4.0.3</b> Storing Functions in .R files</a></li>
+<li class="chapter" data-level="4.0.4" data-path="code.html"><a href="code.html#function-1-check_na"><i class="fa fa-check"></i><b>4.0.4</b> Function 1: <code>check_na()</code></a></li>
+<li class="chapter" data-level="4.0.5" data-path="code.html"><a href="code.html#function-2-theme_cbds"><i class="fa fa-check"></i><b>4.0.5</b> Function 2: <code>theme_cbds()</code></a></li>
+<li class="chapter" data-level="4.0.6" data-path="code.html"><a href="code.html#summary-3"><i class="fa fa-check"></i><b>4.0.6</b> Summary</a></li>
+<li class="chapter" data-level="4.0.7" data-path="code.html"><a href="code.html#additional-resources-3"><i class="fa fa-check"></i><b>4.0.7</b> Additional Resources</a></li>
+<li class="chapter" data-level="4.0.8" data-path="code.html"><a href="code.html#slides-and-video-3"><i class="fa fa-check"></i><b>4.0.8</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="testing.html"><a href="testing.html"><i class="fa fa-check"></i><b>5</b> Testing</a>
+<ul>
+<li class="chapter" data-level="5.0.1" data-path="testing.html"><a href="testing.html#code-testing"><i class="fa fa-check"></i><b>5.0.1</b> Code Testing</a></li>
+<li class="chapter" data-level="5.0.2" data-path="testing.html"><a href="testing.html#unit-tests"><i class="fa fa-check"></i><b>5.0.2</b> Unit Tests</a></li>
+<li class="chapter" data-level="5.0.3" data-path="testing.html"><a href="testing.html#testthat"><i class="fa fa-check"></i><b>5.0.3</b> <code>testthat</code></a></li>
+<li class="chapter" data-level="5.0.4" data-path="testing.html"><a href="testing.html#testing-function-1-check_na"><i class="fa fa-check"></i><b>5.0.4</b> Testing Function #1: <code>check_na()</code></a></li>
+<li class="chapter" data-level="5.0.5" data-path="testing.html"><a href="testing.html#testing-function-2-theme_cbds"><i class="fa fa-check"></i><b>5.0.5</b> Testing Function #2: <code>theme_cbds()</code></a></li>
+<li class="chapter" data-level="5.0.6" data-path="testing.html"><a href="testing.html#test-errors"><i class="fa fa-check"></i><b>5.0.6</b> Test Errors</a></li>
+<li class="chapter" data-level="5.0.7" data-path="testing.html"><a href="testing.html#summary-4"><i class="fa fa-check"></i><b>5.0.7</b> Summary</a></li>
+<li class="chapter" data-level="5.0.8" data-path="testing.html"><a href="testing.html#additional-resources-4"><i class="fa fa-check"></i><b>5.0.8</b> Additional Resources</a></li>
+<li class="chapter" data-level="5.0.9" data-path="testing.html"><a href="testing.html#slides-and-video-4"><i class="fa fa-check"></i><b>5.0.9</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="description.html"><a href="description.html"><i class="fa fa-check"></i><b>6</b> Description</a>
+<ul>
+<li class="chapter" data-level="6.0.1" data-path="description.html"><a href="description.html#metadata"><i class="fa fa-check"></i><b>6.0.1</b> Metadata</a></li>
+<li class="chapter" data-level="6.0.2" data-path="description.html"><a href="description.html#description-1"><i class="fa fa-check"></i><b>6.0.2</b> DESCRIPTION</a></li>
+<li class="chapter" data-level="6.0.3" data-path="description.html"><a href="description.html#install-restart"><i class="fa fa-check"></i><b>6.0.3</b> Install &amp; Restart</a></li>
+<li class="chapter" data-level="6.0.4" data-path="description.html"><a href="description.html#summary-5"><i class="fa fa-check"></i><b>6.0.4</b> Summary</a></li>
+<li class="chapter" data-level="6.0.5" data-path="description.html"><a href="description.html#additional-resources-5"><i class="fa fa-check"></i><b>6.0.5</b> Additional Resources</a></li>
+<li class="chapter" data-level="6.0.6" data-path="description.html"><a href="description.html#slides-and-video-5"><i class="fa fa-check"></i><b>6.0.6</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="documentation.html"><a href="documentation.html"><i class="fa fa-check"></i><b>7</b> Documentation</a>
+<ul>
+<li class="chapter" data-level="7.0.1" data-path="documentation.html"><a href="documentation.html#why-document"><i class="fa fa-check"></i><b>7.0.1</b> Why Document?</a></li>
+<li class="chapter" data-level="7.0.2" data-path="documentation.html"><a href="documentation.html#roxygen2"><i class="fa fa-check"></i><b>7.0.2</b> <code>roxygen2</code></a></li>
+<li class="chapter" data-level="7.0.3" data-path="documentation.html"><a href="documentation.html#documenting-functions"><i class="fa fa-check"></i><b>7.0.3</b> Documenting Functions</a></li>
+<li class="chapter" data-level="7.0.4" data-path="documentation.html"><a href="documentation.html#documenting-theme_cbds"><i class="fa fa-check"></i><b>7.0.4</b> Documenting <code>theme_cbds()</code></a></li>
+<li class="chapter" data-level="7.0.5" data-path="documentation.html"><a href="documentation.html#other-documentation"><i class="fa fa-check"></i><b>7.0.5</b> Other Documentation</a></li>
+<li class="chapter" data-level="7.0.6" data-path="documentation.html"><a href="documentation.html#summary-6"><i class="fa fa-check"></i><b>7.0.6</b> Summary</a></li>
+<li class="chapter" data-level="7.0.7" data-path="documentation.html"><a href="documentation.html#additional-resources-6"><i class="fa fa-check"></i><b>7.0.7</b> Additional Resources</a></li>
+<li class="chapter" data-level="7.0.8" data-path="documentation.html"><a href="documentation.html#slides-and-video-6"><i class="fa fa-check"></i><b>7.0.8</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="vignettes.html"><a href="vignettes.html"><i class="fa fa-check"></i><b>8</b> Vignettes</a>
+<ul>
+<li class="chapter" data-level="8.0.1" data-path="vignettes.html"><a href="vignettes.html#vignettes-1"><i class="fa fa-check"></i><b>8.0.1</b> Vignettes</a></li>
+<li class="chapter" data-level="8.0.2" data-path="vignettes.html"><a href="vignettes.html#package-vignettes"><i class="fa fa-check"></i><b>8.0.2</b> Package Vignettes</a></li>
+<li class="chapter" data-level="8.0.3" data-path="vignettes.html"><a href="vignettes.html#vignettes-googlesheets"><i class="fa fa-check"></i><b>8.0.3</b> Vignettes: <code>googlesheets</code></a></li>
+<li class="chapter" data-level="8.0.4" data-path="vignettes.html"><a href="vignettes.html#vignettes-stringr"><i class="fa fa-check"></i><b>8.0.4</b> Vignettes: <code>stringr</code></a></li>
+<li class="chapter" data-level="8.0.5" data-path="vignettes.html"><a href="vignettes.html#creating-vignettes"><i class="fa fa-check"></i><b>8.0.5</b> Creating Vignettes</a></li>
+<li class="chapter" data-level="8.0.6" data-path="vignettes.html"><a href="vignettes.html#write-for-beginners"><i class="fa fa-check"></i><b>8.0.6</b> Write for Beginners</a></li>
+<li class="chapter" data-level="8.0.7" data-path="vignettes.html"><a href="vignettes.html#the-process"><i class="fa fa-check"></i><b>8.0.7</b> The Process</a></li>
+<li class="chapter" data-level="8.0.8" data-path="vignettes.html"><a href="vignettes.html#summary-7"><i class="fa fa-check"></i><b>8.0.8</b> Summary</a></li>
+<li class="chapter" data-level="8.0.9" data-path="vignettes.html"><a href="vignettes.html#additional-resources-7"><i class="fa fa-check"></i><b>8.0.9</b> Additional Resources</a></li>
+<li class="chapter" data-level="8.0.10" data-path="vignettes.html"><a href="vignettes.html#slides-and-video-7"><i class="fa fa-check"></i><b>8.0.10</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>9</b> Data</a>
+<ul>
+<li class="chapter" data-level="9.0.1" data-path="data.html"><a href="data.html#data-available-to-the-user"><i class="fa fa-check"></i><b>9.0.1</b> Data Available to the User</a></li>
+<li class="chapter" data-level="9.0.2" data-path="data.html"><a href="data.html#data-required-by-your-functions"><i class="fa fa-check"></i><b>9.0.2</b> Data Required By Your Functions</a></li>
+<li class="chapter" data-level="9.0.3" data-path="data.html"><a href="data.html#raw-data"><i class="fa fa-check"></i><b>9.0.3</b> Raw Data</a></li>
+<li class="chapter" data-level="9.0.4" data-path="data.html"><a href="data.html#documenting-datasets"><i class="fa fa-check"></i><b>9.0.4</b> Documenting Datasets</a></li>
+<li class="chapter" data-level="9.0.5" data-path="data.html"><a href="data.html#summary-8"><i class="fa fa-check"></i><b>9.0.5</b> Summary</a></li>
+<li class="chapter" data-level="9.0.6" data-path="data.html"><a href="data.html#additional-resources-8"><i class="fa fa-check"></i><b>9.0.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="9.0.7" data-path="data.html"><a href="data.html#slides-and-video-8"><i class="fa fa-check"></i><b>9.0.7</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="release.html"><a href="release.html"><i class="fa fa-check"></i><b>10</b> Release</a>
+<ul>
+<li class="chapter" data-level="10.0.1" data-path="release.html"><a href="release.html#to-github"><i class="fa fa-check"></i><b>10.0.1</b> To GitHub</a></li>
+<li class="chapter" data-level="10.0.2" data-path="release.html"><a href="release.html#installing-from-github"><i class="fa fa-check"></i><b>10.0.2</b> Installing From GitHub</a></li>
+<li class="chapter" data-level="10.0.3" data-path="release.html"><a href="release.html#package-checking"><i class="fa fa-check"></i><b>10.0.3</b> Package Checking</a></li>
+<li class="chapter" data-level="10.0.4" data-path="release.html"><a href="release.html#continuous-integration-travis"><i class="fa fa-check"></i><b>10.0.4</b> Continuous Integration: Travis</a></li>
+<li class="chapter" data-level="10.0.5" data-path="release.html"><a href="release.html#versioning"><i class="fa fa-check"></i><b>10.0.5</b> Versioning</a></li>
+<li class="chapter" data-level="10.0.6" data-path="release.html"><a href="release.html#readme.md"><i class="fa fa-check"></i><b>10.0.6</b> README.md</a></li>
+<li class="chapter" data-level="10.0.7" data-path="release.html"><a href="release.html#summary-9"><i class="fa fa-check"></i><b>10.0.7</b> Summary</a></li>
+<li class="chapter" data-level="10.0.8" data-path="release.html"><a href="release.html#additional-resources-9"><i class="fa fa-check"></i><b>10.0.8</b> Additional Resources</a></li>
+<li class="chapter" data-level="10.0.9" data-path="release.html"><a href="release.html#slides-and-video-9"><i class="fa fa-check"></i><b>10.0.9</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
+<li class="chapter" data-level="11" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>11</b> References</a></li>
+<li class="divider"></li>
+<p style="text-align:center;"> <a href="https://github.com/jhudsl/OTTR_Template" target="blank" > This content was published with</a> <a href="https://bookdown.org/" target="blank"> bookdown by: </a> </p>
+<p style="text-align:center;"> <a href="https://www.datatrail.org/"> Data Trail </a></p>
+<a href="https://www.datatrail.org/"><img src="https://github.com/datatrail-jhu/DataTrail_Template/raw/main/assets/DataTrail_logo.jpg" style=" width: 80%; filter: grayscale(100%); padding-left: 40px; padding-top: 8px; vertical-align: top "</a>
+<p style="text-align:center; font-size: 12px;"> <a href="https://github.com/rstudio4edu/rstudio4edu-book/"> Style adapted from: rstudio4edu-book </a> <a href ="https://creativecommons.org/licenses/by/2.0/"> (CC-BY 2.0) </a></p>
+<p style="padding-left: 40px;"><div class="trapezoid" style = "padding-left: 40px;"><span>  <a href="https://forms.gle/VWaJYc3zATe3qxYC9"> Click here to provide feedback</a> <img src="assets/itcr_arrow.png" style=" width: 10%" ></span></div></p>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Course Name</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<head>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+  <!--script src="https://kit.fontawesome.com/6a26f47516.js"></script-->
+  <!--<script src="assets/hideOutput.js"></script>-->
+  <link href="assets/style_DataTrail.css" rel="stylesheet">
+</head>
+        
+
+
+<div class="hero-image-container"> 
+  <img class= "hero-image" src="assets/DataTrail.jpg">
+</div>
+<div id="functions" class="section level1" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Functions</h1>
+<!-- Google Slide ID -->
+<!-- 1Bo0j-Ct0phh9ygYe9LOsmd-J8YNN92H5OS_kPtynEHs -->
+<!-- Include a slide PNG with Page_ID from this Slide Deck: -->
+<!-- ![](https://docs.google.com/presentation/d/1Bo0j-Ct0phh9ygYe9LOsmd-J8YNN92H5OS_kPtynEHs/export/png?id=1Bo0j-Ct0phh9ygYe9LOsmd-J8YNN92H5OS_kPtynEHs&pageid=PAGE_ID) -->
+<!-- or use  `didactr::gs_slide_df("1Bo0j-Ct0phh9ygYe9LOsmd-J8YNN92H5OS_kPtynEHs")$png_markdown` -->
+<p>Functions were first introduced in the <a href="https://leanpub.com/universities/courses/jhu/cbds-intro-r">Introduction to R</a> course in the Cloud-Based Data Science Course Set. If you’d like a review before this lesson, please refer back to the functions lesson in that course.</p>
+<p>We review functions here as they are the operational unit of packages. As you continue to add functionality to the <code>cbds</code> package skeleton we created in the previous lesson, you’ll need to be comfortable with writing functions.</p>
+<div id="functions-review" class="section level3" number="3.0.1">
+<h3><span class="header-section-number">3.0.1</span> Functions: Review</h3>
+<p>Functions help make your code more modular. This means that instead of having a single file with all of your code running as a script from top to bottom, you can instead write user-defined functions for processes that you’ll do over and over again.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1Bo0j-Ct0phh9ygYe9LOsmd-J8YNN92H5OS_kPtynEHs/export/png?id=1Bo0j-Ct0phh9ygYe9LOsmd-J8YNN92H5OS_kPtynEHs&amp;pageid=g5d13a53002_0_0" alt="User-Defined Functions" /></p>
+<p>For example, if you are working with multiple, similar datasets and have to carry out the same operations on each dataset, rather than copying and pasting the code to do so and changing the DataFrame you’re operating on, instead, you can write a single function, including the necessary code and then execute that function on each dataset.</p>
+<p>In doing this, you accomplish a few things:</p>
+<ol style="list-style-type: decimal">
+<li>You make your code <strong>more readable</strong>. Code is read more often than it is written. By having a single function, readers of your code only have to understand that code block once. When they encounter its use, they already know what the code will do. And, it will lead to less code overall to read.</li>
+<li>It <strong>simplifies updating your code</strong>. If you have the code in a single function and then use that function throughout, if a change needs to happen, you have to only change it in a single location, rather than looking for all the places you’ve copy and pasted the code. If you find yourself copy and pasting code more than once, write a function.</li>
+<li>You <strong>avoid accidental errors</strong>. If you’re using related and very similar code in multiple places rather than writing functions, you have to remember where you copy and pasted and how many places you’ve done so. With functions, you have a single copy and only have to update that, minimizing the chance of errors and forgetting to edit your code in more than one place.</li>
+</ol>
+<div id="when-to-write" class="section level4" number="3.0.1.1">
+<h4><span class="header-section-number">3.0.1.1</span> When To Write</h4>
+<p>Hopefully, if you’re at the point in your learning that you’re ready to start writing packages, you’ve gotten more comfortable with using functions from others’ packages and are getting more comfortable with writing your own functions.</p>
+<p>Packages are built around writing functions, so you’ll get extra practice in this lesson and hopefully by the end of this course, it’ll be close to second nature.</p>
+<p>When writing packages, you’ll write a lot of functions. The general rule is that you should <strong>write a function whenever you’ve copy and pasted code more than once</strong>. However, in packages, functions are the operational unit - the thing that we’re going to be building a package upon, so we’ll be thinking about building our packages with a function-first mentality!</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1Bo0j-Ct0phh9ygYe9LOsmd-J8YNN92H5OS_kPtynEHs/export/png?id=1Bo0j-Ct0phh9ygYe9LOsmd-J8YNN92H5OS_kPtynEHs&amp;pageid=g5d13a53002_0_5" alt="Avoid copying and pasting code more than once" /></p>
+</div>
+<div id="how-to-write" class="section level4" number="3.0.1.2">
+<h4><span class="header-section-number">3.0.1.2</span> How To Write</h4>
+<p>As a reminder, there are three main components to a function. Each function has a:</p>
+<ol style="list-style-type: decimal">
+<li>name</li>
+<li>argument(s)</li>
+<li>body</li>
+</ol>
+<p>In code, in its most simple form, defining a function looks as follows:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="functions.html#cb3-1" aria-hidden="true" tabindex="-1"></a>name <span class="ot">&lt;-</span> <span class="cf">function</span>(arguments){</span>
+<span id="cb3-2"><a href="functions.html#cb3-2" aria-hidden="true" tabindex="-1"></a>    body</span>
+<span id="cb3-3"><a href="functions.html#cb3-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>As discussed in the <a href="https://leanpub.com/universities/courses/jhu/cbds-intro-r">Introduction to R</a> course, naming your function is an important step. So important, that we’ll review it here.</p>
+<p>In almost every case, <strong>function names should be verbs</strong> - or action words. This makes sense as functions <strong>do</strong> things; they carry out actions. (On the other hand, variable names tend to be nouns, as they represent objects or <em>things</em>.)</p>
+<p>Function names should:</p>
+<ol style="list-style-type: decimal">
+<li>be verbs</li>
+<li>explain what the function does</li>
+<li>be succinct</li>
+<li>use snake case (i.e. <code>make_snake_case()</code> could be a function that takes a string as an input and coverts the string to snake case, where all words are lowercase and separated by underscores)</li>
+<li>not have a name used elsewhere (i.e. don’t use <code>mutate()</code> as that’s used in <code>dplyr</code>)</li>
+</ol>
+</div>
+</div>
+<div id="function-example-temperature" class="section level3" number="3.0.2">
+<h3><span class="header-section-number">3.0.2</span> Function Example: Temperature</h3>
+<p>In the <a href="https://leanpub.com/universities/courses/jhu/cbds-intro-r">Introduction to R</a> course, we provided an example function of converting an input temperature in Celsius to Fahrenheit:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="functions.html#cb4-1" aria-hidden="true" tabindex="-1"></a>celsius_to_fahrenheit <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
+<span id="cb4-2"><a href="functions.html#cb4-2" aria-hidden="true" tabindex="-1"></a>  C <span class="ot">&lt;-</span> <span class="fu">readline</span>(<span class="at">prompt=</span><span class="st">&quot;Enter a value in Celsius: &quot;</span>)</span>
+<span id="cb4-3"><a href="functions.html#cb4-3" aria-hidden="true" tabindex="-1"></a>  F <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(C) <span class="sc">*</span> (<span class="dv">9</span><span class="sc">/</span><span class="dv">5</span>) <span class="sc">+</span> <span class="dv">32</span></span>
+<span id="cb4-4"><a href="functions.html#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">paste</span>(<span class="st">&quot;The entered Celsius temperature is&quot;</span>, F, <span class="st">&quot;degrees Fahrenheit.&quot;</span>))</span>
+<span id="cb4-5"><a href="functions.html#cb4-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Note that this code simply creates and <strong>defines the function</strong>.</p>
+<p>To actually <em>use</em> the function to convert degrees Celsius to Fahrenheit, you have to <strong>execute the function</strong>:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="functions.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">celsius_to_fahrenheit</span>()</span>
+<span id="cb5-2"><a href="functions.html#cb5-2" aria-hidden="true" tabindex="-1"></a>Enter a value <span class="cf">in</span> Celsius<span class="sc">:</span> <span class="dv">70</span></span>
+<span id="cb5-3"><a href="functions.html#cb5-3" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">&quot;The entered Celsius temperature is 158 degrees Fahrenheit.&quot;</span></span></code></pre></div>
+<p>We also discussed previously that this function could be generalized to convert in both directions (to Celsius <em>or</em> to Fahrenheit) by utilizing <strong>additional arguments</strong>. To make the function clearer, we’ve also <strong>included comments</strong>:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="functions.html#cb6-1" aria-hidden="true" tabindex="-1"></a>convert_temp <span class="ot">&lt;-</span> <span class="cf">function</span>(temp, <span class="at">unit =</span> <span class="st">&quot;C&quot;</span>){</span>
+<span id="cb6-2"><a href="functions.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (unit<span class="sc">==</span><span class="st">&quot;C&quot;</span>){</span>
+<span id="cb6-3"><a href="functions.html#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># if temp in C, convert to F</span></span>
+<span id="cb6-4"><a href="functions.html#cb6-4" aria-hidden="true" tabindex="-1"></a>    D <span class="ot">&lt;-</span> temp <span class="sc">*</span> (<span class="dv">9</span><span class="sc">/</span><span class="dv">5</span>) <span class="sc">+</span> <span class="dv">32</span></span>
+<span id="cb6-5"><a href="functions.html#cb6-5" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (unit<span class="sc">==</span><span class="st">&quot;F&quot;</span>) {</span>
+<span id="cb6-6"><a href="functions.html#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># if temp in F, convert to C</span></span>
+<span id="cb6-7"><a href="functions.html#cb6-7" aria-hidden="true" tabindex="-1"></a>    D <span class="ot">&lt;-</span> (temp <span class="sc">-</span> <span class="dv">32</span>) <span class="sc">*</span> (<span class="dv">5</span><span class="sc">/</span><span class="dv">9</span>)</span>
+<span id="cb6-8"><a href="functions.html#cb6-8" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb6-9"><a href="functions.html#cb6-9" aria-hidden="true" tabindex="-1"></a>    D <span class="ot">&lt;-</span> <span class="fu">message</span>(<span class="st">&quot;Please enter a correct unit -- either F or C&quot;</span>)</span>
+<span id="cb6-10"><a href="functions.html#cb6-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-11"><a href="functions.html#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="fu">return</span>(D)</span>
+<span id="cb6-12"><a href="functions.html#cb6-12" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+</div>
+<div id="function-example-even-vs.-odd" class="section level3" number="3.0.3">
+<h3><span class="header-section-number">3.0.3</span> Function Example: Even vs. Odd</h3>
+<p>Sometimes the best way to understand a topic is to familiarize yourself with multiple examples. We’ll walk through two more function examples, explaining each part along the way. These are not functions we’ll include in the package we’re building in this course and are instead just meant to help you gain a deeper understanding of writing functions in R.</p>
+<p>Here, we’ll be building a function that determines whether or not an input value is even or odd. Something you may be less familiar with at this point is the modulo operator: <code>%%</code>. This operator divides the number on the left hand side of the operator with that on the right-hand side and returns the remainder. For example if you do the following mathematically: <code>7 / 3</code> in R, you would see that 7 divided by 3 is 2.3333. This is because 3 goes into 7 twice, with one remainder. If you’re interested in only returning that 1 remainder, you would use the modulo operator. So, in R, <code>7 %% 3</code> returns 1 - the remainder of 7 divided by 3!</p>
+<p>This operator can be helpful in many situations, one of which is determining whether a number is even or odd. For example, if a value divided by 2 returns a remainder of zero, you know that number is even! Let’s write a function to do just that!</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="functions.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="do">## generate the function</span></span>
+<span id="cb7-2"><a href="functions.html#cb7-2" aria-hidden="true" tabindex="-1"></a>even_odd <span class="ot">&lt;-</span> <span class="cf">function</span>(value){</span>
+<span id="cb7-3"><a href="functions.html#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (value <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>){</span>
+<span id="cb7-4"><a href="functions.html#cb7-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">print</span>(<span class="st">&quot;even&quot;</span>)</span>
+<span id="cb7-5"><a href="functions.html#cb7-5" aria-hidden="true" tabindex="-1"></a>    }<span class="cf">else</span>{</span>
+<span id="cb7-6"><a href="functions.html#cb7-6" aria-hidden="true" tabindex="-1"></a>        <span class="fu">print</span>(<span class="st">&quot;odd&quot;</span>)</span>
+<span id="cb7-7"><a href="functions.html#cb7-7" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb7-8"><a href="functions.html#cb7-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Here, we see that the function’s name is <code>even_odd</code> and that it takes one input parameter (<code>value</code>).</p>
+<p>So if we created this function by running the code you see above, you would then be able to execute the function by calling the function name and providing an input variable:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="functions.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="do">## execute the function</span></span>
+<span id="cb8-2"><a href="functions.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">even_odd</span>(<span class="dv">6</span>)</span>
+<span id="cb8-3"><a href="functions.html#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">even_odd</span>(<span class="dv">17</span>)</span></code></pre></div>
+<p>When we execute the two lines of code here we see that when 6 is the input argument, the function correctly returns “even”. When 17 - and odd number - is the input argument, the function correctly returns “odd”.</p>
+<p><strong>Naming the arguments</strong></p>
+<p>As a reminder, R knows that you’re specifying the input value even though you haven’t explicitly stated that this is the <code>value</code> argument. To be more explicit and make your code even more readable, it can be helpful to explicitly state the argument’s name in the function call. The code here is functionally the same as the code previously; however, we’ve added <code>value =</code> to be clear what argument we’re inputting to our function.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="functions.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="do">## naming the argument</span></span>
+<span id="cb9-2"><a href="functions.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">even_odd</span>(<span class="at">value =</span> <span class="dv">6</span>)</span>
+<span id="cb9-3"><a href="functions.html#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">even_odd</span>(<span class="at">value =</span> <span class="dv">17</span>)</span></code></pre></div>
+<div id="adding-warnings" class="section level4" number="3.0.3.1">
+<h4><span class="header-section-number">3.0.3.1</span> Adding warnings</h4>
+<p>Something we haven’t talked about previously is checking that the inputs to your functions are what it was expecting. For example, our function for checking even vs. odd numbers works great if we give it a number. What happens if we accidentally give it a string, where checking even vs. odd does not make sense?</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="functions.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="do">## will produce an error</span></span>
+<span id="cb10-2"><a href="functions.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">even_odd</span>(<span class="st">&#39;cbds&#39;</span>)</span></code></pre></div>
+<p>In this example, we get the error: “Error in value%%2 : non-numeric argument to binary operator”</p>
+<p>This is because it doesn’t make sense to try to calculate the remainder of a string divided by 2. It is often the case in functions that you only want to operate on a certain type of input. When this is the case, it’s best to check that the input to your function is what you expected.</p>
+<p>One way to do something like this is to add a warning message, using the <code>warning()</code> function:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="functions.html#cb11-1" aria-hidden="true" tabindex="-1"></a>even_odd <span class="ot">&lt;-</span> <span class="cf">function</span>(value){</span>
+<span id="cb11-2"><a href="functions.html#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># add warning message</span></span>
+<span id="cb11-3"><a href="functions.html#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="sc">!</span><span class="fu">is.numeric</span>(value)){</span>
+<span id="cb11-4"><a href="functions.html#cb11-4" aria-hidden="true" tabindex="-1"></a>       <span class="fu">warning</span>(<span class="st">&quot;Input value is not numeric.&quot;</span>)</span>
+<span id="cb11-5"><a href="functions.html#cb11-5" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb11-6"><a href="functions.html#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (value <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>){</span>
+<span id="cb11-7"><a href="functions.html#cb11-7" aria-hidden="true" tabindex="-1"></a>        <span class="fu">print</span>(<span class="st">&quot;even&quot;</span>)</span>
+<span id="cb11-8"><a href="functions.html#cb11-8" aria-hidden="true" tabindex="-1"></a>    }<span class="cf">else</span>{</span>
+<span id="cb11-9"><a href="functions.html#cb11-9" aria-hidden="true" tabindex="-1"></a>        <span class="fu">print</span>(<span class="st">&quot;odd&quot;</span>)</span>
+<span id="cb11-10"><a href="functions.html#cb11-10" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb11-11"><a href="functions.html#cb11-11" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>For example, when we create the function here, we add an if statement at the top of the function to check if the input to value is not numeric and if it is not numeric print a warning that the “Input value is not numeric”.</p>
+<p>However, one caveat to this is that a warning doesn’t stop the code from running. It will still attempt to run the function with this input. So, if you try to execute this function without a numeric input (for example running <code>even_odd('cbds')</code>), you’ll see the warning; however, you’ll still also get an error message.</p>
+</div>
+<div id="adding-stop" class="section level4" number="3.0.3.2">
+<h4><span class="header-section-number">3.0.3.2</span> Adding stop</h4>
+<p>If we replace <code>warning()</code> with <code>stop()</code>, the function will not execute past where <code>stop()</code> is encountered. This way, the user (you, in this case) only sees the specified error message.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="functions.html#cb12-1" aria-hidden="true" tabindex="-1"></a>even_odd <span class="ot">&lt;-</span> <span class="cf">function</span>(value){</span>
+<span id="cb12-2"><a href="functions.html#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># stop if non-numeric</span></span>
+<span id="cb12-3"><a href="functions.html#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="sc">!</span><span class="fu">is.numeric</span>(value)){</span>
+<span id="cb12-4"><a href="functions.html#cb12-4" aria-hidden="true" tabindex="-1"></a>       <span class="fu">stop</span>(<span class="st">&quot;Input value is not numeric.&quot;</span>)</span>
+<span id="cb12-5"><a href="functions.html#cb12-5" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb12-6"><a href="functions.html#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (value <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>){</span>
+<span id="cb12-7"><a href="functions.html#cb12-7" aria-hidden="true" tabindex="-1"></a>        <span class="fu">print</span>(<span class="st">&quot;even&quot;</span>)</span>
+<span id="cb12-8"><a href="functions.html#cb12-8" aria-hidden="true" tabindex="-1"></a>    }<span class="cf">else</span>{</span>
+<span id="cb12-9"><a href="functions.html#cb12-9" aria-hidden="true" tabindex="-1"></a>        <span class="fu">print</span>(<span class="st">&quot;odd&quot;</span>)</span>
+<span id="cb12-10"><a href="functions.html#cb12-10" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb12-11"><a href="functions.html#cb12-11" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Using this function, when we then run <code>even_odd('cbds')</code>, the only thing returned is “Error in even_odd(”cbds”) : Input value is not numeric.”</p>
+<p>Note that what is returned from the function with a numeric input variable is still what we expect. <code>even_odd(6)</code> still returns “even”.</p>
+<p>It’s good practice to add checks using <code>warning()</code> and <code>stop()</code> to ensure your functions are behaving as you expected them to when you wrote them.</p>
+</div>
+</div>
+<div id="function-example-exponentiation" class="section level3" number="3.0.4">
+<h3><span class="header-section-number">3.0.4</span> Function Example: Exponentiation</h3>
+<p>For another example, let’s consider the case of exponentiation. In math you can exponentiate numbers. For example, 6 to the power 2 (<code>6^2</code>) means take the number 6 and multiply it by itself (<code>6 * 6</code>). 6 to the power 3 (<code>6^3</code>) says take 6 and then multiply itself again (<code>6 * 6 * 6</code>). This idea of exponentiation is very helpful, so it can be helpful to have a function that does this for you:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="functions.html#cb13-1" aria-hidden="true" tabindex="-1"></a>exponentiate <span class="ot">&lt;-</span> <span class="cf">function</span>(number, exponent){   </span>
+<span id="cb13-2"><a href="functions.html#cb13-2" aria-hidden="true" tabindex="-1"></a>    out <span class="ot">&lt;-</span> number <span class="sc">^</span> exponent</span>
+<span id="cb13-3"><a href="functions.html#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(out)</span>
+<span id="cb13-4"><a href="functions.html#cb13-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Here, we’ve generated a function called <code>exponentiate</code> that takes two parameters (<code>number</code>, <code>exponent</code>). Within the function, we see that the <code>number</code> is raised to the power <code>exponent</code>. This value is then stored in the variable <code>out</code>. This variable <code>out</code> is then returned from the function.</p>
+<p>For example, after defining this function, we could execute it by running <code>exponentiate(6,2)</code> and it would return the value “36”.</p>
+<p>We could also be clearer about our arguments and run <code>exponentiate(number = 6, exponent = 2)</code>. This would also return “36”.</p>
+<p><strong>Default Parameters</strong></p>
+<p>However, we could improve this function taking things one step further by specifying a default argument. In the case of exponentiation, it’s most comment to raise something to the power 2. So, we may want to set the default argument for <code>exponent</code> to be 2. We do this within the arguments of <code>function()</code>. When we do this, if no value is provided when the <code>exponentiate()</code> function is executed, then R will use the default value 2.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="functions.html#cb14-1" aria-hidden="true" tabindex="-1"></a>exponentiate <span class="ot">&lt;-</span> <span class="cf">function</span>(number, <span class="at">exponent =</span> <span class="dv">2</span>){    </span>
+<span id="cb14-2"><a href="functions.html#cb14-2" aria-hidden="true" tabindex="-1"></a>    out <span class="ot">&lt;-</span> number <span class="sc">^</span> exponent</span>
+<span id="cb14-3"><a href="functions.html#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(out)</span>
+<span id="cb14-4"><a href="functions.html#cb14-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>For example, if we created this function and then ran <code>exponentiate(6)</code> or <code>exponentiate(number = 6)</code>, R would return “36”, as it knew to use the number 2 as the value for the <code>exponent</code> argument.</p>
+<p>However, we aren’t locked into using 2 as the only possible value for exponentiation. If we call the function, we can specify a different value for this argument. <code>exponentiate(6, 3)</code> or <code>exponentiate(number = 6, exponent = 3)</code> would raise 6 to the power 3, returning the value “216”.</p>
+<p>Setting default values for arguments within functions can be very helpful and save you time.</p>
+</div>
+<div id="summary-2" class="section level3" number="3.0.5">
+<h3><span class="header-section-number">3.0.5</span> Summary</h3>
+<p>In this lesson, we’ve reminded you of <em>the basics</em> of writing functions in R and walked through a few additional examples; however, we’ll be creating a package throughout this course and writing more functions. If you’d like more information and practice than provided in this lesson before moving on to creating a package in this course, check on the additional resources below.</p>
+</div>
+<div id="additional-resources-2" class="section level3" number="3.0.6">
+<h3><span class="header-section-number">3.0.6</span> Additional Resources</h3>
+<ul>
+<li><a href="http://r4ds.had.co.nz/functions.html">Chapter 19: Functions in r4ds</a>, by Hadley Wickham in R for Data Science</li>
+<li><a href="http://adv-r.had.co.nz/Functions.html">Functions</a>, by Hadley Wickham in Advanced R</li>
+<li><a href="https://nicercode.github.io/intro/writing-functions.html">Writing Functions</a> and <a href="https://nicercode.github.io/guides/functions/">Functions</a>, blog posts from <a href="https://nicercode.github.io/">Nice R Code</a></li>
+</ul>
+</div>
+<div id="slides-and-video-2" class="section level3" number="3.0.7">
+<h3><span class="header-section-number">3.0.7</span> Slides and Video</h3>
+<div class="figure">
+<img src="https://www.youtube.com/watch?v=FB-eMZUaej4" alt="" />
+<p class="caption">Functions</p>
+</div>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1Bo0j-Ct0phh9ygYe9LOsmd-J8YNN92H5OS_kPtynEHs/edit?usp=sharing">Slides</a></li>
+</ul>
+
+</div>
+</div>
+<hr>
+<center> 
+  <div class="footer">
+      All illustrations <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY. </a>
+      <br>
+      All other materials <a href= "https://creativecommons.org/licenses/by/4.0/"> CC-BY </a> unless noted otherwise.
+  </div>
+</center>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="overview.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="code.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
