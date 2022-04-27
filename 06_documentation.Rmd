@@ -182,7 +182,7 @@ This will generate the documentation and give you a readout of what it's doing i
 This results in the the `man/` documentation being generated for you.
 
 {format: png}
-![`man/` direcotry generated](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_68)
+![`man/` directory generated](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_68)
 
 Within the `man/` directory, you'll see that the `.Rd` file has been generated for you from the roxygen comments in your .R file.
 
@@ -232,7 +232,7 @@ For example, your file could include the following roxygen comment block:
 There are a few new ideas in this block. Something we haven't talked about yet is text formatting in .Rd documentation files.
 
 {format: png}
-![Formatting and linking possible within docuemntation](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_114)
+![Formatting and linking possible within documentation](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_114)
 
 Specifically, you can italicize (`\emph{text}`), bold (`\strong{text}`), or specify that text should be formatted as code (`\code{code}`) within your documentation.
 

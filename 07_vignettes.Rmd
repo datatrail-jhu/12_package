@@ -85,7 +85,7 @@ What this does:
 
 1. Adds needed packages to DESCRIPTION file automatically for you
 2. Creates `inst/doc` and adds this directory to .gitignore (so that built vignettes are not version controlled)
-3. Adds `vignettes/*.html` and `vignettes/*.R` to .gitiginore
+3. Adds `vignettes/*.html` and `vignettes/*.R` to .gitignore
 
 To do this, you may have to first install `knitr` (if you haven't previously) and then run then use the following code:
 

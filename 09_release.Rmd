@@ -319,7 +319,7 @@ For our `cbds` package, we'll write a very brief README to demonstrate the proce
 For now, we'll generate a Markdown README to demonstrate the process in our package using `usethis::use_readme_md()`. This creates the `README.md` file and opens it up for you to edit.
 
 {format: png}
-![usethis::use_readme_md() genereates and opens README](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_1_10)
+![usethis::use_readme_md() generates and opens README](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_1_10)
 
 In the file that is generated, for now, we can just edit the text to include that this is a personal package and demonstrate how to install it. We'll remove example for now until it becomes a full package for release.
 
