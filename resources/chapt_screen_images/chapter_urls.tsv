@@ -1,0 +1,14 @@
+url	chapt_title	img_path
+https://datatrail-jhu.github.io/12_package/no_toc/index.html	About this Course	resources/chapt_screen_images/index.png
+https://datatrail-jhu.github.io/12_package/no_toc/building-r-packages.html	1 Building R Packages	resources/chapt_screen_images/building-r-packages.png
+https://datatrail-jhu.github.io/12_package/no_toc/overview.html	2 Overview	resources/chapt_screen_images/overview.png
+https://datatrail-jhu.github.io/12_package/no_toc/functions.html	3 Functions	resources/chapt_screen_images/functions.png
+https://datatrail-jhu.github.io/12_package/no_toc/code.html	4 Code	resources/chapt_screen_images/code.png
+https://datatrail-jhu.github.io/12_package/no_toc/testing.html	5 Testing	resources/chapt_screen_images/testing.png
+https://datatrail-jhu.github.io/12_package/no_toc/description.html	6 Description	resources/chapt_screen_images/description.png
+https://datatrail-jhu.github.io/12_package/no_toc/documentation.html	7 Documentation	resources/chapt_screen_images/documentation.png
+https://datatrail-jhu.github.io/12_package/no_toc/vignettes.html	8 Vignettes	resources/chapt_screen_images/vignettes.png
+https://datatrail-jhu.github.io/12_package/no_toc/data.html	9 Data	resources/chapt_screen_images/data.png
+https://datatrail-jhu.github.io/12_package/no_toc/release.html	10 Release	resources/chapt_screen_images/release.png
+https://datatrail-jhu.github.io/12_package/no_toc/about-the-authors.html	About the Authors	resources/chapt_screen_images/about-the-authors.png
+https://datatrail-jhu.github.io/12_package/no_toc/references.html	11 References	resources/chapt_screen_images/references.png
