@@ -71,6 +71,7 @@ Reflow
 repo
 Rmd
 RMD
+RStudio
 roxygen
 Roxygen
 Rproj
