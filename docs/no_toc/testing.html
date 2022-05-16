@@ -316,12 +316,16 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>The input to this function should be the name you want to use for your test file. In our case, we’re going to write tests for the <code>check_na</code> function, so we’ll use that as the input. This function will then create (and open!) a file for us with the word <code>test-</code> followed by the name we specified.</p>
 <div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="testing.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create test and structure</span></span>
 <span id="cb27-2"><a href="testing.html#cb27-2" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_test</span>(<span class="st">&quot;check_na&quot;</span>)</span></code></pre></div>
-<p>
-<img src="https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&amp;pageid=g5d432a4243_0_0" alt="use_test sets up structure and files for automated testing" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&amp;pageid=g5d432a4243_0_0" alt="" />
+<p class="caption"><code>use_test</code> sets up structure and files for automated testing</p>
+</div>
 <p>Executing this function <em>also</em> creates a <code>tests/</code> directory within our package. Within that directory there will be a directory called <code>testthat/</code>. The test file we just created <code>test-check_na.R</code> will be stored within that directory. There will be example code within that file. This is where we’ll write our unit test code.</p>
 <p>Finally, within <code>tests/</code> there will be a file called <code>testthat.R</code>. This file automatically has code within it that will allow for automated testing to take place.</p>
-<p>
-<img src="https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&amp;pageid=g5d432a4243_0_11" alt="testthat.R contains code needed to automate testing" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&amp;pageid=g5d432a4243_0_11" alt="" />
+<p class="caption"><code>testthat.R</code> contains code needed to automate testing</p>
+</div>
 </div>
 <div id="testing-expectations" class="section level4" number="5.0.3.2">
 <h4><span class="header-section-number">5.0.3.2</span> Testing Expectations</h4>
@@ -437,17 +441,23 @@ expect_equal(2 * 2, 4)
 <span id="cb38-3"><a href="testing.html#cb38-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expect_equal</span>(<span class="fu">dim</span>(tested), <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>))</span>
 <span id="cb38-4"><a href="testing.html#cb38-4" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div>
 <p>The example code used and both of these tests will be all be stored in the <code>test-check_na.R</code> file we generated previously.</p>
-<p>
-<img src="https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&amp;pageid=g5d432a4243_0_28" alt="test-check_na.R" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&amp;pageid=g5d432a4243_0_28" alt="" />
+<p class="caption">test-check_na.R</p>
+</div>
 </div>
 <div id="running-tests-in-a-package" class="section level4" number="5.0.4.3">
 <h4><span class="header-section-number">5.0.4.3</span> Running tests in a package</h4>
 <p>Now that we have our first two official unit tests, it’s time to test our package. To do so, return to the Build tab in the top-right panel, click on More, and select “Test Package.” This will run all of the tests in <code>tests/testthat</code>.</p>
-<p>
-<img src="https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&amp;pageid=g5d432a4243_0_39" alt="Run package tests" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&amp;pageid=g5d432a4243_0_39" alt="" />
+<p class="caption">Run package tests</p>
+</div>
 <p>The results of these tests will be visible in the Build tab. Notice that we have passed all tests! Let’s keep on writing tests for our package!</p>
-<p>
-<img src="https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&amp;pageid=g5d432a4243_0_44" alt="Test output in Build tab" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&amp;pageid=g5d432a4243_0_44" alt="" />
+<p class="caption">Test output in Build tab</p>
+</div>
 </div>
 </div>
 <div id="testing-function-2-theme_cbds" class="section level3" number="5.0.5">
@@ -464,8 +474,10 @@ expect_equal(2 * 2, 4)
 <p>To do this, let’s again use <code>use_test()</code> to create our test files within the expected structure. But, this time, we’ll create a file for the <code>theme_cbds</code> function!</p>
 <div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="testing.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create test files</span></span>
 <span id="cb39-2"><a href="testing.html#cb39-2" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_test</span>(<span class="st">&quot;theme_cbds&quot;</span>)</span></code></pre></div>
-<p>
-<img src="https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&amp;pageid=g5d432a4243_0_49" alt="Generate new test file" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&amp;pageid=g5d432a4243_0_49" alt="" />
+<p class="caption">Generate new test file</p>
+</div>
 <p>This generates a new file in <code>tests/testthat</code> called <code>test-theme_cbds.R</code>. We’ll delete the example code in that file and replace it with a test that tests our functions expected behaviors:</p>
 <div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="testing.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># generate test plot</span></span>
 <span id="cb40-2"><a href="testing.html#cb40-2" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width)) <span class="sc">+</span></span>
@@ -490,17 +502,23 @@ expect_equal(2 * 2, 4)
 <span id="cb41-8"><a href="testing.html#cb41-8" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div>
 <p>Here, we’re testing to ensure that when we change the <code>base_size</code> and <code>base_family</code>, the resulting plot reflects those changes.</p>
 <p>We save all of this test code in <code>test-theme_cbds.R</code>.</p>
-<p>
-<img src="https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&amp;pageid=g5d432a4243_0_62" alt="test-theme_cbds.R" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&amp;pageid=g5d432a4243_0_62" alt="" />
+<p class="caption">test-theme_cbds.R</p>
+</div>
 <p>With these tests written, we save the file, return to the Build Tab, again select More and then click check package from the drop-down menu. You should again get a message that all tests passed!</p>
-<p>
-<img src="https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&amp;pageid=g5d432a4243_0_74" alt="All tests pass" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&amp;pageid=g5d432a4243_0_74" alt="" />
+<p class="caption">All tests pass</p>
+</div>
 </div>
 <div id="test-errors" class="section level3" number="5.0.6">
 <h3><span class="header-section-number">5.0.6</span> Test Errors</h3>
 <p>So far we’ve only demonstrated what it looks like when a test passes. But, what happens if a unit test fails? For example, what if into that last test, I had misspecified what font to expect, calling for “sans” in the plot but then testing for “serif”</p>
-<p>
-<img src="https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&amp;pageid=g5d432a4243_0_79" alt="Errors in testing" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&amp;pageid=g5d432a4243_0_79" alt="" />
+<p class="caption">Errors in testing</p>
+</div>
 <p>In this case, the test would (and should!) fail. The output we would get when testing the package would then provide us with a lot of information! First, in red, we see the description of the test where the failure occurred was in the “font and font size” test. We also see what file this test is in, along with the number of the line of code where the failure occurred (here, line 20). We also get a readout of what the mismatch was, and we can see that the test saw a mismatch between “sans” and “serif”.</p>
 <p>We also see the overall results, where 10 tests passed and 1 failed. Note that even though the test in line 20 failed, the test in line 21 was still run. All tests are tried, even if one fails earlier in the file.</p>
 <p>If you’re following along and made this change to see the error, do go back and change “sans” back to “serif” so that you’re tests no longer fail!</p>
