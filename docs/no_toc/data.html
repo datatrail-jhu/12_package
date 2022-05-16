@@ -303,25 +303,35 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="data.html#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co"># for external use</span></span>
 <span id="cb54-2"><a href="data.html#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="st">`</span><span class="at">usethis::use_data(df_trees)</span><span class="st">`</span></span></code></pre></div>
 <p>Note that you get a readout of the fact that the <code>data/</code> directory has been created for you and that your dataset has been saved within that directory.</p>
-<p>
-<img src="https://docs.google.com/presentation/d/17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4/export/png?id=17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4&amp;pageid=g5f5d9320fd_0_0" alt="use_data does all the legwork for you to make data available to users" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4/export/png?id=17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4&amp;pageid=g5f5d9320fd_0_0" alt="" />
+<p class="caption"><code>use_data</code> does all the legwork for you to make data available to users</p>
+</div>
 <p>To double check this, you would look at your Files tab, where you would now see that the <code>data/</code> directory is there for you.</p>
-<p>
-<img src="https://docs.google.com/presentation/d/17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4/export/png?id=17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4&amp;pageid=g5f5d9320fd_0_6" alt="data/ directory has been created" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4/export/png?id=17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4&amp;pageid=g5f5d9320fd_0_6" alt="" />
+<p class="caption"><code>data/</code> directory has been created</p>
+</div>
 <p>Within that directory, you’ll find that your object <code>df_trees</code> is now stored within <code>data/</code> as a <code>.rda</code> file: <code>df_trees.rda</code>. Unlike CSVs, this R Data file extension is something we haven’t used a ton, but this is a great way to store data within an R package and is the most efficient format for making data available to users within a package.</p>
-<p>
-<img src="https://docs.google.com/presentation/d/17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4/export/png?id=17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4&amp;pageid=g5f5d9320fd_0_11" alt="df_trees.rda is stored within data/" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4/export/png?id=17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4&amp;pageid=g5f5d9320fd_0_11" alt="" />
+<p class="caption"><code>df_trees.rda</code> is stored within data/</p>
+</div>
 </div>
 <div id="data-required-by-your-functions" class="section level3" number="9.0.2">
 <h3><span class="header-section-number">9.0.2</span> Data Required By Your Functions</h3>
 <p>In addition to data that you want your users to have access to, sometimes your functions require data and you want that data to be available to your functions but not to all package users. So, the data can’t be stored in <code>data/</code>. Data for your use by your package’s functions is referred to as <strong>internal data</strong>. Internal data are generated again using the <code>use_data()</code> function from <code>usethis</code>; however, you’ll need to change an input argument: <code>internal = TRUE</code>.</p>
 <div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="data.html#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="co"># for internal use</span></span>
 <span id="cb55-2"><a href="data.html#cb55-2" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_data</span>(df_trees, <span class="at">internal =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
-<p>
-<img src="https://docs.google.com/presentation/d/17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4/export/png?id=17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4&amp;pageid=g5f5d9320fd_0_16" alt="specify internal = TRUE to store internal data" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4/export/png?id=17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4&amp;pageid=g5f5d9320fd_0_16" alt="" />
+<p class="caption">specify <code>internal = TRUE</code> to store internal data</p>
+</div>
 <p>Notice that these data are <em>not</em> stored in <code>data/</code> and instead are stored in the <code>R/</code> directory in a file named <code>sysdata.rda</code>.</p>
-<p>
-<img src="https://docs.google.com/presentation/d/17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4/export/png?id=17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4&amp;pageid=g5f5d9320fd_0_21" alt="internal data are stored in R/sysdata.rda" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4/export/png?id=17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4&amp;pageid=g5f5d9320fd_0_21" alt="" />
+<p class="caption">internal data are stored in <code>R/sysdata.rda</code></p>
+</div>
 <p>As a reminder, these data are only available for use inside your package.</p>
 </div>
 <div id="raw-data" class="section level3" number="9.0.3">
@@ -330,19 +340,27 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>To automatically generate the scripts (using <code>usethis</code>) you’ll use to generate raw data files (and the accompanying script), you would use the <code>usethis::use_data_raw()</code> function:</p>
 <div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="data.html#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="co"># for raw data</span></span>
 <span id="cb56-2"><a href="data.html#cb56-2" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_data_raw</span>(<span class="st">&quot;trees_raw&quot;</span>)</span></code></pre></div>
-<p>
-<img src="https://docs.google.com/presentation/d/17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4/export/png?id=17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4&amp;pageid=g5f5d9320fd_0_26" alt="use_data_raw gets you started with external data" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4/export/png?id=17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4&amp;pageid=g5f5d9320fd_0_26" alt="" />
+<p class="caption"><code>use_data_raw</code> gets you started with external data</p>
+</div>
 <p>As previously, you get a helpful readout of what has been done for you as well as what still remains for you to do.</p>
 <p>Specifically, the example above creates a <code>data-raw/</code> directory for you.</p>
-<p>
-<img src="https://docs.google.com/presentation/d/17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4/export/png?id=17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4&amp;pageid=g5f5d9320fd_0_31" alt="data-raw/ is generated for you" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4/export/png?id=17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4&amp;pageid=g5f5d9320fd_0_31" alt="" />
+<p class="caption"><code>data-raw/</code> is generated for you</p>
+</div>
 <p>It also generates a script file of the name you specified within the <code>data-raw/</code> directory, and opens that script file.</p>
-<p>
-<img src="https://docs.google.com/presentation/d/17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4/export/png?id=17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4&amp;pageid=g5f5d9320fd_0_26" alt="use_raw_data() helps you to get set up to add raw data" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4/export/png?id=17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4&amp;pageid=g5f5d9320fd_0_26" alt="" />
+<p class="caption"><code>use_raw_data()</code> helps you to get set up to add raw data</p>
+</div>
 <p>Within the script file, there is a comment prompting you to add code here that takes your raw data file and gets it into the cleaner form that you’ve shared with users. You would add your code to take your raw dataset from its raw form into the form shared with your users (in your <code>data/</code> directory).</p>
 <p>One example of this approach being used comes from Hadley Wickham’s <a href="https://github.com/hadley/babynames/blob/master/data-raw/births.R"><code>babynames</code></a> package. Within that package cleaned up data from the USA Social Security Administration are made available to users (in the <code>data/</code> directory). However, to make those data usable by others from the package, Hadley Wickham had to gather and clean the data. The code to accomplish this is stored within the <code>data-raw/</code> directory.</p>
-<p>
-<img src="https://docs.google.com/presentation/d/17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4/export/png?id=17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4&amp;pageid=g5f5d9320fd_0_41" alt="Example of .R script that generates clean data from raw" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4/export/png?id=17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4&amp;pageid=g5f5d9320fd_0_41" alt="" />
+<p class="caption">Example of .R script that generates clean data from raw</p>
+</div>
 <p>At the end of this script, he saves the data file as a CSV into the <code>data-raw/</code> directory. This way his workflow is completely reproducible - anyone looking at the code in this package is completely clear on what data were used (from the information in <code>data-raw/</code>) and can get to using the dataset (because the clean version is stored in <code>data</code>/)</p>
 <p>Note that to access raw data file from a package you utilize <code>system.file</code> using the following syntax:</p>
 <div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="data.html#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="st">&quot;births.csv&quot;</span>, <span class="at">package =</span> <span class="st">&quot;babynames&quot;</span>)</span></code></pre></div>

@@ -296,11 +296,15 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">6.0.2</span> DESCRIPTION</h3>
 <p>The DESCRIPTION file has already been generated for you and its expected structure has been established for you. Now, it’s up to you to change the information in that file to reflect your <code>cbds</code> package.</p>
 <p>To get started, click on the DESCRIPTION file in the “Files” tab so that it opens up at the top-left.</p>
-<p>
-<img src="https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&amp;pageid=g5dcfb20e71_0_0" alt="DESCRIPTION file" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&amp;pageid=g5dcfb20e71_0_0" alt="" />
+<p class="caption">DESCRIPTION file</p>
+</div>
 <p>The DESCRIPTION file contains different information on each line where there is a <em>field</em> and a <em>value</em> (separated by a colon). Values that take up more than one line have be be indented.</p>
-<p>
-<img src="https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&amp;pageid=g5dcfb20e71_0_6" alt="field and value are separated by a colon" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&amp;pageid=g5dcfb20e71_0_6" alt="" />
+<p class="caption">field and value are separated by a colon</p>
+</div>
 <p>We’re going to walk through a number of these fields and describe what information goes in each of them so that you have a complete DESCRIPTION file and all your metadata is complete!</p>
 <div id="package" class="section level4" number="6.0.2.1">
 <h4><span class="header-section-number">6.0.2.1</span> Package</h4>
@@ -321,18 +325,24 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p><strong>Title</strong>: Tools for Working with Categorical Variables (Factors)
 <strong>Description</strong>: Helpers for reordering factor levels (including moving specified levels to front, ordering by first appearance, reversing, and randomly shuffling), and tools for modifying factor levels (including collapsing rare levels into other, ‘anonymizing’, and manually ‘recoding’).</p>
 <p>A reminder that you can see the Title and description of packages by loading them into RStudio and then using <code>?packagename</code>. The package documentation will show up in the Help tab.</p>
-<p>
-<img src="https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&amp;pageid=g5dcfb20e71_0_32" alt="Title and Description fields help to explain what this package should be used for" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&amp;pageid=g5dcfb20e71_0_32" alt="" />
+<p class="caption">Title and Description fields help to explain what this package should be used for</p>
+</div>
 <p>Writing a good Title line and Description are <em>very</em> important if you plan on releasing your package - they’re how others know what your package does. For our purposes with this first package we’re developing in this course, they’re less important, as we’re just writing a package containing functions for our own use. Nevertheless, it’s good to practice writing this information in the correct format, so write a Title and Description in your package’s DESCRIPTION file.</p>
-<p>
-<img src="https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&amp;pageid=g5dcfb20e71_0_20" alt="Title and Description fields in our package" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&amp;pageid=g5dcfb20e71_0_20" alt="" />
+<p class="caption">Title and Description fields in our package</p>
+</div>
 </div>
 <div id="version" class="section level4" number="6.0.2.3">
 <h4><span class="header-section-number">6.0.2.3</span> Version</h4>
 <p>Working our way through the DESCRIPTION file, you’ll see a <strong>Version</strong> field. We’ll discuss versioning in more detail in the final lesson of this course, but for now, know that as packages are developed and improved over time, the package version changes. Users of your package can decide whether or not they want to use the most recent version of your package or if an older version of your package is what they need.</p>
 <p>For now we’ll just note that packages <em>in development</em> should start with the version: “0.0.0.9000”, which is the current value in your DESCRIPTION file.</p>
-<p>
-<img src="https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&amp;pageid=g5dcfb20e71_0_67" alt="Development version in DESCRIPTION file" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&amp;pageid=g5dcfb20e71_0_67" alt="" />
+<p class="caption">Development version in DESCRIPTION file</p>
+</div>
 <p>Upon <em>release</em>, the version will contain three numbers, separated by periods. Those numbers correspond to <major>.<minor>.<patch>. For example, 1.0.0 would be the first released version of your package. As you patch the package (make a small change), the patch value would increase, such that the next version may be 1.0.1. We’ll discuss what major, minor, and patch mean in the context of versioning in the final lesson in this course.</p>
 </div>
 <div id="author" class="section level4" number="6.0.2.4">
@@ -354,8 +364,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>Often, the creator and the author are the same person, but they don’t have to be. <em>But</em>, every package is required to have at least one author (aut) and one maintainer (cre), even if they are the same person.</p>
 <p>Be sure to edit your package’s DESCRIPTION file to include your information.</p>
-<p>
-<img src="https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&amp;pageid=g5dcfb20e71_0_53" alt="Author information included in DESCRIPTION file" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&amp;pageid=g5dcfb20e71_0_53" alt="" />
+<p class="caption">Author information included in DESCRIPTION file</p>
+</div>
 <p>Additionally, note that often in package development for large packages, there can be more than one author. The syntax for this requires that author <code>person()</code> calls be separated by a comma:</p>
 <pre><code>Authors@R: c(
     person(given = &quot;Jane&quot;,
@@ -372,8 +384,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>The <strong>License</strong> field specifies who can use your package. If you’re not releasing your package, this field is unimportant and can be left as is and ignored.</p>
 <p>However, if you are releasing your package, this field is critical. There are standard licenses that may people choose to use in their packages (i.e. CC0). If using a standard license, you would include the abbreviation in this field.</p>
 <p>The <a href="https://tldrlegal.com/license/creative-commons-cc0-1.0-universal">CC0</a> license allows anyone to use your code for any purpose.</p>
-<p>
-<img src="https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&amp;pageid=g5dcfb20e71_0_53" alt="Specifies use of the Creative Commons CC0 license" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&amp;pageid=g5dcfb20e71_0_53" alt="" />
+<p class="caption">Specifies use of the Creative Commons CC0 license</p>
+</div>
 <p>Often, you may want to put some restrictions on your code and its use, in which case it’s important to look into other licenses, such as the <a href="https://tldrlegal.com/license/mit-license">MIT license</a> or <a href="https://tldrlegal.com/license/gnu-general-public-license-v2">GPL-2</a>.</p>
 </div>
 <div id="dependencies" class="section level4" number="6.0.2.6">
@@ -385,8 +399,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>Packages included in the <strong>Imports</strong> field are those that are <em>required</em> for your package to function. Packages you include in this field will be installed (if they haven’t been already) any time your package is installed.</p>
 <p>But, remember, that package installation and making a package available for use are two different steps. So, while this package will be installed, to be used in your package, you’ll have to explicitly refer to the package and function you want to use (using the <code>package::function_name</code> syntax) within your packages code. (As stated previously, you should avoid using <code>library()</code> within your package code.)</p>
 <p>In the two functions we’ve included in our package, the only package that is required for use of our package is <code>ggplot2</code>. While we only have one function in our package at this point that utilizes this package, we know that we’ll likely be writing other themes over time and functions that have to do with plotting. For this reason, we’re going to add <code>ggplot2</code> to our Imports field.</p>
-<p>
-<img src="https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&amp;pageid=g5dcfb20e71_0_91" alt="Import ggplot2" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&amp;pageid=g5dcfb20e71_0_91" alt="" />
+<p class="caption">Import <code>ggplot2</code></p>
+</div>
 <p>If your package depends on multiple other packages, it’s best to include them alphabetically, with each package listed on a separate line (and separated by a comma) so that they can be easily scanned by the human eye.</p>
 <p><strong>Suggests</strong></p>
 <p>Packages listed in this field can be used in your package, but aren’t required. For example, if you have a single function in your package that uses this external package, you may list it in <strong>Suggests</strong>. Packages in this field are <em>not</em> installed along with your package. If you list a package in Suggests, you avoid the user of your package from installing a package they may not need.</p>
@@ -396,8 +412,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb44-3"><a href="description.html#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="st">       call. = FALSE&quot;</span>)</span>
 <span id="cb44-4"><a href="description.html#cb44-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>You may have noticed that <code>testthat</code> has already been added in the Suggests field for you. This means that testthat will <em>not</em> be installed upon installation of your package; however, if someone were to try to run the tests in your <code>testthat/</code> directory using the <code>testthat</code> package, they would have to install <code>testthat</code> first.</p>
-<p>
-<img src="https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&amp;pageid=g5dcfb20e71_0_98" alt="Suggests testthat" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&amp;pageid=g5dcfb20e71_0_98" alt="" />
+<p class="caption">Suggests <code>testthat</code></p>
+</div>
 <p>The other notable bit about the testthat package in the DESCRIPTION file is the fact that “(&gt;= 2.1.0)” is included. This specifies the version of the package necessary. Specifically, for <code>testthat</code> here, the DESCRIPTION file is specifying that version 2.1.0 <em>or a more recent version</em> is required. It’s best practice to specify the minimum version necessary, rather than a specific version (== 2.1.0).</p>
 <p>Note that we could have included a minimum version along with <code>ggplot2</code> in our <strong>Imports</strong> field if we felt that there was a minimum version required for our package to work. If we were to have added a version there, we would have added the version we were using at the time (i.e.”&gt;=3.2.0”).</p>
 <p><strong>Depends</strong></p>
@@ -408,15 +426,19 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>You may also notice in your DESCRIPTION file two other fields: <strong>LazyData</strong> and <strong>Encoding</strong>.</p>
 <p><strong>LazyData</strong> helps make access to data in your package easier. We’ll discuss this further in a later lesson. You should leave this field and value as is in your DESCRIPTION file.</p>
 <p><strong>Encoding</strong> refers to how the characters used by the individual typing are stored and transmitted by the computer. There are a number of different systems for encoding. If you’ve heard for ASCII, UTF, or unicode, these refer to different systems used for encoding information within the computer. We note this here to specify that <strong>UTF-8</strong> is an encoding that works on all platforms, and is the one included by default in your DESCRIPTION file. Unless you have a reason to specify a different encoding, leave the value of this field as is.</p>
-<p>
-<img src="https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&amp;pageid=g5dcfb20e71_0_105" alt="LazyData and Encoding left with their defaults" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&amp;pageid=g5dcfb20e71_0_105" alt="" />
+<p class="caption">LazyData and Encoding left with their defaults</p>
+</div>
 </div>
 </div>
 <div id="install-restart" class="section level3" number="6.0.3">
 <h3><span class="header-section-number">6.0.3</span> Install &amp; Restart</h3>
 <p>Finally, while we haven’t added additionally functionality in this lesson, it’s a good idea to “Install and Restart” to make sure you haven’t messed up any of the expected formatting in this file before moving onto the next lesson. If it restarts R and loads you’re package without error, you’re ready to move on. If not, look back carefully at the syntax in your DESCRIPTION file before proceeding.</p>
-<p>
-<img src="https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&amp;pageid=g5dcfb20e71_0_112" alt="Install and Restart" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&amp;pageid=g5dcfb20e71_0_112" alt="" />
+<p class="caption">Install and Restart</p>
+</div>
 </div>
 <div id="summary-5" class="section level3" number="6.0.4">
 <h3><span class="header-section-number">6.0.4</span> Summary</h3>
