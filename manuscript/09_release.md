@@ -29,82 +29,82 @@ git config --global user.name "JaneEverydayDoe"
 git config --global user.email "Jane.Everyday.Doe@gmail.com"
 ```
 
-{format: png}
+
 ![`git config`](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_1)
 
 **Global RSA Key**
 
 Now, it's time to set up the global options for the workspace, which will allow you to set up an SSH key for the workspace. Go to the Tools menu and select "Global Options" from the drop-down menu.
 
-{format: png}
+
 ![Global Options](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_11)
 
 Within this window, select Git/SVN from the menu on the left, then click on "Create RSA Key..."
 
-{format: png}
+
 ![Create RSA Key](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_6) 
 
 In the window that pops up, choose a passphrase and type it into both boxes. Remember this passphrase as you will need to type it in shortly. Then, click "Create".
 
-{format: png}
+
 ![Create Passphrase](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_16) 
 
 This will return you to the Options window. On this window, click on "View public key". In the window that pops up, copy all the text for your key.
 
-{format: png}
+
 ![View public key](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_101)
 
 You've now generated an RSA key for your project. It's time to let GitHub know about this key so that it can verify who you are. To do so, go to [http://github.com/keys]. In this window, click on "New SSH key". 
 
-{format: png}
+
 ![New SSH key on GitHub](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_89)
 
 
 Create a Title for this Key and then paste the text you just copied from RStudio Cloud into this box. Then, click Add SSH key.
 
-{format: png}
+
 ![Paste RSA key into box and add](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_95)
 
 **Project Options**
 
 You've now established a global RSA key for this workspace on RStudio Cloud. Now, it's time to connect this specific project to a repo on GitHub. To do so, select "Project Options" from the Tools drop-down menu on RStudio Cloud.
 
-{format: png}
+
 ![Project Options](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_166)
 
 As with the Global options, select "Git/SVN" from the menu at left. Then, select "Git" from the Version control system drop down menu.
 
-{format: png}
+
 ![Select Git from drop-down menu](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_26)
 
 You will be asked two questions to confirm that you want a new git repository and that you want to restart RStudio. Select Yes for both.
 
-{format: png}
+
 ![Yes to git repo and new project](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_31)
 
 At this point you now have a new Git tab for use within RStudio Cloud right next to the Build tab we've been using throughout this course
 
-{format: png}
+
 ![Git tab now viewable](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_36)
 
 If you click on this tab, you'll see a list of the files in your R project. The question marks to the left of each file indicates that these files are untracked. (As a reminder, this means that git has not seen these before. You have not yet staged them.) An icon with an M indicates a file that has been modified. A D indicates a file has been deleted. And, an A indicates that it has been added (or staged).
 
-{format: png}
+
 ![Git tab lists files and status](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_42)
 
 If you then click on Diff, you'll be brought to a new window. Here, if you click on any file, you can see the changes since your last commit. As this is our first commit, everything is new, thus it's all in green. In the future, deleted lines are shown in red.
 
-{format: png}
+
 ![Diff shows you what has changed since last commit](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_47)
 
 To stage all of these files, click the check boxes to the left for all the files. Then, add a helpful commit message on the right, and click "Commit".
 
-{format: png}
+
 ![Stage and commit these files](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_52)
 
 A window will pop up giving you an update of what has changed with this commit.
 
-{format: png}
+
 ![Git commit summary](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_58)
 
 **Connect to remote (GitHub)**
@@ -113,7 +113,7 @@ At this point, we've generated an RSA key and shared that key with GitHub. We've
 
 To do this, you'll have to Create a repository as we've done before at [http://github.com/new]. Add the package name as the name of the repo and include a short Description. Leave all other fields as is and click "Create repository."
 
-{format: png}
+
 ![Create GitHub repo](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_182)
 
 On the screen that shows up next there are instructions about how to connect GitHub with your files on RStudio Cloud. To do this, be sure to toggle "SSH" at the top if it is not already. Then copy the highlighted text from GitHub. It should look similar to what you see here, but with your GitHub username:
@@ -123,7 +123,7 @@ git remote add origin git@github.com:JaneEverydayDoe/cbds.git
 git push -u origin master
 ```
 
-{format: png}
+
 ![connect to remote GitHub repo](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_187)
 
 Copy this text and then paste it into the Terminal on RStudio Cloud. 
@@ -132,12 +132,12 @@ Upon pressing enter (and executing these commands), you will be asked first if y
 
 Then, you will be asked for your passphrase. This is the passphrase you created when generating your RSA key. Type that now and press enter.
 
-{format: png}
+
 ![Type yes and enter passphrase](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_74)
 
 And, with that, your package will be pushed to GitHub! 
  
-{format: png}
+
 ![Package on GitHub](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_78)
 
 As an added bonus, you'll no longer have to type in your username and password every time you want to make a change on GitHub thanks to your RSA key setup!
@@ -162,7 +162,7 @@ devtools::install_github("janeeverydaydoe/cbds")
   
 With that, the package has been installed. Then, you just have to load it using `library(cbds)` to start using the functionality within the package.
 
-{format: png}
+
 ![Installing from GitHub](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_225)
 
 ### Package Checking
@@ -173,17 +173,17 @@ Nevertheless, we do want to mention that there is a way to check your packages f
 
 The easiest way to check your package is to click on the Check icon within the Build tab.
 
-{format: png}
+
 ![Check in Build Tab](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_236)
 
 This will start running a number of checks for you, giving you a readout of all the checks it's carrying out. This checks all the aspects of your package that we've covered in this course, including the package's structure, metadata, NAMESPACE, data code, tests, vignettes, and documentation.
 
-{format: png}
+
 ![Checks running](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_231)
 
 At the end of all of these checks, you'll get a readout of what was found:
 
-{format: png}
+
 ![RMD check results](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_242)
 
 Here you see that there was 1 warning. The warning here has to do with an outside requirement, qpdf. If you google this warning, you'll see that this warning is really only applicable if you want to submit your package to CRAN and that it requires installing qpdf. However, as we don't want to submit to CRAN at this point, we're in pretty good shape with no errors, notes, or other warnings!
@@ -199,17 +199,17 @@ One step beyond manually checking each time you make changes to your package is 
 
 To start using Travis with your R package, you'll first want to create a Travis account. Go to [https://travis-ci.org/profile] and click "Sign in with GitHub"
 
-{format: png}
+
 ![Sign in with GitHub](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_252)
 
 On the next screen click, "Authorize travis-ci".
 
-{format: png}
+
 ![Authorize Travis-ci](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_258)
 
 Once authorized, you'll want to click on the repo that you'd like to use with Travis. Here, we'll click on `cbds`.
 
-{format: png}
+
 ![Select `cbds` repo to use with Travis](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_263)
 
 You'll get a note that this is not an active directory. Click "Activate repository" to activate.
@@ -217,7 +217,7 @@ You'll get a note that this is not an active directory. Click "Activate reposito
 
 You'll get a note that there are no builds for this repository. To change that, let's return to RStudio Cloud and set up Travis on that end.
 
-{format: png}
+
 ![No builds](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_273)
 
 
@@ -231,12 +231,12 @@ usethis::use_travis()
 
 Execute this function and you'll see that a file `travis.yml` is generated.
 
-{format: png}
+
 ![`usethis::use_travis()`](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_278)
 
 If you open this up, you'll notice that a few lines of information have been added there. 
 
-{format: png}
+
 ![`travis.yml`](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_283)
 
 
@@ -244,17 +244,17 @@ What these lines accomplish is that every time you push to GitHub or every time 
 
 Having added this yaml file, we want to push these changes to GitHub. Return to the Git tab, select to stage these files, add a commit message, and commit these files. Then, be sure to push these files to GitHub. (You may be asked your passphrase again.)
 
-{format: png}
+
 ![`travis.yml`](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_288)
 
 Upon pushing these changes to GitHub, Travis CI will automatically run `devtools::check()` for you. You can see Travis running on your Travis account. Yellow indicates a build that is running. Green indicates a successful build. Red indicates an error and something you'll want to address as soon as possible to avoid issues down the line.
 
-{format: png}
+
 ![Travis checking build](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_294)
 
 It may take a while (~10 minutes) for your Travis build to generate. However, eventually it will either pass (and turn green) or fail (and be red). You'll also get a log indicating where it may have failed.
 
-{format: png}
+
 ![Travis build failed - check log](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_358)
 
 If you followed the instructions here, your build will likely have failed. This was intentional. Builds fail frequently when you're just getting started! So, let's take a look at where we went wrong. By looking at the output on Travis we see that warnings were found. Well, this makes sense, we *know* that there are warnings. We just don't care about them at this point because we're not trying to put this package on CRAN.
@@ -265,17 +265,17 @@ So, we can tell Travis to *not* treat warnings as errors by adding the following
 warnings_are_errors: false
 ```
 
-{format: png}
+
 ![Update `travis.yml`](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_363)
 
 After saving this file, we stage, commit, and push our changes to GitHub! Travis will then automatically re-build.
 
-{format: png}
+
 ![Push changes](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_368)
 
 Eventually, Travis should indicate a successful build with a green check mark! Upon refresh, the badge at the top should indicate the build is "passing". Success!
 
-{format: png}
+
 ![A successful build!](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_0_392)
 
 ### Versioning
@@ -313,22 +313,22 @@ usethis::use_readme_rmd()
 
 For our `cbds` package, we'll write a very brief README to demonstrate the process, but for a package released to others, you'd want a more helpful README, similar to that of the [googlesheets](https://github.com/jennybc/googlesheets/blob/master/README.md) or [dplyr](https://github.com/tidyverse/dplyr/blob/master/README.md) packages.
 
-{format: png}
+
 ![`googlesheets` README](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_1_0)
 
 For now, we'll generate a Markdown README to demonstrate the process in our package using `usethis::use_readme_md()`. This creates the `README.md` file and opens it up for you to edit.
 
-{format: png}
+
 ![usethis::use_readme_md() generates and opens README](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_1_10)
 
 In the file that is generated, for now, we can just edit the text to include that this is a personal package and demonstrate how to install it. We'll remove example for now until it becomes a full package for release.
 
-{format: png}
+
 ![Edit file](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_1_15)
 
 Once edited, you'll click Preview to knit the file. You're then ready to add, commit, and push the changes to your repo. 
 
-{format: png}
+
 ![Commit and push changes](https://docs.google.com/presentation/d/1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA/export/png?id=1rir5qKFkrPwkXHfJDM6OILAeuSGlhisn2nTumwyBTQA&pageid=g5eb2058428_1_20)
 
 Your Travis build will automatically begin and you're package will be checked and ready to go!

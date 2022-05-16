@@ -311,7 +311,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div id="viewing-vignettes-browsevignettes" class="section level4" number="8.0.2.2">
 <h4><span class="header-section-number">8.0.2.2</span> Viewing vignettes: <code>browseVignettes()</code></h4>
 <p>To see the vignettes in a package, you can use the <code>browseVignettes()</code> function with the package name of interest as an input. For example, to see the vignettes for <code>googlesheets</code>, which we’ll discuss in detail next, just execute <code>browseVignettes("googlesheets")</code>. This will <a href="https://cran.r-project.org/web/packages/googlesheets/vignettes/">open up a URL</a> in your web browser.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&amp;pageid=g5dd7d7062c_0_0" alt="browseVignettes(&quot;googlesheets&quot;)" /></p>
 </div>
 </div>
@@ -326,11 +326,11 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 <p>From their titles you can see that each plays a different role. The Basic Usage vignette is likely where most people would start. However, if after using this package, you found yourself running into trouble working with formulas in googlesheets, you’d likely check out the “Formulas and formatted numbers” vignette. If you were struggling to understand your authorization in the package, you would look at the “Managing Auth Tokens” vignette. And, if you wanted to use an alternative browser, you’d check out the last vignette listed above.</p>
 <p>As the “googlesheets Basic Usage” vignette is where most people would start, that is the vignette we’ll focus on most closely in this lesson. The Vignette is viewable at <a href="https://cran.r-project.org/web/packages/googlesheets/vignettes/basic-usage.html">this link</a> if you’d like to scroll through and have a look for yourself. (Note that vignettes can and should be updated overtime, so the images here may look different from what you see in the future!)</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&amp;pageid=g5dd7d7062c_0_82" alt="“googlesheets Basic Usage”" /></p>
 <p>At the top of the vignette, in addition to the title, you have information about who authored the vignette and when it was last updated. And, in the most helpful vignettes, there is a table of contents where you can see clearly what’s included throughout the vignette. By looking at the topics here you can see that all of the basic functions you would want to accomplish using the <code>googlesheets</code> package (reading in a google sheet, creating a new google sheet, editing an existing sheet, etc.) are all documented within this vignette.</p>
 <p>Let’s focus in on <a href="https://cran.r-project.org/web/packages/googlesheets/vignettes/basic-usage.html#list-your-google-sheets">“List Your Google Sheets”</a>. If we click on that link within the table of contents, we’ll be brought to the part of the vignette that explains how to accomplish listing all of your google sheets.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&amp;pageid=g5dd7d7062c_0_96" alt="Vignettes include text, code and outputs to demonstrate functionality" /></p>
 <p>In this bit of the vignette it becomes clear through the text provided what this function is used for and then, through the code, it becomes clear <em>how</em> to use it. Now, you <em>could</em> have read the documentation for that function and learned similar information, but with the vignette you then have all the information in one place to tell you what you can do after you list your Google Sheets using this function. It demonstrates how all of the pieces of the package fit together functionally through text that helps explain and code that demonstrates how it works!</p>
 <p>If you were to scroll through this vignette you would see that it’s rather long, but that’s OK. You don’t have to read the whole thing. If you look at the vignette and figure out the answer to the question that brought you there, you can move on. But, if you’re just getting started taking a look at the whole vignette can be very helpful! A vignette that helps its users most is the one that is well-organized, has clear examples, and has text to help explain the package.</p>
@@ -356,10 +356,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="vignettes.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(c(&quot;knitr&quot;, &quot;rmarkdown&quot;))</span></span>
 <span id="cb49-2"><a href="vignettes.html#cb49-2" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_vignette</span>(<span class="st">&#39;get-started&#39;</span>, <span class="at">title =</span> <span class="st">&quot;Getting Started&quot;</span>)</span></code></pre></div>
 <p>With this, you’ll see a new file (get-started.Rmd) has been added to your <code>vignettes/</code> directory, that file has opened up for you, and, in your Console, you see a read-out of what changes have been made for you.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&amp;pageid=g5f4c3822f3_0_0" alt="Vignette file generated from use_vignette()" /></p>
 <p>Note that within the <code>get-started.Rmd</code> document, some required YAML information at the top of the document as well as two code chunks have been added for you. But, aside from a line of code loading in your package (<code>library(cbds)</code>) being included for you, none of this is specific to <em>your</em> package yet. It’s time to personalize this document and make this vignette a helpful long-form piece of documentation to accompany your package!</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&amp;pageid=g5f4c3822f3_0_10" alt="get-started.Rmd contains skeleton but requires that you add information about your package" /></p>
 </div>
 <div id="metadata-1" class="section level4" number="8.0.5.2">
@@ -400,19 +400,19 @@ date: &quot;2022-04-27&quot;</code></pre>
 <h4><span class="header-section-number">8.0.7.1</span> Step 1: Add Text</h4>
 <p>For large packages, sometimes you’ll need a lot of introductory text or even a section dedicated to explaining your package, but for our package - which is primarily to hold functions for our personal use - we’ll just include a brief paragraph introducing the package.</p>
 <p>After our brief introduction, the functions in this package revolve around working with data. So, we’ll introduce a dataset that we’ll then use throughout our vignette.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&amp;pageid=g5f4c3822f3_0_24" alt="Include text that explains at a beginner’s level" /></p>
 </div>
 <div id="step-2-add-code" class="section level4" number="8.0.7.2">
 <h4><span class="header-section-number">8.0.7.2</span> Step 2: Add code</h4>
 <p>To work with this dataset, we’ll load the <code>ggplot2</code> package and then take a look at the diamonds dataset. Note that to do this, we include the code in a R Markdown code chunk.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&amp;pageid=g5f4c3822f3_0_33" alt="Write code in code chunks and run them to ensure the code executes" /></p>
 </div>
 <div id="step-3-run-code-chunk" class="section level4" number="8.0.7.3">
 <h4><span class="header-section-number">8.0.7.3</span> Step 3: Run code chunk</h4>
 <p>To ensure that there are no errors in the code you’ve written, it’s always a good idea to run the code chunk before moving on to the next part of your vignette.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&amp;pageid=g5f4c3822f3_0_42" alt="Run code chunks to ensure the code executes without error" /></p>
 </div>
 <div id="step-4-repeat-steps-1-3" class="section level4" number="8.0.7.4">
@@ -420,20 +420,20 @@ date: &quot;2022-04-27&quot;</code></pre>
 <p>At this point, we have an introduction and data to work with, so we’re ready to continue adding text and code to demonstrate how the functions in our package work.</p>
 <p>We have two functions currently, so we’ll add an H1 header for each and then include text and code to demonstrate how they work.</p>
 <p>First, we demonstrate using text, code, and code output how a user would use the function <code>check_na()</code></p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&amp;pageid=g5f4c3822f3_0_55" alt="Including check_na() in our vignette" /></p>
 <p>Second, we’ll want to document our <code>theme_cbds()</code> function. Remember this is a custom theme to be applied to <code>ggplot2</code> plots. So, it would likely be helpful for users to be able to visualize the changes from default plots to what your theme produces.</p>
 <p>Thus, it’s a good idea to include what the plot would look like before applying your theme.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&amp;pageid=g5f4c3822f3_0_65" alt="Example of what plot looks like before applying theme_cbds()" /></p>
 <p>Then, you can demonstrate what this plot would look like - using both text and code to explain - with your function:</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&amp;pageid=g5f4c3822f3_0_73" alt="Example of what plot looks like before applying theme_cbds()" /></p>
 <p>Note that text explaining the code can be included before the code <em>and</em> text explaining the output of the code can be included after the code chunk to summarize what’s going on.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&amp;pageid=g5f4c3822f3_0_81" alt="Text can be included before or after code to help readers understand" /></p>
 <p>Finally, sometimes, it can helpful to readers to demonstrate explicitly that a function works in different contexts. For example, we can include an additional plot, demonstrating what this would look like for a barplot (using a categorical variable).</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&amp;pageid=g5f4c3822f3_0_88" alt="Multiple, related examples can help readers’ understanding" /></p>
 <p>At this point, our full vignette includes the following a YAML with modified metadata at the top, text introducing our package, and text, code and output demonstrating how to use the functions within our package. We’re now ready for the final step - building our vignette!</p>
 </div>
@@ -441,13 +441,13 @@ date: &quot;2022-04-27&quot;</code></pre>
 <h4><span class="header-section-number">8.0.7.5</span> Step 4: Build Vignette</h4>
 <p>To accomplish this, we’ll first note that using “Clean &amp; Rebuild” from the Build tab will <em>NOT</em> build your vignettes for you. This is to save time so that your Vignettes are not re-generated every time you change something small in your package.</p>
 <p>However, at this point we <em>want</em> to build our vignettes. To do so we’ll want to use the <code>build()</code> function from <code>devtoools</code>. To use this, first add <code>devtools</code> to your DESCRIPTION file.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&amp;pageid=g5f4c3822f3_0_96" alt="Add devtools to your DESCRIPTION file" /></p>
 <p>Then, install the package on RStudio Cloud for immediate use:</p>
 <pre><code>install.packages(&quot;devtools&quot;)</code></pre>
 <p>Now, we can create our package bundle <em>and</em> generate vignettes by using:</p>
 <pre><code>devtools::build()</code></pre>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&amp;pageid=g5f4c3822f3_0_110" alt="Vignettes are built!" /></p>
 <p>Note that the output indicates that our vignettes have been built (along with the rest of the package)!</p>
 </div>

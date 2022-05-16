@@ -30,7 +30,7 @@ You're likely very familiar with a number of packages at this point. You've prob
 
 More specifically, a package is a collection of functions, data, and code conveniently provided in a nice, complete format for you. At the time of writing, there are just over 17,600 packages available to download - each with their own specialized functions and code, all developed for a specific but different purpose. What we haven't talked about previously, however, is that you too can write R packages. In fact, anyone can and should write R packages!
 
-{format: png}
+
 ![R Documentation: R Packages](https://docs.google.com/presentation/d/1fueR3mDU3mGjq0qemekAalmbeYop4_I_7Z9CPHW7fcY/export/png?id=1fueR3mDU3mGjq0qemekAalmbeYop4_I_7Z9CPHW7fcY&pageid=g5cdfd9360d_0_244)
 
 Writing your own R package is helpful:
@@ -59,12 +59,12 @@ As a refresher and to make sure we're all on the same page before moving forward
 
 As a brief refresher, if you are installing from the CRAN repository, use the `install.packages()` function, with the name of the package you want to install in quotes between the parentheses . For example, if you want to install the package `ggplot2`, you would use: `install.packages("ggplot2")`  
 
-{format: png}
+
 ![Installing from CRAN](https://docs.google.com/presentation/d/1fueR3mDU3mGjq0qemekAalmbeYop4_I_7Z9CPHW7fcY/export/png?id=1fueR3mDU3mGjq0qemekAalmbeYop4_I_7Z9CPHW7fcY&pageid=g5cdfd9360d_0_162)
 
 From GitHub, installation occurs using `devtools::install_github("author/package")` replacing "author" and "package" with their GitHub username and the name of the package.
 
-{format: png}
+
 ![Installing from GitHub](https://docs.google.com/presentation/d/1fueR3mDU3mGjq0qemekAalmbeYop4_I_7Z9CPHW7fcY/export/png?id=1fueR3mDU3mGjq0qemekAalmbeYop4_I_7Z9CPHW7fcY&pageid=g5cdfd9360d_0_84)
 
 #### Loading
@@ -73,7 +73,7 @@ Installing a package does *not* make its functions immediately available to you.
 
 **NOTE:** Unlike when you're installing a package, when loading a package, you do *not* have to put the package name in quotes.
 
-{format: png}
+
 ![Loading a Package](https://docs.google.com/presentation/d/1fueR3mDU3mGjq0qemekAalmbeYop4_I_7Z9CPHW7fcY/export/png?id=1fueR3mDU3mGjq0qemekAalmbeYop4_I_7Z9CPHW7fcY&pageid=g5cdfd9360d_0_320)
 
 There is an order to loading packages - some packages require other packages to be loaded first. These other packages are known as **dependencies**. When you install a new package, that new package's manual/help pages will automatically determine what packages this new package is dependent upon and will install those packages as well. We'll discuss this in more detail in a later lesson in this course.

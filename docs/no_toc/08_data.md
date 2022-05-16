@@ -32,17 +32,17 @@ To store data in the `data/` directory, you'll use `usethis::use_data()` and spe
 
 Note that you get a readout of the fact that the `data/` directory has been created for you and that your dataset has been saved within that directory.
 
-{format: png}
+
 ![`use_data` does all the legwork for you to make data available to users](https://docs.google.com/presentation/d/17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4/export/png?id=17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4&pageid=g5f5d9320fd_0_0)
 
 To double check this, you would look at your Files tab, where you would now see that the `data/` directory is there for you.
 
-{format: png}
+
 ![`data/` directory has been created](https://docs.google.com/presentation/d/17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4/export/png?id=17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4&pageid=g5f5d9320fd_0_6)
 
 Within that directory, you'll find that your object `df_trees` is now stored within `data/` as a `.rda` file: `df_trees.rda`. Unlike CSVs, this R Data file extension is something we haven't used a ton, but this is a great way to store data within an R package and is the most efficient format for making data available to users within a package.
 
-{format: png}
+
 ![`df_trees.rda` is stored within data/](https://docs.google.com/presentation/d/17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4/export/png?id=17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4&pageid=g5f5d9320fd_0_11)
 
 ### Data Required By Your Functions
@@ -54,13 +54,13 @@ In addition to data that you want your users to have access to, sometimes your f
 usethis::use_data(df_trees, internal = TRUE)
 ```
 
-{format: png}
+
 ![specify `internal = TRUE` to store internal data](https://docs.google.com/presentation/d/17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4/export/png?id=17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4&pageid=g5f5d9320fd_0_16)
 
 
 Notice that these data are *not* stored in `data/` and instead are stored in the `R/` directory in a file named `sysdata.rda`.
 
-{format: png}
+
 ![internal data are stored in `R/sysdata.rda`](https://docs.google.com/presentation/d/17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4/export/png?id=17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4&pageid=g5f5d9320fd_0_21)
 
 As a reminder, these data are only available for use inside your package.
@@ -76,26 +76,26 @@ To automatically generate the scripts (using `usethis`) you'll use to generate r
 usethis::use_data_raw("trees_raw")
 ```
 
-{format: png}
+
 ![`use_data_raw` gets you started with external data](https://docs.google.com/presentation/d/17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4/export/png?id=17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4&pageid=g5f5d9320fd_0_26)
 
 As previously, you get a helpful readout of what has been done for you as well as what still remains for you to do.
 
 Specifically, the example above creates a `data-raw/` directory for you.
 
-{format: png}
+
 ![`data-raw/` is generated for you](https://docs.google.com/presentation/d/17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4/export/png?id=17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4&pageid=g5f5d9320fd_0_31)
 
 It also generates a script file of the name you specified within the `data-raw/` directory, and opens that script file.
 
-{format: png}
+
 ![`use_raw_data()` helps you to get set up to add raw data](https://docs.google.com/presentation/d/17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4/export/png?id=17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4&pageid=g5f5d9320fd_0_26)
 
 Within the script file, there is a comment prompting you to add code here that takes your raw data file and gets it into the cleaner form that you've shared with users. You would add your code to take your raw dataset from its raw form into the form shared with your users (in your `data/` directory).
 
 One example of this approach being used comes from Hadley Wickham's [`babynames`](https://github.com/hadley/babynames/blob/master/data-raw/births.R) package. Within that package cleaned up data from the USA Social Security Administration are made available to users (in the `data/` directory). However, to make those data usable by others from the package, Hadley Wickham had to gather and clean the data. The code to accomplish this is stored within the `data-raw/` directory.
 
-{format: png}
+
 ![Example of .R script that generates clean data from raw](https://docs.google.com/presentation/d/17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4/export/png?id=17jSiXAuZqt_y8LwEurK5kRLcCHQKH2UeZWWRs_DbcF4&pageid=g5f5d9320fd_0_41)
 
 At the end of this script, he saves the data file as a CSV into the `data-raw/` directory. This way his workflow is completely reproducible - anyone looking at the code in this package is completely clear on what data were used (from the information in `data-raw/`) and can get to using the dataset (because the clean version is stored in `data`/)

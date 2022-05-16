@@ -326,10 +326,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="documentation.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install package</span></span>
 <span id="cb45-2"><a href="documentation.html#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;roxygen2&quot;</span>)</span></code></pre></div>
 <p>Then, return to (open) your <code>check_na.R</code> file from within the <code>R/</code> directory. Once open, click on the wand icon within RStudio Cloud and select “Insert Roxygen Skeleton.”</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&amp;pageid=g5dd0b1f446_0_0" alt="Insert Roxygen Skeleton" /></p>
 <p>This will get you started with what’s necessary for documenting your function using <code>roxygen2</code>. Specifically, this will add a <em>block</em>, or a number of lines at the top of your file containing roxygen comments. Blocks include <em>tags</em>. Tags take the format: <code>@tag_name information</code></p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&amp;pageid=g5dd0b1f446_0_6" alt="Add roxygen comments in block at top of function" /></p>
 <p>Note that within roxygen comments “@” therefore has a special meaning. If you ever want to use an actual “@” symbol (for email addresses, for example), you’ll need to use “@@”.</p>
 </div>
@@ -341,7 +341,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>For each object you document, the <strong>title</strong> should be a single line, written in sentence case (First word capitalized), and should <em>not</em> end in a period. The title should briefly explain the function’s purpose.</p>
 <p>The <strong>description</strong> should briefly (in a few sentences) describe what the function does.</p>
 <p>To see this clearly, let’s use <code>?ggplot</code> (after loading the <code>ggplot2</code> library into RStudio Cloud) to see how these pieces go on to look in the documentation.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&amp;pageid=g5dd0b1f446_0_6" alt="title and description in ggplot function" /></p>
 <p>Now, having seen an example, let’s add this specific information necessary to use <em>your</em> function.</p>
 <p><strong>Title &amp; Description: <code>check_na.R</code></strong></p>
@@ -351,10 +351,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb46-3"><a href="documentation.html#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39; Take variable as input and compute the number of total observations,</span></span>
 <span id="cb46-4"><a href="documentation.html#cb46-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39; number of missing observations and number of non-missing observations.</span></span></code></pre></div>
 <p>The first few lines of your .R file should now look as follows within RStudio Cloud:</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&amp;pageid=g5dd0b1f446_0_29" alt="title and description in roxygen block" /></p>
 <p>As a brief aside, if you write a long description in a single line, you can use “Reflow Comment” (from the wand icon) to separate these comments into separate lines, so that no one line is too long (each line should be &lt;80 characters long) .</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&amp;pageid=g5dd0b1f446_0_24" alt="Reflow Comment" /></p>
 </div>
 <div id="documenting-tags-tags" class="section level5" number="7.0.3.2.2">
@@ -392,24 +392,24 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li>When there’s more than one line for a tag, it must be indented for easy reading, as you see with the <code>@return</code> tag here</li>
 <li>We’ve included two examples, each of which will execute without error</li>
 </ol>
-<p>{format: png}
+<p>
 !<span class="citation">(<a href="#ref-tags" role="doc-biblioref"><strong>tags?</strong></a> within <code>check_na.R</code>)</span>(<a href="https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&amp;pageid=g5dd0b1f446_0_39" class="uri">https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&amp;pageid=g5dd0b1f446_0_39</a>)</p>
 <p>Also, you may see a tag in there that we haven’t talked about yet. The <strong><code>@export</code></strong> tag indicates that this function should be added to the NAMESPACE file. While we haven’t discussed that file and won’t be editing it manually, it’s important to know that functions included in the NAMESPACE are functions you want users of your package to have access to. So, if you want this function to be available to users, include the <code>@export</code> tag.</p>
 <p>Note that sometimes you’ll have functions that are used internally by other functions within your package and you won’t want them to be exported (available to users). However, for this first package and for most packages you write as you get started, you’ll likely want to <code>@export</code> each of your functions.</p>
-<p>{format: png}
+<p>
 !<span class="citation">(<a href="#ref-export" role="doc-biblioref"><strong>export?</strong></a> tag makes function usable to users)</span>(<a href="https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&amp;pageid=g5dd0b1f446_0_46" class="uri">https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&amp;pageid=g5dd0b1f446_0_46</a>)</p>
 </div>
 </div>
 <div id="step-3-generate-documentation" class="section level4" number="7.0.3.3">
 <h4><span class="header-section-number">7.0.3.3</span> Step 3: Generate documentation</h4>
 <p>Now that you’ve add the required information to your function in the roxygen comments, you’re ready to generate your documentation. To do this, return to the “Build” tab in RStudio Cloud, click on “More” and select “Document” from the drop-down menu.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&amp;pageid=g5dd0b1f446_0_58" alt="Document" /></p>
 <p>This will generate the documentation and give you a readout of what it’s doing in the process:</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&amp;pageid=g5dd0b1f446_0_63" alt="Generate documentation" /></p>
 <p>This results in the the <code>man/</code> documentation being generated for you.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&amp;pageid=g5dd0b1f446_0_68" alt="man/ directory generated" /></p>
 <p>Within the <code>man/</code> directory, you’ll see that the <code>.Rd</code> file has been generated for you from the roxygen comments in your .R file.</p>
 </div>
@@ -417,10 +417,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <h4><span class="header-section-number">7.0.3.4</span> Step 4: Look at your documentation!</h4>
 <p>It’s finally time to take a look at your documentation using the <code>?</code> function.</p>
 <p>To do so, “Install and Restart” from the Build tab.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&amp;pageid=g5dd0b1f446_0_74" alt="“Install and Restart”" /></p>
 <p>You’re now ready to view your function’s technology! To do so, run <code>?check_na</code> from the console. Your documentation will be viewable in the Help tab!</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&amp;pageid=g5dd0b1f446_0_79" alt="Documentation in View Tab" /></p>
 </div>
 </div>
@@ -449,12 +449,12 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb48-19"><a href="documentation.html#cb48-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39;   geom_point() +</span></span>
 <span id="cb48-20"><a href="documentation.html#cb48-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39;   theme_cbds()</span></span></code></pre></div>
 <p>There are a few new ideas in this block. Something we haven’t talked about yet is text formatting in .Rd documentation files.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&amp;pageid=g5dd0b1f446_0_114" alt="Formatting and linking possible within documentation" /></p>
 <p>Specifically, you can italicize (<code>\emph{text}</code>), bold (<code>\strong{text}</code>), or specify that text should be formatted as code (<code>\code{code}</code>) within your documentation.</p>
 <p>Additionally you can include links to <em>other</em> documentation. For another function within the same package you would specify <code>\code{\link{function_name}}</code>. If you wanted, however, to include a link to a function in another R package, you would use <code>\code{\link[other_package]{function_name}}</code>.</p>
 <p>You can see an example text formatting and linking to other packages in the documentation for our <code>theme_cbds()</code> function.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&amp;pageid=g5dd0b1f446_0_114" alt="Formatting and linking in rendered documentation" /></p>
 <p>Linking to places on the web is also possible using <code>url{}</code>, <code>\href{}</code>, and <code>\email{}</code>. Friendly reminder that the email would require @@.</p>
 </div>

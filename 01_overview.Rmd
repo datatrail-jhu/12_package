@@ -17,7 +17,7 @@ Second, the main functions within that package all begin with `gs_`. This means 
 
 Third, the package is **well-documented** and has [**vignettes**](https://cran.rstudio.com/web/packages/googlesheets/vignettes/basic-usage.html). We'll discuss these in later lessons in this course, but for now what this means is that if you are trying to figure out what a function does, how to get started, or how to use the package overall, a look at the package's vignettes, peak through the package documentation, or a quick Google search will usually solve your problem quickly and painlessly.
 
-{format: png}
+
 ![`googlesheets` is a great package](https://docs.google.com/presentation/d/1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c/export/png?id=1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c&pageid=g5d3c3ba7e1_0_0)
 
 While we'll get to discussing function naming, documentation, and vignettes in coming lessons, we'll focus on the first point here - package naming! We'll also discuss the basic components of an R package and get you on your way to creating your first R package.
@@ -124,12 +124,12 @@ We suggest you follow along as the following lessons in this course will refer b
 
 As you've done previously, you'll start by going to [Rstudio Cloud](https://rstudio.cloud) and creating a new project.
 
-{format: png}
+
 ![Create a New Project](https://docs.google.com/presentation/d/1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c/export/png?id=1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c&pageid=g5d3c3ba7e1_0_177)
 
 We're going to create a package called `cbds`, so you can should this project 'cbds'. Now, we talked previously about how having a good name for your package is important. Because this is just a package being created as an example, `cbds` is a fine name. But, if it were a package being used for a specific purpose or one to be released out into the world, you should spend more time and think of a better name for sure!
 
-{format: png}
+
 ![Rename project: cbds](https://docs.google.com/presentation/d/1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c/export/png?id=1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c&pageid=g5d3c3ba7e1_0_172)
 
 #### Step 2: Install `usethis`
@@ -157,17 +157,17 @@ create_package("cbds")
 
 When you run this code, you'll get a warning message asking you if you want to create the package anyway. Choose the numeric option (here, it's 3) that corresponds to "Yup".
 
-{format: png}
+
 ![`create_package()`](https://docs.google.com/presentation/d/1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c/export/png?id=1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c&pageid=g5d3c3bad68_0_22)
 
 You'll then be prompted to see if you want to Switch Projects.
 
-{format: png}
+
 ![Select "Save" to Switch Projects](https://docs.google.com/presentation/d/1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c/export/png?id=1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c&pageid=g5d3c3bad68_0_27)
 
 Click Save when asked if you want to Save workspace image to `/cloud/project/.RData` and you'll be moved into the directory `cbds/`.
 
-{format: png}
+
 ![cbds package directory and Build tab](https://docs.google.com/presentation/d/1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c/export/png?id=1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c&pageid=g5d3c3bad68_0_32)
 
 Notice that you're now within `/cloud/project/cbds` and that a number of files are visible here. These have all been created for you thanks to the `create_package()` function from `usethis`. Earlier we mentioned that a minimal package has a folder called `R/` and a text file called DESCRIPTION. Both of those have been created for you! This means that you have a minimal package already...in just a few short steps!
@@ -181,7 +181,7 @@ Something we haven't discussed a ton up to this point is that everything on RStu
 
 Packages also require an .Rproj file within the package directory. Because RStudio Cloud already has a .Rproj file by default for the project space, we see this message.
 
-{format: png}
+
 ![Creating packages in RStudio Cloud creates an .Rproj file](https://docs.google.com/presentation/d/1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c/export/png?id=1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c&pageid=g5d3c3bad68_0_64)
 
 
@@ -189,7 +189,7 @@ Packages also require an .Rproj file within the package directory. Because RStud
 
 You should also notice on RStudio Cloud that a "Build" tab is now visible at the top-right. If you click on "Install and Restart", RStudio will build your package from the source package files in this directory, restart R in the console, and load your package into R. A log of what's happening will also be kept in the Build tab.
 
-{format: png}
+
 ![Install and Restart from the Build tab](https://docs.google.com/presentation/d/1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c/export/png?id=1FRr14fKonsB9VU7ssSN96diU048kKCkI-Zcemeiw-8c&pageid=g5d3c3bad68_0_78)
 
 Here, you've built your package from the source package files in this directory; however, we haven't actually added any functions to this package yet. That's what we'll do in a coming lesson. Once we do that, we'll build the package and test out its functionality!

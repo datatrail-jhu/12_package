@@ -37,7 +37,7 @@ Packages can have as many vignettes as you'd like. Smaller packages likely only 
 
 To see the vignettes in a package, you can use the `browseVignettes()` function with the package name of interest as an input. For example, to see the vignettes for `googlesheets`, which we'll discuss in detail next, just execute `browseVignettes("googlesheets")`. This will [open up a URL](https://cran.r-project.org/web/packages/googlesheets/vignettes/) in your web browser.
 
-{format: png}
+
 ![`browseVignettes("googlesheets")`](https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&pageid=g5dd7d7062c_0_0)
 
 ### Vignettes: `googlesheets`
@@ -53,14 +53,14 @@ From their titles you can see that each plays a different role. The Basic Usage 
 
 As the "googlesheets Basic Usage" vignette is where most people would start, that is the vignette we'll focus on most closely in this lesson. The Vignette is viewable at [this link](https://cran.r-project.org/web/packages/googlesheets/vignettes/basic-usage.html) if you'd like to scroll through and have a look for yourself. (Note that vignettes can and should be updated overtime, so the images here may look different from what you see in the future!)
 
-{format: png}
+
 !["googlesheets Basic Usage"](https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&pageid=g5dd7d7062c_0_82)
 
 At the top of the vignette, in addition to the title, you have information about who authored the vignette and when it was last updated. And, in the most helpful vignettes, there is a table of contents where you can see clearly what's included throughout the vignette. By looking at the topics here you can see that all of the basic functions you would want to accomplish using the `googlesheets` package (reading in a google sheet, creating a new google sheet, editing an existing sheet, etc.) are all documented within this vignette.
 
 Let's focus in on ["List Your Google Sheets"](https://cran.r-project.org/web/packages/googlesheets/vignettes/basic-usage.html#list-your-google-sheets). If we click on that link within the table of contents, we'll be brought to the part of the vignette that explains how to accomplish listing all of your google sheets.
 
-{format: png}
+
 ![Vignettes include text, code and outputs to demonstrate functionality](https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&pageid=g5dd7d7062c_0_96)
 
 In this bit of the vignette it becomes clear through the text provided what this function is used for and then, through the code, it becomes clear *how* to use it. Now, you *could* have read the documentation for that function and learned similar information, but with the vignette you then have all the information in one place to tell you what you can do after you list your Google Sheets using this function. It demonstrates how all of the pieces of the package fit together functionally through text that helps explain and code that demonstrates how it works!
@@ -97,12 +97,12 @@ usethis::use_vignette('get-started', title = "Getting Started")
 With this, you'll see a new file (get-started.Rmd) has been added to your `vignettes/` directory, that file has opened up for you, and, in your Console, you see a read-out of what changes have been made for you.
 
 
-{format: png}
+
 ![Vignette file generated from `use_vignette()`](https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&pageid=g5f4c3822f3_0_0)
 
 Note that within the `get-started.Rmd` document, some required YAML information at the top of the document as well as two code chunks have been added for you. But, aside from a line of code loading in your package (`library(cbds)`) being included for you, none of this is specific to *your* package yet. It's time to personalize this document and make this vignette a helpful long-form piece of documentation to accompany your package!
 
-{format: png}
+
 ![`get-started.Rmd` contains skeleton but requires that you add information about your package](https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&pageid=g5f4c3822f3_0_10)
 
 #### Metadata
@@ -159,7 +159,7 @@ For large packages, sometimes you'll need a lot of introductory text or even a s
 
 After our brief introduction, the functions in this package revolve around working with data. So, we'll introduce a dataset that we'll then use throughout our vignette.
 
-{format: png}
+
 ![Include text that explains at a beginner's level](https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&pageid=g5f4c3822f3_0_24)
 
 
@@ -167,7 +167,7 @@ After our brief introduction, the functions in this package revolve around worki
 
 To work with this dataset, we'll load the `ggplot2` package and then take a look at the diamonds dataset. Note that to do this, we include the code in a R Markdown code chunk.
 
-{format: png}
+
 ![Write code in code chunks and run them to ensure the code executes](https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&pageid=g5f4c3822f3_0_33)
 
 
@@ -175,7 +175,7 @@ To work with this dataset, we'll load the `ggplot2` package and then take a look
 
 To ensure that there are no errors in the code you've written, it's always a good idea to run the code chunk before moving on to the next part of your vignette.
 
-{format: png}
+
 ![Run code chunks to ensure the code executes without error](https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&pageid=g5f4c3822f3_0_42)
 
 
@@ -187,29 +187,29 @@ We have two functions currently, so we'll add an H1 header for each and then inc
 
 First, we demonstrate using text, code, and code output how a user would use the function `check_na()`
 
-{format: png}
+
 ![Including `check_na()` in our vignette](https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&pageid=g5f4c3822f3_0_55)
 
 Second, we'll want to document our `theme_cbds()` function. Remember this is a custom theme to be applied to `ggplot2` plots. So, it would likely be helpful for users to be able to visualize the changes from default plots to what your theme produces.
 
 Thus, it's a good idea to include what the plot would look like before applying your theme.
 
-{format: png}
+
 ![Example of what plot looks like before applying `theme_cbds()`](https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&pageid=g5f4c3822f3_0_65)
 
 Then, you can demonstrate what this plot would look like - using both text and code to explain - with your function:
 
-{format: png}
+
 ![Example of what plot looks like before applying `theme_cbds()`](https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&pageid=g5f4c3822f3_0_73)
 
 Note that text explaining the code can be included before the code *and* text explaining the output of the code can be included after the code chunk to summarize what's going on.
 
-{format: png}
+
 ![Text can be included before or after code to help readers understand](https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&pageid=g5f4c3822f3_0_81)
 
 Finally, sometimes, it can helpful to readers to demonstrate explicitly that a function works in different contexts. For example, we can include an additional plot, demonstrating what this would look like for a barplot (using a categorical variable).
 
-{format: png}
+
 ![Multiple, related examples can help readers' understanding](https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&pageid=g5f4c3822f3_0_88)
 
 At this point, our full vignette includes the following a YAML with modified metadata at the top, text introducing our package, and text, code and output demonstrating how to use the functions within our package. We're now ready for the final step - building our vignette!
@@ -220,7 +220,7 @@ To accomplish this, we'll first note that using "Clean & Rebuild" from the Build
 
 However, at this point we *want* to build our vignettes. To do so we'll want to use the `build()` function from `devtoools`. To use this, first add `devtools` to your DESCRIPTION file.
 
-{format: png}
+
 ![Add `devtools` to your DESCRIPTION file](https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&pageid=g5f4c3822f3_0_96)
 
 Then, install the package on RStudio Cloud for immediate use:
@@ -235,7 +235,7 @@ Now, we can create our package bundle *and* generate vignettes by using:
 devtools::build()
 ```
 
-{format: png}
+
 ![Vignettes are built!](https://docs.google.com/presentation/d/1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ/export/png?id=1tupzSYZC49l5d0bXFv1Yv1nk8PLVMTWsntolAaNvXQQ&pageid=g5f4c3822f3_0_110)
 
 Note that the output indicates that our vignettes have been built (along with the rest of the package)!

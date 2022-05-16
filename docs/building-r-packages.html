@@ -297,7 +297,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>However, not everything that’s possible in R is available to you every time you open up R or RStudio. This is done intentionally. There is <strong>a lot</strong> you can do with R; however, if all of that was made available every time you opened up R, it would take a long time for R to load and open. Rather, R makes some functionality available from base R (the <code>mean()</code> function, for example), while storing other functionality in <strong>packages</strong>.</p>
 <p>You’re likely very familiar with a number of packages at this point. You’ve probably used <code>ggplot2</code> to generate plots, <code>tidyr</code> and <code>diplyr</code> to work with tabular data, and <code>stringr</code>, <code>forcats</code>, &amp; <code>lubridate</code> to make working with strings, factors, and dates (respectively) simpler. All of these packages contain R code that, when installed and loaded into R, makes their functionality available to the user.</p>
 <p>More specifically, a package is a collection of functions, data, and code conveniently provided in a nice, complete format for you. At the time of writing, there are just over 17,600 packages available to download - each with their own specialized functions and code, all developed for a specific but different purpose. What we haven’t talked about previously, however, is that you too can write R packages. In fact, anyone can and should write R packages!</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1fueR3mDU3mGjq0qemekAalmbeYop4_I_7Z9CPHW7fcY/export/png?id=1fueR3mDU3mGjq0qemekAalmbeYop4_I_7Z9CPHW7fcY&amp;pageid=g5cdfd9360d_0_244" alt="R Documentation: R Packages" /></p>
 <p>Writing your own R package is helpful:</p>
 <ul>
@@ -321,17 +321,17 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div id="installing" class="section level4" number="1.0.2.1">
 <h4><span class="header-section-number">1.0.2.1</span> Installing</h4>
 <p>As a brief refresher, if you are installing from the CRAN repository, use the <code>install.packages()</code> function, with the name of the package you want to install in quotes between the parentheses . For example, if you want to install the package <code>ggplot2</code>, you would use: <code>install.packages("ggplot2")</code></p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1fueR3mDU3mGjq0qemekAalmbeYop4_I_7Z9CPHW7fcY/export/png?id=1fueR3mDU3mGjq0qemekAalmbeYop4_I_7Z9CPHW7fcY&amp;pageid=g5cdfd9360d_0_162" alt="Installing from CRAN" /></p>
 <p>From GitHub, installation occurs using <code>devtools::install_github("author/package")</code> replacing “author” and “package” with their GitHub username and the name of the package.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1fueR3mDU3mGjq0qemekAalmbeYop4_I_7Z9CPHW7fcY/export/png?id=1fueR3mDU3mGjq0qemekAalmbeYop4_I_7Z9CPHW7fcY&amp;pageid=g5cdfd9360d_0_84" alt="Installing from GitHub" /></p>
 </div>
 <div id="loading" class="section level4" number="1.0.2.2">
 <h4><span class="header-section-number">1.0.2.2</span> Loading</h4>
 <p>Installing a package does <em>not</em> make its functions immediately available to you. After installation to make the functions available to you, you must <strong>load</strong> the package into R. To do so, use the <code>library()</code> function. Think of this like any other software you install on your computer. Just because you’ve <em>installed</em> a program, doesn’t mean it’s automatically running - you have to open the program. Same with R. You’ve installed it, but now you have to “open” it. For example, to “open” the <code>ggplot2</code> package, you would run:<code>library(ggplot2)</code></p>
 <p><strong>NOTE:</strong> Unlike when you’re installing a package, when loading a package, you do <em>not</em> have to put the package name in quotes.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1fueR3mDU3mGjq0qemekAalmbeYop4_I_7Z9CPHW7fcY/export/png?id=1fueR3mDU3mGjq0qemekAalmbeYop4_I_7Z9CPHW7fcY&amp;pageid=g5cdfd9360d_0_320" alt="Loading a Package" /></p>
 <p>There is an order to loading packages - some packages require other packages to be loaded first. These other packages are known as <strong>dependencies</strong>. When you install a new package, that new package’s manual/help pages will automatically determine what packages this new package is dependent upon and will install those packages as well. We’ll discuss this in more detail in a later lesson in this course.</p>
 </div>

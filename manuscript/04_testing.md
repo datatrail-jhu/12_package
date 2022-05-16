@@ -50,14 +50,14 @@ The input to this function should be the name you want to use for your test file
 usethis::use_test("check_na")
 ```
 
-{format: png}
+
 ![`use_test` sets up structure and files for automated testing](https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&pageid=g5d432a4243_0_0)
 
 Executing this function *also* creates a `tests/` directory within our package. Within that directory there will be a directory called `testthat/`. The test file we just created `test-check_na.R` will be stored within that directory. There will be example code within that file. This is where we'll write our unit test code.
 
 Finally, within `tests/` there will be a file called `testthat.R`. This file automatically has code within it that will allow for automated testing to take place.
 
-{format: png}
+
 ![`testthat.R` contains code needed to automate testing](https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&pageid=g5d432a4243_0_11)
 
 #### Testing Expectations
@@ -236,7 +236,7 @@ test_that("NA output format", {
 
 The example code used and both of these tests will be all be stored in the `test-check_na.R` file we generated previously.
 
-{format: png}
+
 ![test-check_na.R](https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&pageid=g5d432a4243_0_28)
 
 #### Running tests in a package 
@@ -244,12 +244,12 @@ The example code used and both of these tests will be all be stored in the `test
 Now that we have our first two official unit tests, it's time to test our package. To do so, return to the Build tab in the top-right panel, click on More, and select "Test Package." This will run all of the tests in `tests/testthat`. 
 
 
-{format: png}
+
 ![Run package tests](https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&pageid=g5d432a4243_0_39)
 
 The results of these tests will be visible in the Build tab. Notice that we have passed all tests! Let's keep on writing tests for our package!
 
-{format: png}
+
 ![Test output in Build tab](https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&pageid=g5d432a4243_0_44)
 
 
@@ -273,7 +273,7 @@ To do this, let's again use `use_test()` to create our test files within the exp
 usethis::use_test("theme_cbds")
 ```
 
-{format: png}
+
 ![Generate new test file](https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&pageid=g5d432a4243_0_49)
 
 This generates a new file in `tests/testthat` called `test-theme_cbds.R`. We'll delete the example code in that file and replace it with a test that tests our functions expected behaviors:
@@ -311,19 +311,19 @@ Here, we're testing to ensure that when we change the `base_size` and `base_fami
 
 We save all of this test code in `test-theme_cbds.R`.
 
-{format: png}
+
 ![test-theme_cbds.R](https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&pageid=g5d432a4243_0_62)
 
 With these tests written, we save the file, return to the Build Tab, again select More and then click check package from the drop-down menu. You should again get a message that all tests passed!
 
-{format: png}
+
 ![All tests pass](https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&pageid=g5d432a4243_0_74)
 
 ### Test Errors
 
 So far we've only demonstrated what it looks like when a test passes. But, what happens if a unit test fails? For example, what if into that last test, I had misspecified what font to expect, calling for "sans" in the plot but then testing for "serif"
 
-{format: png}
+
 ![Errors in testing](https://docs.google.com/presentation/d/18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g/export/png?id=18fovc8dhIbVwNSz9sGyEtZwi4DTUI2jqtZ3ib9tay9g&pageid=g5d432a4243_0_79)
 
 In this case, the test would (and should!) fail. The output we would get when testing the package would then provide us with a lot of information! First, in red, we see the description of the test where the failure occurred was in the "font and font size" test. We also see what file this test is in, along with the number of the line of code where the failure occurred (here, line 20). We also get a readout of what the mismatch was, and we can see that the test saw a mismatch between "sans" and "serif".

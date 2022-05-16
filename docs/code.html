@@ -311,16 +311,16 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">4.0.3</span> Storing Functions in .R files</h3>
 <p>Once you’ve got your plan and your function names, it’s time to start writing functions in .R files.</p>
 <p>To do this, you’ll first navigate to “File” &gt; “New File” &gt; “R Script” to create a new R Script.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&amp;pageid=g5d3e7acaa9_0_0" alt="Create a new R Script file" /></p>
 <p>A new untitled R script will show up in the top-left hand pane.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&amp;pageid=g5d3e7acaa9_0_6" alt="Untitled Script (.R) file" /></p>
 <p>We’ll want to save this file with a helpful file name before including any code in this file. To do so, got to “File” &gt; “Save As…”</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&amp;pageid=g5d3e7acaa9_0_11" alt="Save As…" /></p>
 <p>The Save File window that pops up is where you will type in your file name. Here, we’ll save the first file as <code>check_na.R</code>. Note that this file is being stored in <code>/cloud/project/cbds/R</code>. We’ve mentioned previously that your package’s functions should all be stored in the <code>R/</code> directory within your package. Be sure that the path to where these files should be saved is correct. Once you’ve typed in the filename, click “Save”</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&amp;pageid=g5d3e7acaa9_0_16" alt="Save script in R/ directory" /></p>
 <p>Repeat this process to create a second .R file called <code>theme_cbds.R</code>. You should now have two files open in the top-left hand pane. And, if you click on the <code>R/</code> directory in the Files tab at the bottom-right, you should see these two files stored in that directory.</p>
 <p>Now, we’re ready to start writing some code!</p>
@@ -374,24 +374,24 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb17-13"><a href="code.html#cb17-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">colnames</span>(out) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;N&quot;</span>, <span class="st">&quot;NAs&quot;</span>, <span class="st">&quot;Non-NAs&quot;</span>)</span>
 <span id="cb17-14"><a href="code.html#cb17-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(out)</span>
 <span id="cb17-15"><a href="code.html#cb17-15" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&amp;pageid=g5d3e7acaa9_0_36" alt="check_na() function in RStudio Cloud" /></p>
 <p>Remember that defining a function just creates the function. It does <em>not</em> execute the function. To execute this function, we would want to save the file <code>check_na.R</code>, then click “Install and Restart”in the Build top at the top right-hand portion of RStudio Cloud. Remember, this rebuilds your package, so the <code>check_na()</code> function is now available to you when your package is loaded into memory (using <code>library(cbds)</code>, which executes when you click “Install and Restart”).</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&amp;pageid=g5d3e7acaa9_0_46" alt="Install and Restart" /></p>
 <p>Now you can test out the functionality of your package’s first function!</p>
 <p>Let’s first test it on a column from the <code>iris</code> dataset. We’ve seen this dataset before, and it includes information about different iris flowers.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&amp;pageid=g5d3e7acaa9_0_41" alt="iris dataset" /></p>
 <p>Remember: To execute a function you call the function’s name and then provide the necessary inputs within the parentheses:</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="code.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">check_na</span>(iris<span class="sc">$</span>Sepal.Length)</span></code></pre></div>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&amp;pageid=g5d3e7acaa9_0_16" alt="Testing check_na() on the iris dataset" /></p>
 <p>Note in the output we see that there are 150 observations and no missing data.</p>
 <p>Let’s make sure that this works for data where there <em>is</em> missing information. We’ve worked with the <code>msleep</code> (mammalian sleep) dataset previously from <code>ggplot2</code>. You may recall that the variable <code>sleep_rem</code> from that dataset had missing information. So, let’s test out our function on that variable:</p>
 <div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="code.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb19-2"><a href="code.html#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">check_na</span>(msleep<span class="sc">$</span>sleep_rem)</span></code></pre></div>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&amp;pageid=g5d3e7acaa9_0_56" alt="Testing check_na() on the msleep dataset" /></p>
 <p>Perfect! Our function correctly calculates that there are 22 missing values in this variable!</p>
 <p>When we test out our functions in the console like this, we’re doing what are called <strong>smoke tests</strong>. We’re checking quickly to ensure that our function works. However, there are more formal tests called <strong>unit tests</strong> that we’re going to discuss in the next lesson. So, keep this idea of testing out the functions within your package in the back of your mind for now and we’ll discuss formal testing in the next lesson!</p>
@@ -448,7 +448,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb22-8"><a href="code.html#cb22-8" aria-hidden="true" tabindex="-1"></a>    ggplot2<span class="sc">::</span><span class="fu">theme</span>(<span class="at">axis.ticks.length =</span> grid<span class="sc">::</span><span class="fu">unit</span>(<span class="dv">0</span>, <span class="st">&quot;cm&quot;</span>), ...)</span>
 <span id="cb22-9"><a href="code.html#cb22-9" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb22-10"><a href="code.html#cb22-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&amp;pageid=g5d3e7acaa9_0_56" alt="theme_cbds" /></p>
 <p>Just as with the first function example, we have to test out to make sure this function is behaving as we expect it to! Time for a few quick smoke tests.</p>
 <p>After clicking “Install and Restart” in the Build tab, we can then test this function out on the <code>iris</code> dataset.</p>
@@ -459,14 +459,14 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb23-3"><a href="code.html#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb23-4"><a href="code.html#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="co"># generate default plot</span></span>
 <span id="cb23-5"><a href="code.html#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&amp;pageid=g5d3e7acaa9_0_78" alt="Plot with default settings from ggplot2" /></p>
 <p>Now, let’s utilize our new function from our package to improve this plot’s aesthetics!</p>
 <div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="code.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># use cbds theme</span></span>
 <span id="cb24-2"><a href="code.html#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width)) <span class="sc">+</span></span>
 <span id="cb24-3"><a href="code.html#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb24-4"><a href="code.html#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_cbds</span>()</span></code></pre></div>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&amp;pageid=g5d3e7acaa9_0_86" alt="Plot with cbds_theme" /></p>
 <p>That looks pretty great! A lot cleaner plot now that we’ve applied our modified theme to it!</p>
 <p>But, don’t forget that we have two inputs to our theme that we want to ensure are behaving as expected. So, let’s generate the same plot but change the font and increase the font size by passing this information in as arguments to our function.</p>
@@ -475,7 +475,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb25-3"><a href="code.html#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width)) <span class="sc">+</span></span>
 <span id="cb25-4"><a href="code.html#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb25-5"><a href="code.html#cb25-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_cbds</span>(<span class="at">base_size =</span> <span class="dv">18</span>, <span class="at">base_family =</span> <span class="st">&quot;serif&quot;</span>)</span></code></pre></div>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8/export/png?id=1VbKkYRdyWbtc37T7P4IhF1Dd-2SrMKSQmtyG56fVOQ8&amp;pageid=g5d3e7acaa9_0_94" alt="Plot with cbds_theme, serif font, and increased font" /></p>
 <p>Looks like our package with two functions is working as expected! We’ve got a different font and a larger font size for the text.</p>
 </div>

@@ -20,12 +20,12 @@ The DESCRIPTION file has already been generated for you and its expected structu
 
 To get started, click on the DESCRIPTION file in the "Files" tab so that it opens up at the top-left.
 
-{format: png}
+
 ![DESCRIPTION file](https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&pageid=g5dcfb20e71_0_0)
 
 The DESCRIPTION file contains different information on each line where there is a *field* and a *value* (separated by a colon). Values that take up more than one line have be be indented. 
 
-{format: png}
+
 ![field and value are separated by a colon](https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&pageid=g5dcfb20e71_0_6)
 
 We're going to walk through a number of these fields and describe what information goes in each of them so that you have a complete DESCRIPTION file and all your metadata is complete!
@@ -55,13 +55,13 @@ Similarly, the `forcats` package has the following title and description:
 
 A reminder that you can see the Title and description of packages by loading them into RStudio and then using `?packagename`. The package documentation will show up in the Help tab.
 
-{format: png}
+
 ![Title and Description fields help to explain what this package should be used for](https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&pageid=g5dcfb20e71_0_32)
 
 
 Writing a good Title line and Description are *very* important if you plan on releasing your package - they're how others know what your package does. For our purposes with this first package we're developing in this course, they're less important, as we're just writing a package containing functions for our own use. Nevertheless, it's good to practice writing this information in the correct format, so write a Title and Description in your package's DESCRIPTION file.
 
-{format: png}
+
 ![Title and Description fields in our package](https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&pageid=g5dcfb20e71_0_20)
 
 #### Version
@@ -70,7 +70,7 @@ Working our way through the DESCRIPTION file, you'll see a **Version** field. We
 
 For now we'll just note that packages *in development* should start with the version: "0.0.0.9000", which is the current value in your DESCRIPTION file.
 
-{format: png}
+
 ![Development version in DESCRIPTION file](https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&pageid=g5dcfb20e71_0_67)
 
 Upon *release*, the version will contain three numbers, separated by periods. Those numbers correspond to <major>.<minor>.<patch>. For example, 1.0.0 would be the first released version of your package. As you patch the package (make a small change), the patch value would increase, such that the next version may be 1.0.1. We'll discuss what major, minor, and patch mean in the context of versioning in the final lesson in this course.
@@ -102,7 +102,7 @@ Often, the creator and the author are the same person, but they don't have to be
 
 Be sure to edit your package's DESCRIPTION file to include your information.
 
-{format: png}
+
 ![Author information included in DESCRIPTION file](https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&pageid=g5dcfb20e71_0_53)
 
 Additionally, note that often in package development for large packages, there can be more than one author. The syntax for this requires that author `person()` calls be separated by a comma:
@@ -127,7 +127,7 @@ However, if you are releasing your package, this field is critical. There are st
 
 The [CC0](https://tldrlegal.com/license/creative-commons-cc0-1.0-universal) license allows anyone to use your code for any purpose. 
 
-{format: png}
+
 ![Specifies use of the Creative Commons CC0 license](https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&pageid=g5dcfb20e71_0_53)
 
 Often, you may want to put some restrictions on your code and its use, in which case it's important to look into other licenses, such as the [MIT license](https://tldrlegal.com/license/mit-license) or [GPL-2](https://tldrlegal.com/license/gnu-general-public-license-v2). 
@@ -148,7 +148,7 @@ But, remember, that package installation and making a package available for use 
 
 In the two functions we've included in our package, the only package that is required for use of our package is `ggplot2`. While we only have one function in our package at this point that utilizes this package, we know that we'll likely be writing other themes over time and functions that have to do with plotting. For this reason, we're going to add `ggplot2` to our Imports field.
 
-{format: png}
+
 ![Import `ggplot2`](https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&pageid=g5dcfb20e71_0_91)
 
 If your package depends on multiple other packages, it's best to include them alphabetically, with each package listed on a separate line (and separated by a comma) so that they can be easily scanned by the human eye.
@@ -168,7 +168,7 @@ if(!requireNamespace("package_name", quietly = TRUE)){
 
 You may have noticed that `testthat` has already been added in the Suggests field for you. This means that testthat will *not* be installed upon installation of your package; however, if someone were to try to run the tests in your `testthat/` directory using the `testthat` package, they would have to install `testthat` first.
 
-{format: png}
+
 ![Suggests `testthat`](https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&pageid=g5dcfb20e71_0_98)
 
 The other notable bit about the testthat package in the DESCRIPTION file is the fact that "(>= 2.1.0)" is included. This specifies the version of the package necessary. Specifically, for `testthat` here, the DESCRIPTION file is specifying that version 2.1.0 *or a more recent version* is required. It's best practice to specify the minimum version necessary, rather than a specific version (== 2.1.0).
@@ -187,14 +187,14 @@ You may also notice in your DESCRIPTION file two other fields: **LazyData** and 
 
 **Encoding** refers to how the characters used by the individual typing are stored and transmitted by the computer. There are a number of different systems for encoding. If you've heard for ASCII, UTF, or unicode, these refer to different systems used for encoding information within the computer. We note this here to specify that **UTF-8** is an encoding that works on all platforms, and is the one included by default in your DESCRIPTION file. Unless you have a reason to specify a different encoding, leave the value of this field as is.
 
-{format: png}
+
 ![LazyData and Encoding left with their defaults](https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&pageid=g5dcfb20e71_0_105)
 
 ### Install & Restart
 
 Finally, while we haven't added additionally functionality in this lesson, it's a good idea to "Install and Restart" to make sure you haven't messed up any of the expected formatting in this file before moving onto the next lesson. If it restarts R and loads you're package without error, you're ready to move on. If not, look back carefully at the syntax in your DESCRIPTION file before proceeding.
 
-{format: png}
+
 ![Install and Restart](https://docs.google.com/presentation/d/149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I/export/png?id=149NTXkAPfau6uxmvL7WnICAVe_UKMEF_Zc2B6mnEI5I&pageid=g5dcfb20e71_0_112)
 
 

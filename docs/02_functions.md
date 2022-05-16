@@ -16,7 +16,7 @@ We review functions here as they are the operational unit of packages. As you co
 
 Functions help make your code more modular. This means that instead of having a single file with all of your code running as a script from top to bottom, you can instead write user-defined functions for processes that you'll do over and over again.
 
-{format: png}
+
 ![User-Defined Functions](https://docs.google.com/presentation/d/1Bo0j-Ct0phh9ygYe9LOsmd-J8YNN92H5OS_kPtynEHs/export/png?id=1Bo0j-Ct0phh9ygYe9LOsmd-J8YNN92H5OS_kPtynEHs&pageid=g5d13a53002_0_0)
 
 For example, if you are working with multiple, similar datasets and have to carry out the same operations on each dataset, rather than copying and pasting the code to do so and changing the DataFrame you're operating on, instead, you can write a single function, including the necessary code and then execute that function on each dataset.
@@ -35,7 +35,7 @@ Packages are built around writing functions, so you'll get extra practice in thi
 
 When writing packages, you'll write a lot of functions. The general rule is that you should **write a function whenever you've copy and pasted code more than once**. However, in packages, functions are the operational unit - the thing that we're going to be building a package upon, so we'll be thinking about building our packages with a function-first mentality!
 
-{format: png}
+
 ![Avoid copying and pasting code more than once](https://docs.google.com/presentation/d/1Bo0j-Ct0phh9ygYe9LOsmd-J8YNN92H5OS_kPtynEHs/export/png?id=1Bo0j-Ct0phh9ygYe9LOsmd-J8YNN92H5OS_kPtynEHs&pageid=g5d13a53002_0_5)
 
 

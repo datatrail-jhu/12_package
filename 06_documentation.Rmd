@@ -58,12 +58,12 @@ install.packages("roxygen2")
 
 Then, return to (open) your `check_na.R` file from within the `R/` directory. Once open, click on the wand icon within RStudio Cloud and select "Insert Roxygen Skeleton."
 
-{format: png}
+
 ![Insert Roxygen Skeleton](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_0)
 
 This will get you started with what's necessary for documenting your function using `roxygen2`. Specifically, this will add a *block*, or a number of lines at the top of your file containing roxygen comments. Blocks include *tags*. Tags take the format: `@tag_name information`
 
-{format: png}
+
 ![Add roxygen comments in block at top of function](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_6)
 
 Note that within roxygen comments "@" therefore has a special meaning. If you ever want to use an actual "@" symbol (for email addresses, for example), you'll need to use "@@".
@@ -80,7 +80,7 @@ The **description** should briefly (in a few sentences) describe what the functi
 
 To see this clearly, let's use `?ggplot` (after loading the `ggplot2` library into RStudio Cloud) to see how these pieces go on to look in the documentation.
 
-{format: png}
+
 ![title and description in `ggplot` function](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_6)
 
 Now, having seen an example, let's add this specific information necessary to use *your* function.
@@ -98,12 +98,12 @@ Within the `check_na.R` file, let's first replace "Title" with "Return missingne
 
 The first few lines of your .R file should now look as follows within RStudio Cloud:
 
-{format: png}
+
 ![title and description in roxygen block](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_29)
 
 As a brief aside, if you write a long description in a single line, you can use "Reflow Comment" (from the wand icon) to separate these comments into separate lines, so that no one line is too long (each line should be <80 characters long)  .
 
-{format: png}
+
 ![Reflow Comment](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_24)
 
 ##### Documenting tags (`@tags`)
@@ -157,31 +157,31 @@ Note the following:
 1. When there's more than one line for a tag, it must be indented for easy reading, as you see with the `@return` tag here
 2. We've included two examples, each of which will execute without error
 
-{format: png}
+
 ![@tags within `check_na.R`](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_39)
 
 Also, you may see a tag in there that we haven't talked about yet. The **`@export`** tag indicates that this function should be added to the NAMESPACE file. While we haven't discussed that file and won't be editing it manually, it's important to know that functions included in the NAMESPACE are functions you want users of your package to have access to. So, if you want this function to be available to users, include the `@export` tag.
 
 Note that sometimes you'll have functions that are used internally by other functions within your package and you won't want them to be exported (available to users). However, for this first package and for most packages you write as you get started, you'll likely want to `@export` each of your functions.
 
-{format: png}
+
 ![@export tag makes function usable to users](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_46)
 
 #### Step 3: Generate documentation
 
 Now that you've add the required information to your function in the roxygen comments, you're ready to generate your documentation. To do this, return to the "Build" tab in RStudio Cloud, click on "More" and select "Document" from the drop-down menu.
 
-{format: png}
+
 ![Document](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_58)
 
 This will generate the documentation and give you a readout of what it's doing in the process:
 
-{format: png}
+
 ![Generate documentation](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_63)
 
 This results in the the `man/` documentation being generated for you.
 
-{format: png}
+
 ![`man/` directory generated](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_68)
 
 Within the `man/` directory, you'll see that the `.Rd` file has been generated for you from the roxygen comments in your .R file.
@@ -192,12 +192,12 @@ It's finally time to take a look at your documentation using the `?` function.
 
 To do so, "Install and Restart" from the Build tab.
 
-{format: png}
+
 !["Install and Restart"](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_74)
 
 You're now ready to view your function's technology! To do so, run `?check_na` from the console. Your documentation will be viewable in the Help tab!
 
-{format: png}
+
 ![Documentation in View Tab](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_79)
 
 ### Documenting `theme_cbds()`
@@ -231,7 +231,7 @@ For example, your file could include the following roxygen comment block:
 
 There are a few new ideas in this block. Something we haven't talked about yet is text formatting in .Rd documentation files.
 
-{format: png}
+
 ![Formatting and linking possible within documentation](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_114)
 
 Specifically, you can italicize (`\emph{text}`), bold (`\strong{text}`), or specify that text should be formatted as code (`\code{code}`) within your documentation.
@@ -240,7 +240,7 @@ Additionally you can include links to *other* documentation. For another functio
 
 You can see an example text formatting and linking to other packages in the documentation for our `theme_cbds()` function.
 
-{format: png}
+
 ![Formatting and linking in rendered documentation](https://docs.google.com/presentation/d/1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ/export/png?id=1P3XII64p0lwSZQ7V_GTwYyEOX1WXRyn2fgHymY9iNfQ&pageid=g5dd0b1f446_0_114)
 
 Linking to places on the web is also possible using `url{}`, `\href{}`, and `\email{}`. Friendly reminder that the email would require @@.
