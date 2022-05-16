@@ -126,10 +126,10 @@ Specifically, we'll leave the lines currently there alone, but let's *add* the f
 
 ```
 author: "Jane Doe"
-date: "2022-04-27"
+date: "2022-05-16"
 ```
 
-Note that 2022-04-27 will add today's date any time this document is Knit. This helps readers of your vignette know the last time it was updated! We also want to point out that these are *not* the only fields that can be added to this document, but they are very important.
+Note that 2022-05-16 will add today's date any time this document is Knit. This helps readers of your vignette know the last time it was updated! We also want to point out that these are *not* the only fields that can be added to this document, but they are very important.
 
 #### Vignettes in R Markdown
 
