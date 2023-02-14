@@ -1,6 +1,6 @@
 ---
-title: " Course Name "
-date: "May, 2022"
+title: " Developing R Packages "
+date: "February, 2023"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: book.bib
